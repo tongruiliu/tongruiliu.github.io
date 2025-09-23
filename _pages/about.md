@@ -7,9 +7,9 @@ redirect_from:
   - /about.html
 ---
 
-This is the front page of a website that is powered by the [Academic Pages template](https://github.com/academicpages/academicpages.github.io) and hosted on GitHub pages. [GitHub pages](https://pages.github.com) is a free service in which websites are built and hosted from code and data stored in a GitHub repository, automatically updating when a new commit is made to the repository. This template was forked from the [Minimal Mistakes Jekyll Theme](https://mmistakes.github.io/minimal-mistakes/) created by Michael Rose, and then extended to support the kinds of content that academics have: publications, talks, teaching, a portfolio, blog posts, and a dynamically-generated CV. Incidentally, these same features make it a great template for anyone that needs to show off a professional template!
+Welcome to my homepage! I am a senior student at [Dalian University of Technology](https://www.dlut.edu.cn/), majoring in [Mathematics and Applied Mathematics](https://math.dlut.edu.cn/). My research interests include Large Language Models(LLMs), Data-Centric AI(DCAI), and Knowledge Graphs.
 
- You can fork [this template](https://github.com/academicpages/academicpages.github.io) right now, modify the configuration and Markdown files, add your own PDFs and other content, and have your own site for free, with no ads!
+I am very fortunate to be admitted to the Big Data graduate program at the [School of Mathematical Sciences](https://www.math.pku.edu.cn/index.htm), [Peking University](https://www.pku.edu.cn/). Currently, I am interning in Shanghai now. The internship is planned to last for one full year, ending August, 2026.
 
 A data-driven personal website
 ======

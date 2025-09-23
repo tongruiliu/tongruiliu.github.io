@@ -1,7 +1,7 @@
 ---
 layout: archive
 title: "Awards"
-permalink: /awards/   # <--- 这一行最关键！
+permalink: /Awards/  
 author_profile: true
 ---
 

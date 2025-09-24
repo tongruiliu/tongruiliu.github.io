@@ -7,29 +7,32 @@ redirect_from:
   - /about.html
 ---
 
-Welcome to my homepage! I am a senior student at [Dalian University of Technology](https://www.dlut.edu.cn/), majoring in [Mathematics and Applied Mathematics](https://math.dlut.edu.cn/). My research interests include Large Language Models(LLMs), Data-Centric AI(DCAI), and Knowledge Graphs(KG).
+Welcome to my homepage! I am a senior student at [Dalian University of Technology](https://www.dlut.edu.cn/), majoring in [Mathematics and Applied Mathematics](https://math.dlut.edu.cn/). My research interests include Large Language Models(LLMs), Data-Centric AI(DCAI), and Knowledge Graphs(KG). If you are interested in collaborating or exchanging ideas in related fields, please feel free to contact me via email at any time!
+Email addresses: 15668672116@163.com / ruitong.jerry@gmail.com
 
 I am very fortunate to be admitted to the Big Data graduate program at the [School of Mathematical Sciences](https://www.math.pku.edu.cn/index.htm), [Peking University](https://www.pku.edu.cn/). Currently, I am interning in Shanghai now. The internship is planned to last for one full year, ending August, 2026.
 
-A data-driven personal website
+<h2 style="color: red; font-size: 1.5em;">What's New</h2>
+For detailed paper information, please refer to the "[Publications](/Publications/)" section.
+**September 2025**: Invited by the journal publisher, our review paper on large model data preparation is to be published in Journal of Computer Science and Technology (<strong>JCST</strong>).
+**August 2025**: FMS has been submitted to IEEE Transactions on Pattern Analysis and Machine Intelligence (<strong>TPAMI</strong>) and is currently under review.
+**July 2025**: SARMP has been accepted by the International Conference on Neural Information Processing (<strong>ICONIP 2025</strong>).
+**June 2025**: A paper on knowledge graph relation completion (FMS) has been uploaded to arXiv, with its code open-sourced.
+**June 2025**: A paper on knowledge graph completion (SARMP) has been uploaded to arXiv, with its code open-sourced.
+**July 2024**: I was pre-admitted to the School of Mathematical Sciences, Peking University, through the postgraduate recommendation program (bao yan).
+
+
+
+
+
+Selected Awards
 ======
-Like many other Jekyll-based GitHub Pages templates, Academic Pages makes you separate the website's content from its form. The content & metadata of your website are in structured Markdown files, while various other files constitute the theme, specifying how to transform that content & metadata into HTML pages. You keep these various Markdown (.md), YAML (.yml), HTML, and CSS files in a public GitHub repository. Each time you commit and push an update to the repository, the [GitHub pages](https://pages.github.com/) service creates static HTML pages based on these files, which are hosted on GitHub's servers free of charge.
+For comprehensive information about honors and awards, please refer to the "[Awards](/Awards/)" section.
+****Awarded "Model Excellent Communist Youth League Member" of Dalian University of Technology <strong>(only 7 undergraduate students across the university)</strong>
 
-Many of the features of dynamic content management systems (like Wordpress) can be achieved in this fashion, using a fraction of the computational resources and with far less vulnerability to hacking and DDoSing. You can also modify the theme to your heart's content without touching the content of your site. If you get to a point where you've broken something in Jekyll/HTML/CSS beyond repair, your Markdown files describing your talks, publications, etc. are safe. You can rollback the changes or even delete the repository and start over - just be sure to save the Markdown files! You can also write scripts that process the structured data on the site, such as [this one](https://github.com/academicpages/academicpages.github.io/blob/master/talkmap.ipynb) that analyzes metadata in pages about talks to display [a map of every location you've given a talk](https://academicpages.github.io/talkmap.html).
 
-For those users that need more advanced functionality, the template also supports the following popular tools:
-- [MathJax](https://www.mathjax.org/) for mathematical equations
-- [Mermaid](https://mermaid.js.org/) for diagraming
-- [Plotly](https://plotly.com/javascript/) for plotting
 
-Getting started
-======
-1. Register a GitHub account if you don't have one and confirm your e-mail (required!)
-1. Fork [this template](https://github.com/academicpages/academicpages.github.io) by clicking the "Use this template" button in the top right. 
-1. Go to the repository's settings (rightmost item in the tabs that start with "Code", should be below "Unwatch"). Rename the repository "[your GitHub username].github.io", which will also be your website's URL.
-1. Set site-wide configuration and create content & metadata (see below -- also see [this set of diffs](http://archive.is/3TPas) showing what files were changed to set up [an example site](https://getorg-testacct.github.io) for a user with the username "getorg-testacct")
-1. Upload any files (like PDFs, .zip files, etc.) to the files/ directory. They will appear at https://[your GitHub username].github.io/files/example.pdf.  
-1. Check status by going to the repository settings, in the "GitHub pages" section
+
 
 Site-wide configuration
 ------

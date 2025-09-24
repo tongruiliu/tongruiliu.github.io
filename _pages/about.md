@@ -9,7 +9,7 @@ redirect_from:
 
 Welcome to my homepage! I am a senior student at [Dalian University of Technology](https://www.dlut.edu.cn/), majoring in [Mathematics and Applied Mathematics](https://math.dlut.edu.cn/). My research interests include Large Language Models(LLMs), Data-Centric AI(DCAI), and Knowledge Graphs(KG). If you are interested in collaborating or exchanging ideas in related fields, please feel free to contact me via email at any time!
 * Email addresses: 15668672116@163.com / ruitong.jerry@gmail.com
-* *Wechat: ruitong_jerry or Search for my phone number
+* Wechat: ruitong_jerry or Search for my phone number
 
 I am very fortunate to be admitted to the Big Data graduate program at the [School of Mathematical Sciences](https://www.math.pku.edu.cn/index.htm), [Peking University](https://www.pku.edu.cn/). Currently, I am interning in Shanghai now. The internship is planned to last for one full year, ending August, 2026.
 

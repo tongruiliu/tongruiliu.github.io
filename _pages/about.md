@@ -14,6 +14,7 @@ I am very fortunate to be admitted to the Big Data graduate program at the [Scho
 
 <h2 style="color: red; font-size: 1.5em;">What's New</h2>
 For detailed paper information, please refer to the "[Publications](/Publications/)" section.
+
 **September 2025**: Invited by the journal publisher, our review paper on large model data preparation is to be published in Journal of Computer Science and Technology (<strong>JCST</strong>).
 **August 2025**: FMS has been submitted to IEEE Transactions on Pattern Analysis and Machine Intelligence (<strong>TPAMI</strong>) and is currently under review.
 **July 2025**: SARMP has been accepted by the International Conference on Neural Information Processing (<strong>ICONIP 2025</strong>).
@@ -28,10 +29,11 @@ For detailed paper information, please refer to the "[Publications](/Publication
 Selected Awards
 ======
 For comprehensive information about honors and awards, please refer to the "[Awards](/Awards/)" section.
-****Awarded "Model Excellent Communist Youth League Member" of Dalian University of Technology <strong>(only 7 undergraduate students across the university)</strong>
 
-
-
+**Award-2025** "Model Excellent Communist Youth League Member" of Dalian University of Technology <strong>(only 7 undergraduate students across the university)</strong>
+**Award-2025** "Five-Star Volunteer" of Dalian University of Technology <strong>(with a total volunteer service duration of over 600 hours in three years)</strong>
+**Award-2024** "Top 10 Volunteers" of Dalian University of Technology <strong>(only 10 students, including bachelor's, master's and doctoral degrees)</strong>
+**Award-2024** <strong>The National Scholarship</strong></li>
 
 
 Site-wide configuration

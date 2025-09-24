@@ -33,7 +33,7 @@ For comprehensive information about honors and awards, please refer to the "[Awa
 * **Award-2025** "Model Excellent Communist Youth League Member" of Dalian University of Technology <strong>(only 7 undergraduate students across the university)</strong>
 * **Award-2025** "Five-Star Volunteer" of Dalian University of Technology <strong>(with a total volunteer service duration of over 600 hours in three years)</strong>
 * **Award-2024** "Top 10 Volunteers" of Dalian University of Technology <strong>(only 10 students, including bachelor's, master's and doctoral degrees)</strong>
-* **Award-2024** <strong>The National Scholarship</strong></li>
+* **Award-2024** <strong>The National Scholarship</strong>
 
 
 Site-wide configuration

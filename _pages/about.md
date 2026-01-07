@@ -17,7 +17,7 @@ I am very fortunate to be admitted to the Big Data graduate program at the [Scho
 Reviewer/PC Member:Transactions on Knowledge Discovery from Data(TKDD)
 
 <h2 style="color: red; font-size: 1.5em;">What's New</h2>
-For detailed paper information, please refer to the "[Publications](/Publications/)" section.
+For detailed paper information, please refer to the "[Publications](/Publications.html)" section.
 
 * **January 2026**: A paper on closed-loop multimodal reinforcement learning that injects real-time verification signals into policy rollouts to mitigate error propagation and hallucination has been submitted to <strong>ICML 2026</strong>.
 * **January 2026**: A paper on entity state tuning that injects persistent, evolving states into temporal knowledge graph forecasting to bridge structural and sequential reasoning has been submitted to <strong>ACL 2026</strong>. 

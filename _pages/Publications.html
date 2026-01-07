@@ -1,1 +1,137 @@
+<style>
+  /* 每一个 publication 的容器 */
+  .pub-item {
+    display: flex;            /* 开启 Flex 布局，实现左右排列 */
+    margin-bottom: 30px;      /* 每个项目之间的间距 */
+    align-items: flex-start;  /* 顶部对齐 */
+    border-bottom: 1px solid #eee; /* 可选：加个底部分割线 */
+    padding-bottom: 20px;
+  }
 
+  /* 左侧图片区域 */
+  .pub-image {
+    flex: 0 0 200px;          /* 固定宽度 200px，不伸缩 */
+    margin-right: 25px;       /* 图片和文字的间距 */
+  }
+
+  .pub-image img {
+    width: 100%;              /* 图片宽度填满容器 */
+    border-radius: 5px;       /* 图片圆角 */
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1); /* 图片阴影，更有质感 */
+    transition: transform 0.2s; /* 鼠标悬停动画效果 */
+  }
+  
+  .pub-image img:hover {
+    transform: scale(1.02);   /* 鼠标放上去稍微放大一点 */
+  }
+
+  /* 右侧文字内容区域 */
+  .pub-content {
+    flex: 1;                  /* 占据剩余空间 */
+  }
+
+  .pub-title {
+    font-weight: bold;
+    font-size: 1.1em;
+    margin-bottom: 5px;
+    color: #333;              /* 标题颜色 */
+  }
+
+  .pub-authors {
+    color: #555;
+    margin-bottom: 5px;
+  }
+
+  .pub-venue {
+    font-style: italic;
+    color: #666;
+    margin-bottom: 10px;
+  }
+
+  .pub-links a {
+    text-decoration: none;
+    display: inline-block;
+    padding: 2px 8px;
+    margin-right: 5px;
+    border: 1px solid #ddd;
+    border-radius: 3px;
+    font-size: 0.9em;
+    color: #444;
+    transition: all 0.2s;
+  }
+
+  .pub-links a:hover {
+    background-color: #f0f0f0;
+    border-color: #999;
+  }
+
+  /* 手机端适配：屏幕变窄时变成上下排列 */
+  @media (max-width: 768px) {
+    .pub-item {
+      flex-direction: column;
+    }
+    .pub-image {
+      flex: 0 0 auto;
+      width: 100%;
+      margin-right: 0;
+      margin-bottom: 15px;
+    }
+    .pub-image img {
+      width: 100%; 
+    }
+  }
+</style>
+
+<div class="pub-item">
+  <div class="pub-image">
+    <img src="/images/pub_www.png" alt="Paper Teaser">
+  </div>
+  
+  <div class="pub-content">
+    <div class="pub-title">
+      <a href="https://arxiv.org/pdf/2510.08966" style="text-decoration:none; color:inherit;">
+        Semantic-Condition Tuning: Fusing Graph Context with Large Language Models for Knowledge Graph Completion
+      </a>
+    </div>
+    
+    <div class="pub-authors">
+      <strong>Ruitong Liu</strong>, Yan Wen, Te Sun, Yunjia Wu, Pingyang Huang, Zihang Yu, Siyuan Li
+    </div>
+    
+    <div class="pub-venue">
+      WWW 2026 Under Review
+    </div>
+    
+    <p style="font-size: 0.9em; margin-bottom: 10px;">
+        Proposed Semantic-Condition Tuning (SCT), a framework that synthesizes context-aware semantic data from graph structures to enhance LLM reasoning. Designed a knowledge-enhanced data selection mechanism that utilizes LLM-generated descriptions to filter noisy topological context, enabling deep feature-level fusion of structural priors into textual representations.
+    </p>
+
+    <div class="pub-links">
+      <a href="https://arxiv.org/pdf/2510.08966">PDF</a>
+      <a href="javascript:void(0)" onclick="toggleBibtex('bib_sct')">BibTeX</a>
+    </div>
+
+    <div id="bib_sct" style="display:none; margin-top:10px; padding:10px; background:#f9f9f9; border:1px solid #ddd; font-family:monospace; font-size:0.8em; white-space:pre-wrap;">@misc{liu2025semanticcondition,
+  title        = {Semantic-Condition Tuning: Fusing Graph Context with Large Language Models for Knowledge Graph Completion},
+  author       = {Liu, Ruitong and Wen, Yan and Sun, Te and Wu, Yunjia and Huang, Pingyang and Yu, Zihang and Li, Siyuan},
+  year         = {2025},
+  eprint       = {2510.08966},
+  archivePrefix= {arXiv},
+  primaryClass = {cs.AI},
+  note         = {arXiv preprint},
+  doi          = {10.48550/arXiv.2510.08966}
+}</div>
+
+  </div>
+</div>
+
+<script>
+function toggleBibtex(elementId) {
+  var x = document.getElementById(elementId);
+  if (x.style.display === "none") {
+    x.style.display = "block"; 
+  } else {
+    x.style.display = "none";  
+  }
+}
+</script>

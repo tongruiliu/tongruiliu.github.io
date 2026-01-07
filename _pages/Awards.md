@@ -5,6 +5,7 @@ permalink: /Awards/
 author_profile: true
 ---
 
+* May 2025: Third Prize in the National Network Technology Track of the China University Computer Competition
 * May 2025: Awarded "Model Excellent Communist Youth League Member" of Dalian University of Technology **(only 7 undergraduate students across the university)**
 * March 2025: Awarded "Five-Star Volunteer" of Dalian University of Technology **(with a total volunteer service duration of over 600 hours in three years)**
 * January 2025: Awarded "Excellent League Cadre" of the School of Mathematical Sciences

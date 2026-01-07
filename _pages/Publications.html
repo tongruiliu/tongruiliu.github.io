@@ -1,40 +1,46 @@
+---
+layout: single
+title: "Publications"
+permalink: /publications/
+author_profile: true
+---
+
 <style>
-  /* 每一个 publication 的容器 */
   .pub-item {
-    display: flex;            /* 开启 Flex 布局，实现左右排列 */
-    margin-bottom: 30px;      /* 每个项目之间的间距 */
-    align-items: flex-start;  /* 顶部对齐 */
-    border-bottom: 1px solid #eee; /* 可选：加个底部分割线 */
+    display: flex;            
+    margin-bottom: 30px;      
+    align-items: flex-start;  
+    border-bottom: 1px solid #eee; 
     padding-bottom: 20px;
   }
 
-  /* 左侧图片区域 */
+
   .pub-image {
-    flex: 0 0 200px;          /* 固定宽度 200px，不伸缩 */
-    margin-right: 25px;       /* 图片和文字的间距 */
+    flex: 0 0 200px;        
+    margin-right: 25px;      
   }
 
   .pub-image img {
-    width: 100%;              /* 图片宽度填满容器 */
-    border-radius: 5px;       /* 图片圆角 */
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1); /* 图片阴影，更有质感 */
-    transition: transform 0.2s; /* 鼠标悬停动画效果 */
+    width: 100%;            
+    border-radius: 5px;      
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1); 
+    transition: transform 0.2s; 
   }
   
   .pub-image img:hover {
-    transform: scale(1.02);   /* 鼠标放上去稍微放大一点 */
+    transform: scale(1.02);   
   }
 
-  /* 右侧文字内容区域 */
+
   .pub-content {
-    flex: 1;                  /* 占据剩余空间 */
+    flex: 1;                 
   }
 
   .pub-title {
     font-weight: bold;
     font-size: 1.1em;
     margin-bottom: 5px;
-    color: #333;              /* 标题颜色 */
+    color: #333;            
   }
 
   .pub-authors {
@@ -65,7 +71,7 @@
     border-color: #999;
   }
 
-  /* 手机端适配：屏幕变窄时变成上下排列 */
+
   @media (max-width: 768px) {
     .pub-item {
       flex-direction: column;
@@ -84,7 +90,7 @@
 
 <div class="pub-item">
   <div class="pub-image">
-    <img src="/images/pub_www.png" alt="Paper Teaser">
+    <img src="{{ '/images/pub_www.png' | relative_url }}" alt="Paper Teaser">
   </div>
   
   <div class="pub-content">

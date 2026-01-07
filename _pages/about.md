@@ -7,7 +7,8 @@ redirect_from:
   - /about.html
 ---
 
-Welcome to my homepage! I am a senior student at [Dalian University of Technology](https://www.dlut.edu.cn/), majoring in [Mathematics and Applied Mathematics](https://math.dlut.edu.cn/). My research interests include Large Language Models(LLMs), Data-Centric AI(DCAI), and Knowledge Graphs(KG). If you are interested in collaborating or exchanging ideas in related fields, please feel free to contact me via email at any time!
+Welcome to my homepage! I am a senior student at [Dalian University of Technology](https://www.dlut.edu.cn/), majoring in [Mathematics and Applied Mathematics](https://math.dlut.edu.cn/). My research centers on Data-Centric AI for Large Language Models (LLMs) and Multimodal LLMs, spanning from large-scale data engineering to complex reasoning optimization. I specialize in developing scalable frameworks for automated data synthesis and quality filtering, while simultaneously designing advanced alignment algorithms to
+enhance model intelligence. Additionally, I investigate Knowledge Graphs (KGs), leveraging structure-aware modeling to improve factual reliability and logical consistency If you are interested in collaborating or exchanging ideas in related fields, please feel free to contact me via email at any time!
 * Email addresses: 15668672116@163.com / ruitong.jerry@gmail.com
 * Wechat: ruitong_jerry or Search for my phone number
 
@@ -18,11 +19,13 @@ Reviewer/PC Member:Transactions on Knowledge Discovery from Data(TKDD)
 <h2 style="color: red; font-size: 1.5em;">What's New</h2>
 For detailed paper information, please refer to the "[Publications](/Publications/)" section.
 
-* **September 2025**: Invited by the journal publisher, our review paper on large model data preparation is to be published in Journal of Computer Science and Technology (<strong>JCST</strong>).
-* **August 2025**: FMS has been submitted to IEEE Transactions on Pattern Analysis and Machine Intelligence (<strong>TPAMI</strong>) and is currently under review.
-* **July 2025**: SARMP has been accepted by the International Conference on Neural Information Processing (<strong>ICONIP 2025</strong>).
-* **June 2025**: A paper on knowledge graph relation completion (FMS) has been uploaded to arXiv, with its code open-sourced.
-* **June 2025**: A paper on knowledge graph completion (SARMP) has been uploaded to arXiv, with its code open-sourced.
+* **January 2026**: A paper on closed-loop multimodal reinforcement learning that injects real-time verification signals into policy rollouts to mitigate error propagation and hallucination has been submitted to <strong>ICML 2026</strong>.
+* **January 2026**: A paper on entity state tuning that injects persistent, evolving states into temporal knowledge graph forecasting to bridge structural and sequential reasoning has been submitted to <strong>ACL 2026</strong>. 
+* **January 2026**: A paper on a dynamic multi-turn Text-to-SQL benchmark for evaluating large language models in real-world, stateful database interactions has been submitted to <strong>ACL 2026</strong>.
+* **October 2025**: A paper on semantic-condition tuning that injects structured knowledge into large language models for knowledge graph completion has been submitted to <strong>WWW 2026</strong>.
+* **September 2025**: Invited by the journal publisher, our review paper on large model data preparation is to be published in Journal of Computer Science and Technology (<strong>JCST</strong>), and it is currently under minor revision.
+* **August 2025**: A paper on knowledge graph relation completion (FMS) has been submitted to <strong>TPAMI</strong> with its code open-sourced. Now it is currently under review.
+* **July 2025**: A paper on knowledge graph relation completion (SARMP) has been accepted by the International Conference on Neural Information Processing (<strong>ICONIP 2025</strong>).
 * **July 2024**: I was pre-admitted to the School of Mathematical Sciences, Peking University, through the postgraduate recommendation program (bao yan).
 
 

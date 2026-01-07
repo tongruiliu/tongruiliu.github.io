@@ -31,6 +31,58 @@ author_profile: true
     transform: scale(1.02);   
   }
 
+  .pub-image-button {
+    border: 0;
+    padding: 0;
+    background: transparent;
+    cursor: zoom-in;
+  }
+
+  .pub-image-button:focus {
+    outline: 2px solid #666;
+    outline-offset: 4px;
+  }
+
+  .pub-lightbox {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.8);
+    display: none;
+    align-items: center;
+    justify-content: center;
+    z-index: 9999;
+    padding: 20px;
+  }
+
+  .pub-lightbox.is-open {
+    display: flex;
+  }
+
+  .pub-lightbox__inner {
+    position: relative;
+    max-width: 95vw;
+    max-height: 90vh;
+  }
+
+  .pub-lightbox__img {
+    max-width: 95vw;
+    max-height: 90vh;
+    border-radius: 6px;
+    background: #fff;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+    cursor: zoom-out;
+  }
+
+  .pub-lightbox__close {
+    position: absolute;
+    top: -36px;
+    right: 0;
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    padding: 4px 8px;
+    cursor: pointer;
+  }
 
   .pub-content {
     flex: 1;                 
@@ -90,7 +142,9 @@ author_profile: true
 
 <div class="pub-item">
   <div class="pub-image">
-    <img src="{{ '/images/pub_www.png' | relative_url }}" alt="Paper Teaser">
+    <button class="pub-image-button" type="button" data-full="{{ '/images/pub_www.png' | relative_url }}" aria-label="Open image">
+      <img src="{{ '/images/pub_www.png' | relative_url }}" alt="Paper Teaser">
+    </button>
   </div>
   
   <div class="pub-content">
@@ -131,6 +185,13 @@ author_profile: true
   </div>
 </div>
 
+<div id="pub-lightbox" class="pub-lightbox" aria-hidden="true">
+  <div class="pub-lightbox__inner" role="dialog" aria-modal="true">
+    <button id="pub-lightbox-close" class="pub-lightbox__close" type="button">Close</button>
+    <img id="pub-lightbox-img" class="pub-lightbox__img" src="" alt="">
+  </div>
+</div>
+
 <script>
 function toggleBibtex(elementId) {
   var x = document.getElementById(elementId);
@@ -140,4 +201,58 @@ function toggleBibtex(elementId) {
     x.style.display = "none";  
   }
 }
+
+(function () {
+  var lightbox = document.getElementById('pub-lightbox');
+  var lightboxImg = document.getElementById('pub-lightbox-img');
+  var closeBtn = document.getElementById('pub-lightbox-close');
+
+  if (!lightbox || !lightboxImg) {
+    return;
+  }
+
+  function openLightbox(src, alt) {
+    lightboxImg.src = src;
+    lightboxImg.alt = alt || '';
+    lightbox.classList.add('is-open');
+    lightbox.setAttribute('aria-hidden', 'false');
+    if (closeBtn) {
+      closeBtn.focus();
+    }
+  }
+
+  function closeLightbox() {
+    lightbox.classList.remove('is-open');
+    lightbox.setAttribute('aria-hidden', 'true');
+    lightboxImg.src = '';
+  }
+
+  document.querySelectorAll('.pub-image-button').forEach(function (btn) {
+    btn.addEventListener('click', function () {
+      var img = btn.querySelector('img');
+      if (!img) {
+        return;
+      }
+      openLightbox(btn.getAttribute('data-full') || img.src, img.alt);
+    });
+  });
+
+  lightbox.addEventListener('click', function (event) {
+    if (event.target === lightbox) {
+      closeLightbox();
+    }
+  });
+
+  if (closeBtn) {
+    closeBtn.addEventListener('click', closeLightbox);
+  }
+
+  lightboxImg.addEventListener('click', closeLightbox);
+
+  document.addEventListener('keydown', function (event) {
+    if (event.key === 'Escape' && lightbox.classList.contains('is-open')) {
+      closeLightbox();
+    }
+  });
+})();
 </script>

@@ -8,7 +8,7 @@ redirect_from:
 ---
 
 Welcome to my homepage! I am a senior student at [Dalian University of Technology](https://www.dlut.edu.cn/), majoring in [Mathematics and Applied Mathematics](https://math.dlut.edu.cn/). My research centers on Data-Centric AI for Large Language Models (LLMs) and Multimodal LLMs, spanning from large-scale data engineering to complex reasoning optimization. I specialize in developing scalable frameworks for automated data synthesis and quality filtering, while simultaneously designing advanced alignment algorithms to
-enhance model intelligence. Additionally, I investigate Knowledge Graphs (KGs), leveraging structure-aware modeling to improve factual reliability and logical consistency If you are interested in collaborating or exchanging ideas in related fields, please feel free to contact me via email at any time!
+enhance model intelligence. Additionally, I investigate Knowledge Graphs (KGs), leveraging structure-aware modeling to improve factual reliability and logical consistency. If you are interested in collaborating or exchanging ideas in related fields, please feel free to contact me via email at any time!
 * Email addresses: 15668672116@163.com / ruitong.jerry@gmail.com
 * Wechat: ruitong_jerry or Search for my phone number
 

@@ -40,6 +40,7 @@ For comprehensive information about honors and awards, please refer to the "[Awa
 * Award-2024 <strong>The National Scholarship</strong>
 
 
+
 <div style="display: flex; flex-wrap: wrap; gap: 24px; justify-content: center; align-items: center; margin-top: 20px;">
   <div style="text-align: center;">
     <script type="text/javascript" id="clstr_globe" src="//clustrmaps.com/globe.js?d=wWuKIsCZO2yYZA7sXQVVhdoENIGHAUsZCAy6ZjG-Uhk"></script>
@@ -47,20 +48,37 @@ For comprehensive information about honors and awards, please refer to the "[Awa
   </div>
   <div style="min-width: 200px; padding: 16px 22px; border-radius: 14px; background: linear-gradient(135deg, #0f2027, #203a43, #2c5364); color: #fff; text-align: center; box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);">
     <div style="font-size: 0.75em; letter-spacing: 0.18em; text-transform: uppercase; opacity: 0.8;">Visit Counter</div>
-    <div id="visitor-count" style="font-size: 2.2em; font-weight: 700; margin: 6px 0 4px;">--</div>
-    <div style="font-size: 0.85em; opacity: 0.75;">Page views</div>
+    <div id="busuanzi_value_site_pv" data-offset="15" style="font-size: 2.2em; font-weight: 700; margin: 6px 0 4px;">--</div>
+    <div style="font-size: 0.85em; opacity: 0.75;">Page views (PV)</div>
   </div>
 </div>
 
+<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
 <script>
 (function () {
-  var counterEl = document.getElementById('visitor-count');
+  var counterEl = document.getElementById('busuanzi_value_site_pv');
   if (!counterEl) {
     return;
   }
-  fetch('https://api.countapi.xyz/hit/tongruiliu.github.io/visits')
-    .then(function (res) { return res.json(); })
-    .then(function (data) { counterEl.textContent = Number(data.value).toLocaleString(); })
-    .catch(function () { counterEl.textContent = 'N/A'; });
+  var attempts = 0;
+  var timer = setInterval(function () {
+    attempts += 1;
+    if (counterEl.getAttribute('data-offset-applied') === 'true') {
+      clearInterval(timer);
+      return;
+    }
+    var raw = (counterEl.textContent || '').replace(/,/g, '');
+    var value = parseInt(raw, 10);
+    if (Number.isNaN(value)) {
+      if (attempts >= 20) {
+        clearInterval(timer);
+      }
+      return;
+    }
+    var offset = parseInt(counterEl.getAttribute('data-offset') || '0', 10);
+    counterEl.textContent = (value + offset).toLocaleString();
+    counterEl.setAttribute('data-offset-applied', 'true');
+    clearInterval(timer);
+  }, 500);
 })();
 </script>

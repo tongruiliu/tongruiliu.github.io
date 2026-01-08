@@ -41,12 +41,15 @@ For comprehensive information about honors and awards, please refer to the "[Awa
 
 
 
-<div style="display: flex; flex-wrap: wrap; gap: 24px; justify-content: center; align-items: center; margin-top: 20px;">
+<h3 style="color: blue; font-size: 1.5em;">Visitor</h3>
+<div style="display: flex; flex-direction: column; align-items: center; gap: 18px; margin-top: 20px;">
   <div style="text-align: center;">
-    <script type="text/javascript" id="clstr_globe" src="//clustrmaps.com/globe.js?d=wWuKIsCZO2yYZA7sXQVVhdoENIGHAUsZCAy6ZjG-Uhk"></script>
+    <div style="display: inline-block; zoom: 5;">
+      <script type="text/javascript" id="clstr_globe" src="//clustrmaps.com/globe.js?d=wWuKIsCZO2yYZA7sXQVVhdoENIGHAUsZCAy6ZjG-Uhk"></script>
+    </div>
     <div style="font-size: 0.9em; color: #666; margin-top: 6px;">Visitor Geography</div>
   </div>
-  <div style="min-width: 200px; padding: 16px 22px; border-radius: 14px; background: linear-gradient(135deg, #0f2027, #203a43, #2c5364); color: #fff; text-align: center; box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);">
+  <div style="min-width: 220px; padding: 16px 22px; border-radius: 14px; background: linear-gradient(135deg, #0f2027, #203a43, #2c5364); color: #fff; text-align: center; box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);">
     <div style="font-size: 0.75em; letter-spacing: 0.18em; text-transform: uppercase; opacity: 0.8;">Visit Counter</div>
     <div id="busuanzi_value_site_pv" data-offset="15" style="font-size: 2.2em; font-weight: 700; margin: 6px 0 4px;">--</div>
     <div style="font-size: 0.85em; opacity: 0.75;">Page views (PV)</div>

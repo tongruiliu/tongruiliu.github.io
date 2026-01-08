@@ -45,7 +45,9 @@ For comprehensive information about honors and awards, please refer to the "[Awa
 <div style="display: flex; flex-direction: column; align-items: center; gap: 18px; margin-top: 20px;">
   <div style="text-align: center;">
     <div style="display: inline-block; zoom: 5;">
-      <script type="text/javascript" id="clstr_globe" src="https://clustrmaps.com/globe.js?d=wWuKIsCZO2yYZA7sXQVVhdoENIGHAUsZCAy6ZjG-Uhk"></script>
+      <a href="https://clustrmaps.com/site/1c8xb" title="ClustrMaps">
+        <img src="//www.clustrmaps.com/map_v2.png?d=wWuKIsCZO2yYZA7sXQVVhdoENIGHAUsZCAy6ZjG-Uhk&cl=ffffff" alt="ClustrMaps" />
+      </a>
     </div>
     <div style="font-size: 0.9em; color: #666; margin-top: 6px;">Visitor Geography</div>
   </div>

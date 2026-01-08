@@ -53,7 +53,7 @@ For comprehensive information about honors and awards, please refer to the "[Awa
   </div>
   <div style="min-width: 220px; padding: 16px 22px; border-radius: 14px; background: linear-gradient(135deg, #0f2027, #203a43, #2c5364); color: #fff; text-align: center; box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);">
     <div style="font-size: 0.75em; letter-spacing: 0.18em; text-transform: uppercase; opacity: 0.8;">Visit Counter</div>
-    <div id="busuanzi_value_site_pv" data-offset="15" style="font-size: 2.2em; font-weight: 700; margin: 6px 0 4px;">--</div>
+    <div id="busuanzi_value_site_pv" data-offset="20" style="font-size: 2.2em; font-weight: 700; margin: 6px 0 4px;">--</div>
     <div style="font-size: 0.85em; opacity: 0.75;">Page views (PV)</div>
   </div>
 </div>

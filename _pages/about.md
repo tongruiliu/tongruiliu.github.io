@@ -19,12 +19,11 @@ Reviewer/PC Member:Transactions on Knowledge Discovery from Data(TKDD)
 <h2 style="color: red; font-size: 1.5em;">What's New</h2>
 For detailed paper information, please refer to the "[Publications](/Publications.html)" section.
 
-* **January 2026**: A paper on closed-loop multimodal reinforcement learning that injects real-time verification signals into policy rollouts to mitigate error propagation and hallucination has been submitted to <strong>ICML 2026</strong>.
-* **January 2026**: A paper on entity state tuning that injects persistent, evolving states into temporal knowledge graph forecasting to bridge structural and sequential reasoning has been submitted to <strong>ACL 2026</strong>. 
-* **January 2026**: A paper on a dynamic multi-turn Text-to-SQL benchmark for evaluating large language models in real-world, stateful database interactions has been submitted to <strong>ACL 2026</strong>.
-* **October 2025**: A paper on semantic-condition tuning that injects structured knowledge into large language models for knowledge graph completion has been submitted to <strong>WWW 2026</strong>.
+* **January 2026**: Two paper have been submitted to <strong>ICML 2026</strong>.
+* **January 2026**: Two paper have been submitted to <strong>ACL 2026</strong>. 
+* **October 2025**: A paper has been submitted to <strong>WWW 2026</strong>.
 * **September 2025**: Invited by the journal publisher, our review paper on large model data preparation is to be published in Journal of Computer Science and Technology (<strong>JCST</strong>), and it is currently under minor revision.
-* **August 2025**: A paper on knowledge graph relation completion (FMS) has been submitted to <strong>TPAMI</strong> with its code open-sourced. Now it is currently under review.
+* **August 2025**: A paper has been submitted to <strong>TPAMI</strong>.
 * **July 2025**: A paper on knowledge graph relation completion (SARMP) has been accepted by the International Conference on Neural Information Processing (<strong>ICONIP 2025</strong>).
 * **July 2024**: I was pre-admitted to the School of Mathematical Sciences, Peking University, through the postgraduate recommendation program (bao yan).
 

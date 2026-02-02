@@ -24,7 +24,7 @@ For detailed paper information, please refer to the "[Publications](/Publication
 * **January 2026**: Two paper have been submitted to <strong>ACL 2026</strong>. 
 * **October 2025**: A paper has been submitted to <strong>WWW 2026</strong>.
 * **August 2025**: A paper has been submitted to <strong>TPAMI</strong>.
-* **July 2025**: A paper is accepted by (<strong>ICONIP 2025</strong>).
+* **July 2025**: A paper is accepted by <strong>ICONIP 2025</strong>.
 * **July 2025**: I was pre-admitted to the School of Mathematical Sciences, Peking University, through the postgraduate recommendation program (bao yan).
 
 

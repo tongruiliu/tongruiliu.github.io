@@ -1,0 +1,536 @@
+---
+layout: single
+title: "Publications"
+permalink: /publications/
+author_profile: true
+---
+
+<style>
+  .pub-item {
+    display: flex;            
+    margin-bottom: 30px;      
+    align-items: flex-start;  
+    border-bottom: 1px solid #eee; 
+    padding-bottom: 20px;
+  }
+
+
+  .pub-image {
+    flex: 0 0 200px;        
+    margin-right: 25px;      
+  }
+
+  .pub-image img {
+    width: 100%;            
+    border-radius: 5px;      
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1); 
+    transition: transform 0.2s; 
+  }
+  
+  .pub-image img:hover {
+    transform: scale(1.02);   
+  }
+
+  .pub-image-button {
+    border: 0;
+    padding: 0;
+    background: transparent;
+    cursor: zoom-in;
+  }
+
+  .pub-image-button:focus {
+    outline: 2px solid #666;
+    outline-offset: 4px;
+  }
+
+  .pub-lightbox {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.8);
+    display: none;
+    align-items: center;
+    justify-content: center;
+    z-index: 9999;
+    padding: 20px;
+  }
+
+  .pub-lightbox.is-open {
+    display: flex;
+  }
+
+  .pub-lightbox__inner {
+    position: relative;
+    max-width: 95vw;
+    max-height: 90vh;
+  }
+
+  .pub-lightbox__img {
+    max-width: 95vw;
+    max-height: 90vh;
+    border-radius: 6px;
+    background: #fff;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+    cursor: zoom-out;
+  }
+
+  .pub-lightbox__close {
+    position: absolute;
+    top: -36px;
+    right: 0;
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    padding: 4px 8px;
+    cursor: pointer;
+  }
+
+  .pub-content {
+    flex: 1;                 
+  }
+
+  .pub-title {
+    font-weight: bold;
+    font-size: 1.1em;
+    margin-bottom: 5px;
+    color: #333;            
+  }
+
+  .pub-authors {
+    color: #555;
+    margin-bottom: 5px;
+  }
+
+  .pub-venue {
+    font-style: italic;
+    color: #666;
+    margin-bottom: 10px;
+  }
+
+  .pub-links a {
+    text-decoration: none;
+    display: inline-block;
+    padding: 2px 8px;
+    margin-right: 5px;
+    border: 1px solid #ddd;
+    border-radius: 3px;
+    font-size: 0.9em;
+    color: #444;
+    transition: all 0.2s;
+  }
+
+  .pub-links a:hover {
+    background-color: #f0f0f0;
+    border-color: #999;
+  }
+
+
+  @media (max-width: 768px) {
+    .pub-item {
+      flex-direction: column;
+    }
+    .pub-image {
+      flex: 0 0 auto;
+      width: 100%;
+      margin-right: 0;
+      margin-bottom: 15px;
+    }
+    .pub-image img {
+      width: 100%; 
+    }
+  }
+</style>
+
+<div class="pub-item">
+  <div class="pub-image">
+    <button class="pub-image-button" type="button" data-full="{{ '/images/pub_icml_guide.png' | relative_url }}" aria-label="Open image">
+      <img src="{{ '/images/pub_icml_guide.png' | relative_url }}" alt="Paper Teaser">
+    </button>
+  </div>
+
+  <div class="pub-content">
+    <div class="pub-title">
+      <a href="https://arxiv.org/pdf/2602.04290" style="text-decoration:none; color:inherit;">
+        Guided Verifier: Collaborative Multimodal Reasoning via Dynamic Process Supervision
+      </a>
+    </div>
+
+    <div class="pub-authors">
+      Lingzhuang Sun*, <strong>Ruitong Liu*</strong>, Yuxia Zhu*, Xiaohan Xu, Jingxuan Wei, Xiangxiang Zhang, Bihui Yu, Wentao Zhang#
+    </div>
+
+    <div class="pub-venue">
+      *: Equal contribution, #: Corresponding author
+    </div>
+
+    <div class="pub-venue">
+      ICML 2026 Under Review
+    </div>
+
+    <p style="font-size: 0.9em; margin-bottom: 10px;">
+      Developed an end-to-end multimodal reasoning framework with three core contributions: (1) built a scalable data synthesis pipeline (CoRe) that constructs fine-grained process-level supervision by generating targeted multimodal error/hallucination cases for verifier training; (2) updated the RL optimization recipe to incorporate dynamic verifier-guided process supervision during rollouts, improving credit assignment and training stability; and (3) introduced an inference-time collaborative reasoning algorithm where the guided verifier adaptively intervenes to provide targeted corrections and trajectory refinements, boosting robustness and efficiency beyond post-hoc verification.
+    </p>
+
+    <div class="pub-links">
+      <a href="https://arxiv.org/pdf/2602.04290">PDF</a>
+      <a href="javascript:void(0)" onclick="toggleBibtex('bib_guided_verifier')">BibTeX</a>
+      <a href="https://github.com/tongruiliu/Guided-GRPO">Code</a>
+      <a href="https://huggingface.co/ruitongl/Guided-Verifier-8B">Model</a>
+    </div>
+
+    <div id="bib_guided_verifier" style="display:none; margin-top:10px; padding:10px; background:#f9f9f9; border:1px solid #ddd; font-family:monospace; font-size:0.8em; white-space:pre-wrap;">@misc{sun2026guidedverifier,
+  title         = {Guided Verifier: Collaborative Multimodal Reasoning via Dynamic Process Supervision},
+  author        = {Sun, Lingzhuang and Liu, Ruitong and Zhu, Yuxia and Xu, Xiaohan and Wei, Jingxuan and Zhang, Xiangxiang and Yu, Bihui and Zhang, Wentao},
+  year          = {2026},
+  month         = feb,
+  eprint        = {2602.04290},
+  archivePrefix = {arXiv},
+  primaryClass  = {cs.CL},
+  doi           = {10.48550/arXiv.2602.04290},
+  url           = {https://arxiv.org/abs/2602.04290}
+}</div>
+  </div>
+</div>
+
+<div class="pub-item">
+  <div class="pub-image">
+    <button class="pub-image-button" type="button" data-full="{{ '/images/pub_www.png' | relative_url }}" aria-label="Open image">
+      <img src="{{ '/images/pub_www.png' | relative_url }}" alt="Paper Teaser">
+    </button>
+  </div>
+  
+  <div class="pub-content">
+    <div class="pub-title">
+      <a href="https://arxiv.org/pdf/2510.08966" style="text-decoration:none; color:inherit;">
+        Semantic-Condition Tuning: Fusing Graph Context with Large Language Models for Knowledge Graph Completion
+      </a>
+    </div>
+    
+    <div class="pub-authors">
+      <strong>Ruitong Liu</strong>, Yan Wen, Te Sun, Yunjia Wu, Pingyang Huang, Zihang Yu, Siyuan Li
+    </div>
+    
+    <div class="pub-venue">
+      WWW 2026 Under Review
+    </div>
+    
+    <p style="font-size: 0.9em; margin-bottom: 10px;">
+        Proposed Semantic-Condition Tuning (SCT), a framework that synthesizes context-aware semantic data from graph structures to enhance LLM reasoning. Designed a knowledge-enhanced data selection mechanism that utilizes LLM-generated descriptions to filter noisy topological context, enabling deep feature-level fusion of structural priors into textual representations.
+    </p>
+
+    <div class="pub-links">
+      <a href="https://arxiv.org/pdf/2510.08966">PDF</a>
+      <a href="javascript:void(0)" onclick="toggleBibtex('bib_sct')">BibTeX</a>
+      <a href="https://github.com/tongruiliu/GMT">Code</a>
+    </div>
+
+    <div id="bib_sct" style="display:none; margin-top:10px; padding:10px; background:#f9f9f9; border:1px solid #ddd; font-family:monospace; font-size:0.8em; white-space:pre-wrap;">@misc{liu2025semanticcondition,
+  title        = {Semantic-Condition Tuning: Fusing Graph Context with Large Language Models for Knowledge Graph Completion},
+  author       = {Liu, Ruitong and Wen, Yan and Sun, Te and Wu, Yunjia and Huang, Pingyang and Yu, Zihang and Li, Siyuan},
+  year         = {2025},
+  eprint       = {2510.08966},
+  archivePrefix= {arXiv},
+  primaryClass = {cs.AI},
+  note         = {arXiv preprint},
+  doi          = {10.48550/arXiv.2510.08966}
+}</div>
+
+  </div>
+</div>
+
+<div class="pub-item">
+  <div class="pub-image">
+    <button class="pub-image-button" type="button" data-full="{{ '/images/pub_tpami.png' | relative_url }}" aria-label="Open image">
+      <img src="{{ '/images/pub_tpami.png' | relative_url }}" alt="Paper Teaser">
+    </button>
+  </div>
+
+  <div class="pub-content">
+    <div class="pub-title">
+      <a href="https://arxiv.org/pdf/2506.23137" style="text-decoration:none; color:inherit;">
+        Flow-Modulated Scoring for Semantic-Aware Knowledge Graph Completion
+      </a>
+    </div>
+
+    <div class="pub-authors">
+      Siyuan Li, <strong>Ruitong Liu</strong>, Yan Wen, Te Sun, Andi Zhang, Yanbiao Ma#, Xiaoshuai Hao#
+    </div>
+
+    <div class="pub-venue">
+      #: Corresponding author
+    </div>
+
+    <div class="pub-venue">
+      TPAMI Under Review
+    </div>
+
+    <p style="font-size: 0.9em; margin-bottom: 10px;">
+      Research on Semantic-Aware Knowledge Graph Completion. Conducted research on Knowledge Graph (KG) representation learning, focusing on structure-aware data synthesis and dynamic semantics modeling. Proposed Flow-Modulated Scoring (FMS), a framework that utilizes an energy-based Top-K data selection mechanism to filter noisy context and employs conditional flow matching to synthesize dynamic entity state representations, achieving state-of-the-art performance.
+    </p>
+
+    <div class="pub-links">
+      <a href="https://arxiv.org/pdf/2506.23137">PDF</a>
+      <a href="javascript:void(0)" onclick="toggleBibtex('bib_tpami')">BibTeX</a>
+      <a href="https://github.com/yuanwuyuan9/FMS">Code</a>
+    </div>
+
+    <div id="bib_tpami" style="display:none; margin-top:10px; padding:10px; background:#f9f9f9; border:1px solid #ddd; font-family:monospace; font-size:0.8em; white-space:pre-wrap;">@misc{Li2025FlowModulated,
+  title        = {Flow-Modulated Scoring for Semantic-Aware Knowledge Graph Completion},
+  author       = {Siyuan Li and Ruitong Liu and Yan Wen and Te Sun and Andi Zhang and Yanbiao Ma and Xiaoshuai Hao},
+  year         = {2025},
+  eprint       = {2506.23137},
+  archivePrefix= {arXiv},
+  primaryClass = {cs.CL},
+  doi          = {10.48550/arXiv.2506.23137},
+  url          = {https://arxiv.org/abs/2506.23137}
+}</div>
+
+  </div>
+</div>
+
+<div class="pub-item">
+  <div class="pub-image">
+    <button class="pub-image-button" type="button" data-full="{{ '/images/pub_survey.png' | relative_url }}" aria-label="Open image">
+      <img src="{{ '/images/pub_survey.png' | relative_url }}" alt="Paper Teaser">
+    </button>
+  </div>
+
+  <div class="pub-content">
+    <div class="pub-title">
+      <a href="https://drive.google.com/file/d/1TqwULwmD8f-cpokfcfYfapuC9bNxrztA/view?usp=sharing" style="text-decoration:none; color:inherit;">
+        Data Preparation for Large Language Models: A Survey
+      </a>
+    </div>
+
+    <div class="pub-authors">
+      Hao Liang, Zhen Hao Wong, <strong>Ruitong Liu</strong>, Yuhan Wang, Meiyi Qiang, Zhengyang Zhao, Chengyu Shen, Conghui He#, Wentao Zhang#, Bin Cui#
+    </div>
+
+    <div class="pub-venue">
+      #: Corresponding author
+    </div>
+
+    <div class="pub-venue">
+      JCST's 40th Anniversary Special Issue
+    </div>
+
+    <p style="font-size: 0.9em; margin-bottom: 10px;">
+      Led the research on Post-Training data preparation, systematically surveying the full lifecycle of data pipelines for Supervised Fine-Tuning (SFT) and RLHF. Analyzed and categorized state-of-the-art methodologies for instruction synthesis, quality filtering, and preference alignment, establishing a rigorous taxonomy to guide the construction of high-quality alignment corpora.
+    </p>
+
+    <div class="pub-links">
+      <a href="https://drive.google.com/file/d/1TqwULwmD8f-cpokfcfYfapuC9bNxrztA/view?usp=sharing">PDF</a>
+      <a href="javascript:void(0)" onclick="toggleBibtex('bib_survey')">BibTeX</a>
+    </div>
+
+    <div id="bib_survey" style="display:none; margin-top:10px; padding:10px; background:#f9f9f9; border:1px solid #ddd; font-family:monospace; font-size:0.8em; white-space:pre-wrap;">Coming Soon</div>
+  </div>
+</div>
+
+<div class="pub-item">
+  <div class="pub-image">
+    <button class="pub-image-button" type="button" data-full="{{ '/images/ICONIP.png' | relative_url }}" aria-label="Open image">
+      <img src="{{ '/images/ICONIP.png' | relative_url }}" alt="Paper Teaser">
+    </button>
+  </div>
+
+  <div class="pub-content">
+    <div class="pub-title">
+      <a href="https://link.springer.com/chapter/10.1007/978-981-95-4367-0_38" style="text-decoration:none; color:inherit;">
+        Context-Driven Knowledge Graph Completion with Semantic-Aware Relational Message Passing
+      </a>
+    </div>
+
+    <div class="pub-authors">
+      Siyuan Li, <strong>Ruitong Liu</strong>, Te Sun, Yan Wen, Ruihao Zhou, Jingyi Kang, Yunjia Wu
+    </div>
+
+    <div class="pub-venue">
+      ICONIP 2025 Poster
+    </div>
+
+    <p style="font-size: 0.9em; margin-bottom: 10px;">
+      Proposed Semantic-Aware Relational Message Passing (SARMP), a framework that addresses noise and over-smoothing in Knowledge Graph Completion. Designed a semantic-aware Top-K neighbor selection strategy to filter irrelevant edges based on latent similarity, enabling the precise aggregation of contextual cues via multi-head attention mechanisms.
+    </p>
+
+    <div class="pub-links">
+      <a href="https://link.springer.com/chapter/10.1007/978-981-95-4367-0_38">PDF</a>
+      <a href="javascript:void(0)" onclick="toggleBibtex('bib_iconip')">BibTeX</a>
+    </div>
+
+    <div id="bib_iconip" style="display:none; margin-top:10px; padding:10px; background:#f9f9f9; border:1px solid #ddd; font-family:monospace; font-size:0.8em; white-space:pre-wrap;">@incollection{Li2025ContextDriven,
+  author       = {Siyuan Li and Ruitong Liu and Te Sun and Yan Wen and Ruihao Zhou and Jingyi Kang and Yunjia Wu},
+  title        = {Context-Driven Knowledge Graph Completion with Semantic-Aware Relational Message Passing},
+  booktitle    = {Neural Information Processing},
+  editor       = {Tadahiro Taniguchi and Chi Sing Andrew Leung and Tadashi Kozuno and Junichiro Yoshimoto and Mufti Mahmud and Maryam Doborjeh and Kenji Doya},
+  series       = {Lecture Notes in Computer Science},
+  volume       = {16309},
+  pages        = {567--580},
+  publisher    = {Springer Singapore},
+  address      = {Singapore},
+  year         = {2025},
+  doi          = {10.1007/978-981-95-4367-0_38},
+  isbn         = {978-981-95-4367-0},
+  url          = {https://link.springer.com/chapter/10.1007/978-981-95-4367-0_38}
+}</div>
+  </div>
+</div>
+
+<div class="pub-item">
+  <div class="pub-image">
+    <button class="pub-image-button" type="button" data-full="{{ '/images/t2sql.png' | relative_url }}" aria-label="Open image">
+      <img src="{{ '/images/t2sql.png' | relative_url }}" alt="Paper Teaser">
+    </button>
+  </div>
+
+  <div class="pub-content">
+    <div class="pub-title">
+      <a href="https://arxiv.org/pdf/2510.26495" style="text-decoration:none; color:inherit;">
+        Rethinking Text-to-SQL: Dynamic Multi-turn SQL Interaction for Real-world Database Exploration
+      </a>
+    </div>
+
+    <div class="pub-authors">
+      Linzhuang Sun*, Tianyu Guo*, Hao Liang*, <strong>Ruitong Liu</strong>, Yuying Li, Qifeng Cai, Jingxuan Wei, Yuchen Wu, Bihui Yu, Xiangxiang Zhang, Wentao Zhang#, Bin CUI#
+    </div>
+
+    <div class="pub-venue">
+      *: Equal contribution, #: Corresponding author
+    </div>
+
+    <div class="pub-venue">
+      ACL 2026 Under Review
+    </div>
+
+    <p style="font-size: 0.9em; margin-bottom: 10px;">
+      Contributed to the data visualization of benchmark statistics and experimental results. Assisted in the \textbf{data cleaning pipeline} by verifying the executability of generated SQL queries, ensuring the removal of syntax errors to maintain dataset reliability.
+    </p>
+
+    <div class="pub-links">
+      <a href="https://arxiv.org/pdf/2510.26495">PDF</a>
+      <a href="javascript:void(0)" onclick="toggleBibtex('bib_t2sql')">BibTeX</a>
+    </div>
+
+    <div id="bib_t2sql" style="display:none; margin-top:10px; padding:10px; background:#f9f9f9; border:1px solid #ddd; font-family:monospace; font-size:0.8em; white-space:pre-wrap;">@misc{Sun2025RethinkingTextToSQL,
+  title        = {Rethinking Text-to-SQL: Dynamic Multi-turn SQL Interaction for Real-world Database Exploration},
+  author       = {Linzhuang Sun and Tianyu Guo and Hao Liang and Ruitong Liu and Yuying Li and Qifeng Cai and Jingxuan Wei and Yuchen Wu and Bihui Yu and Xiangxiang Zhang and Wentao Zhang and Bin CUI},
+  year         = {2025},
+  eprint       = {2510.26495},
+  archivePrefix= {arXiv},
+  primaryClass = {cs.DB},
+  doi          = {10.48550/arXiv.2510.26495},
+  url          = {https://arxiv.org/abs/2510.26495}
+}
+</div>
+  </div>
+</div>
+
+<div class="pub-item">
+  <div class="pub-image">
+    <button class="pub-image-button" type="button" data-full="{{ '/images/acl2.png' | relative_url }}" aria-label="Open image">
+      <img src="{{ '/images/acl2.png' | relative_url }}" alt="Paper Teaser">
+    </button>
+  </div>
+
+  <div class="pub-content">
+    <div class="pub-title">
+      <a href="https://drive.google.com/file/d/1KvE3DZ1ih_8kzPfQUeitKelu57EHNNkV/view?usp=sharing" style="text-decoration:none; color:inherit;">
+        Evolving Beyond Snapshots: Harmonizing Structure and Sequence via Entity State Tuning for Temporal Knowledge Graph Forecasting
+      </a>
+    </div>
+
+    <div class="pub-authors">
+      Yunjia Wu, yiyong xiao, Huang Pingyang, Peize Li, Siyuan Li#, <strong>Ruitong Liu#</strong>, Yan Wen, Te Sun, Fangyi Pei
+    </div>
+
+    <div class="pub-venue">
+      #: Corresponding author
+    </div>
+
+    <div class="pub-venue">
+      ACL 2026 Under Review
+    </div>
+
+    <p style="font-size: 0.9em; margin-bottom: 10px;">
+      Oversee the overall design and progress arrangement of the research project
+    </p>
+
+    <div class="pub-links">
+      <a href="https://drive.google.com/file/d/1KvE3DZ1ih_8kzPfQUeitKelu57EHNNkV/view?usp=sharing">PDF</a>
+      <a href="javascript:void(0)" onclick="toggleBibtex('bib_acl2')">BibTeX</a>
+    </div>
+
+    <div id="bib_acl2" style="display:none; margin-top:10px; padding:10px; background:#f9f9f9; border:1px solid #ddd; font-family:monospace; font-size:0.8em; white-space:pre-wrap;">Coming Soon</div>
+  </div>
+</div>
+
+<div id="pub-lightbox" class="pub-lightbox" aria-hidden="true">
+  <div class="pub-lightbox__inner" role="dialog" aria-modal="true">
+    <button id="pub-lightbox-close" class="pub-lightbox__close" type="button">Close</button>
+    <img id="pub-lightbox-img" class="pub-lightbox__img" src="" alt="">
+  </div>
+</div>
+
+<script>
+function toggleBibtex(elementId) {
+  var x = document.getElementById(elementId);
+  if (x.style.display === "none") {
+    x.style.display = "block"; 
+  } else {
+    x.style.display = "none";  
+  }
+}
+
+(function () {
+  var lightbox = document.getElementById('pub-lightbox');
+  var lightboxImg = document.getElementById('pub-lightbox-img');
+  var closeBtn = document.getElementById('pub-lightbox-close');
+
+  if (!lightbox || !lightboxImg) {
+    return;
+  }
+
+  function openLightbox(src, alt) {
+    lightboxImg.src = src;
+    lightboxImg.alt = alt || '';
+    lightbox.classList.add('is-open');
+    lightbox.setAttribute('aria-hidden', 'false');
+    if (closeBtn) {
+      closeBtn.focus();
+    }
+  }
+
+  function closeLightbox() {
+    lightbox.classList.remove('is-open');
+    lightbox.setAttribute('aria-hidden', 'true');
+    lightboxImg.src = '';
+  }
+
+  document.querySelectorAll('.pub-image-button').forEach(function (btn) {
+    btn.addEventListener('click', function () {
+      var img = btn.querySelector('img');
+      if (!img) {
+        return;
+      }
+      openLightbox(btn.getAttribute('data-full') || img.src, img.alt);
+    });
+  });
+
+  lightbox.addEventListener('click', function (event) {
+    if (event.target === lightbox) {
+      closeLightbox();
+    }
+  });
+
+  if (closeBtn) {
+    closeBtn.addEventListener('click', closeLightbox);
+  }
+
+  lightboxImg.addEventListener('click', closeLightbox);
+
+  document.addEventListener('keydown', function (event) {
+    if (event.key === 'Escape' && lightbox.classList.contains('is-open')) {
+      closeLightbox();
+    }
+  });
+})();
+</script>

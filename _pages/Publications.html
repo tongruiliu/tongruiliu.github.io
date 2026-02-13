@@ -193,6 +193,52 @@ author_profile: true
 
 <div class="pub-item">
   <div class="pub-image">
+    <button class="pub-image-button" type="button" data-full="{{ '/images/pub_canvas_cot.png' | relative_url }}" aria-label="Open image">
+      <img src="{{ '/images/pub_canvas_cot.png' | relative_url }}" alt="Paper Teaser">
+    </button>
+  </div>
+
+  <div class="pub-content">
+    <div class="pub-title">
+      <a href="https://arxiv.org/pdf/2602.10494" style="text-decoration:none; color:inherit;">
+        Canvas-of-Thought: Grounding Reasoning via Mutable Structured States
+      </a>
+    </div>
+
+    <div class="pub-authors">
+      Lingzhuang Sun*, Yuxia Zhu*, <strong>Ruitong Liu*</strong>, Hao Liang, Zheng Sun, Caijun Jia, Honghao He, Yuchen Wu, Siyuan Li, Jingxuan Wei, Xiangxiang Zhang, Bihui Yu, Wentao Zhang#
+    </div>
+
+    <div class="pub-venue">
+      *: Equal contribution, #: Corresponding author
+    </div>
+
+    <div class="pub-venue">
+      ICML 2026 Under Review
+    </div>
+
+    <p style="font-size: 0.9em; margin-bottom: 10px;">
+      Developed Canvas-of-Thought (Canvas-CoT), a stateful multimodal reasoning framework that transforms linear text generation into mutable state manipulation. The framework's core contributions include: (1) introducing a structured DOM-based reasoning substrate that enables atomic CRUD operations (Insert, Replace, Modify, Delete) for in-place state revisions, significantly reducing the serialization tax of context regeneration; (2) integrating a rendering-based critique loop that provides explicit visual feedback to resolve spatial and geometric hallucinations difficult to articulate through text alone; and (3) implementing recurrent context optimization which discards verbose thought traces to maintain a Markovian-like persistent state, boosting both reasoning precision and token efficiency in high-dimensional tasks.
+    </p>
+
+    <div class="pub-links">
+      <a href="https://arxiv.org/pdf/2602.10494">PDF</a>
+      <a href="javascript:void(0)" onclick="toggleBibtex('bib_canvas_cot')">BibTeX</a>
+      <a href="https://github.com/Zzzyxii/Canvas-CoT">Code</a>
+    </div>
+
+    <div id="bib_canvas_cot" style="display:none; margin-top:10px; padding:10px; background:#f9f9f9; border:1px solid #ddd; font-family:monospace; font-size:0.8em; white-space:pre-wrap;">@article{sun2026canvas,
+  title   = {Canvas-of-Thought: Grounding Reasoning via Mutable Structured States},
+  author  = {Sun, Lingzhuang and Zhu, Yuxia and Liu, Ruitong and Liang, Hao and Sun, Zheng and Jia, Caijun and He, Honghao and Wu, Yuchen and Li, Siyuan and Wei, Jingxuan and Zhang, Xiangxiang and Yu, Bihui and Zhang, Wentao},
+  journal = {arXiv preprint arXiv:2602.10494},
+  year    = {2026},
+  url     = {https://arxiv.org/abs/2602.10494}
+}</div>
+  </div>
+</div>
+
+<div class="pub-item">
+  <div class="pub-image">
     <button class="pub-image-button" type="button" data-full="{{ '/images/pub_www.png' | relative_url }}" aria-label="Open image">
       <img src="{{ '/images/pub_www.png' | relative_url }}" alt="Paper Teaser">
     </button>

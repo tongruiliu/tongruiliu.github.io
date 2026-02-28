@@ -12,7 +12,7 @@ enhance model intelligence. Additionally, I investigate Knowledge Graphs (KGs), 
 * Email addresses: 15668672116@163.com / ruitong.jerry@gmail.com
 * Wechat: ruitong_jerry or Search for my phone number
 
-I am very fortunate to be admitted to the Big Data graduate program at the [School of Mathematical Sciences](https://www.math.pku.edu.cn/index.htm), [Peking University](https://www.pku.edu.cn/). Currently, I am interning in Beijing now.
+I am very fortunate to be admitted to the Big Data graduate program at the [School of Mathematical Sciences](https://www.math.pku.edu.cn/index.htm), [Peking University](https://www.pku.edu.cn/). I am currently interning at a top-tier quant firm in Beijing.
 
 Reviewer/PC Member:Transactions on Knowledge Discovery from Data(TKDD)
 

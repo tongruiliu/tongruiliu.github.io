@@ -1324,6 +1324,7 @@ body {
   </div>
 
   <h2 class="rt-section-title" id="section-pubs"><i class="fa fa-book" aria-hidden="true"></i> Publications</h2>
+  <p class="rt-note">*: co-first authors. #: corresponding author.</p>
   <div class="rt-pubs-zone rt-tag-card rt-tag-pad">
     <span class="rt-corner-tag rt-corner-tag--blue">publications</span>
     <div class="rt-pub-grid">

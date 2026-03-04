@@ -583,6 +583,18 @@ redirect_from:
   color: #64748b;
 }
 
+.rt-home .rt-pub-authors {
+  margin: 0 0 8px;
+  font-size: 0.84rem;
+  line-height: 1.45;
+  color: #475569;
+}
+
+.rt-home .rt-pub-authors strong {
+  color: #0f172a;
+  font-weight: 800;
+}
+
 .rt-home .rt-pub-links {
   display: flex;
   flex-wrap: wrap;
@@ -865,7 +877,7 @@ redirect_from:
     </details>
   </div>
 
-  <h2 class="rt-section-title" id="section-pubs"><i class="fa fa-book" aria-hidden="true"></i> Selected Publications</h2>
+  <h2 class="rt-section-title" id="section-pubs"><i class="fa fa-book" aria-hidden="true"></i> Publications</h2>
   <div class="rt-pubs-zone">
     <p class="rt-note">Auto synced from your existing <a href="/publications/">Publications</a> page.</p>
     <div class="rt-pub-grid">
@@ -875,6 +887,7 @@ redirect_from:
         </a>
         <div class="rt-pub-body">
           <h3 class="rt-pub-title">Guided Verifier: Collaborative Multimodal Reasoning via Dynamic Process Supervision</h3>
+          <p class="rt-pub-authors">Lingzhuang Sun*, <strong>Ruitong Liu*</strong>, Yuxia Zhu*, Xiaohan Xu, Jingxuan Wei, Xiangxiang Zhang, Bihui Yu, Wentao Zhang#</p>
           <p class="rt-pub-meta">ICML 2026 Under Review</p>
           <div class="rt-pub-links">
             <a class="rt-pill" href="https://arxiv.org/pdf/2602.04290">PDF</a>
@@ -890,6 +903,7 @@ redirect_from:
         </a>
         <div class="rt-pub-body">
           <h3 class="rt-pub-title">Canvas-of-Thought: Grounding Reasoning via Mutable Structured States</h3>
+          <p class="rt-pub-authors">Lingzhuang Sun*, Yuxia Zhu*, <strong>Ruitong Liu*</strong>, Hao Liang, Zheng Sun, Caijun Jia, Honghao He, Yuchen Wu, Siyuan Li, Jingxuan Wei, Xiangxiang Zhang, Bihui Yu, Wentao Zhang#</p>
           <p class="rt-pub-meta">ICML 2026 Under Review</p>
           <div class="rt-pub-links">
             <a class="rt-pill" href="https://arxiv.org/pdf/2602.10494">PDF</a>
@@ -903,7 +917,8 @@ redirect_from:
           <img class="rt-pub-thumb" src="{{ '/images/pub_www.png' | relative_url }}" alt="Semantic-Condition Tuning teaser">
         </a>
         <div class="rt-pub-body">
-          <h3 class="rt-pub-title">Semantic-Condition Tuning: Fusing Graph Context with LLMs for KGC</h3>
+          <h3 class="rt-pub-title">Semantic-Condition Tuning: Fusing Graph Context with Large Language Models for Knowledge Graph Completion</h3>
+          <p class="rt-pub-authors"><strong>Ruitong Liu</strong>, Yan Wen, Te Sun, Yunjia Wu, Pingyang Huang, Zihang Yu, Siyuan Li</p>
           <p class="rt-pub-meta">IJCAI 2026 Under Review</p>
           <div class="rt-pub-links">
             <a class="rt-pill" href="https://arxiv.org/pdf/2510.08966">PDF</a>
@@ -918,6 +933,7 @@ redirect_from:
         </a>
         <div class="rt-pub-body">
           <h3 class="rt-pub-title">Flow-Modulated Scoring for Semantic-Aware Knowledge Graph Completion</h3>
+          <p class="rt-pub-authors">Siyuan Li, <strong>Ruitong Liu</strong>, Yan Wen, Te Sun, Andi Zhang, Yanbiao Ma#, Xiaoshuai Hao#</p>
           <p class="rt-pub-meta">TPAMI Under Review</p>
           <div class="rt-pub-links">
             <a class="rt-pill" href="https://arxiv.org/pdf/2506.23137">PDF</a>
@@ -932,6 +948,7 @@ redirect_from:
         </a>
         <div class="rt-pub-body">
           <h3 class="rt-pub-title">Data Preparation for Large Language Models: A Survey</h3>
+          <p class="rt-pub-authors">Hao Liang, Zhen Hao Wong, <strong>Ruitong Liu</strong>, Yuhan Wang, Meiyi Qiang, Zhengyang Zhao, Chengyu Shen, Conghui He#, Wentao Zhang#, Bin Cui#</p>
           <p class="rt-pub-meta">JCST 40th Anniversary Special Issue</p>
           <div class="rt-pub-links">
             <a class="rt-pill" href="https://drive.google.com/file/d/1TqwULwmD8f-cpokfcfYfapuC9bNxrztA/view?usp=sharing">PDF</a>
@@ -945,6 +962,7 @@ redirect_from:
         </a>
         <div class="rt-pub-body">
           <h3 class="rt-pub-title">Context-Driven Knowledge Graph Completion with Semantic-Aware Relational Message Passing</h3>
+          <p class="rt-pub-authors">Siyuan Li, <strong>Ruitong Liu</strong>, Te Sun, Yan Wen, Ruihao Zhou, Jingyi Kang, Yunjia Wu</p>
           <p class="rt-pub-meta">ICONIP 2025 Poster</p>
           <div class="rt-pub-links">
             <a class="rt-pill" href="https://link.springer.com/chapter/10.1007/978-981-95-4367-0_38">PDF</a>
@@ -958,6 +976,7 @@ redirect_from:
         </a>
         <div class="rt-pub-body">
           <h3 class="rt-pub-title">Rethinking Text-to-SQL: Dynamic Multi-turn SQL Interaction for Real-world Database Exploration</h3>
+          <p class="rt-pub-authors">Linzhuang Sun*, Tianyu Guo*, Hao Liang*, <strong>Ruitong Liu</strong>, Yuying Li, Qifeng Cai, Jingxuan Wei, Yuchen Wu, Bihui Yu, Xiangxiang Zhang, Wentao Zhang#, Bin CUI#</p>
           <p class="rt-pub-meta">ACL 2026 Under Review</p>
           <div class="rt-pub-links">
             <a class="rt-pill" href="https://arxiv.org/pdf/2510.26495">PDF</a>
@@ -970,7 +989,8 @@ redirect_from:
           <img class="rt-pub-thumb" src="{{ '/images/acl2.png' | relative_url }}" alt="Temporal KGF paper teaser">
         </a>
         <div class="rt-pub-body">
-          <h3 class="rt-pub-title">Evolving Beyond Snapshots: Harmonizing Structure and Sequence via Entity State Tuning for Temporal KGF</h3>
+          <h3 class="rt-pub-title">Evolving Beyond Snapshots: Harmonizing Structure and Sequence via Entity State Tuning for Temporal Knowledge Graph Forecasting</h3>
+          <p class="rt-pub-authors">Yunjia Wu, yiyong xiao, Huang Pingyang, Peize Li, Siyuan Li#, <strong>Ruitong Liu#</strong>, Yan Wen, Te Sun, Fangyi Pei</p>
           <p class="rt-pub-meta">ACL 2026 Under Review</p>
           <div class="rt-pub-links">
             <a class="rt-pill" href="https://drive.google.com/file/d/1KvE3DZ1ih_8kzPfQUeitKelu57EHNNkV/view?usp=sharing">PDF</a>

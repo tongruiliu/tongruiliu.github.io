@@ -82,6 +82,7 @@ body {
   --rt-surface-soft: #f7fbff;
   position: relative;
   z-index: 1;
+  font-size: 1.035rem;
 }
 
 .rt-home a {
@@ -314,6 +315,82 @@ body {
   font-weight: 700;
   letter-spacing: 0.01em;
   text-transform: none;
+}
+
+.rt-home .rt-tag-card {
+  position: relative;
+}
+
+.rt-home .rt-tag-pad {
+  padding-top: 28px !important;
+}
+
+.rt-home .rt-corner-tag {
+  position: absolute;
+  top: 8px;
+  right: 10px;
+  z-index: 4;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  height: 20px;
+  padding: 0 9px 0 10px;
+  border-radius: 999px;
+  border: 1px solid #86efac;
+  background: linear-gradient(135deg, #f0fdf4 0%, #dcfce7 100%);
+  color: #166534;
+  font-size: 0.64rem;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  box-shadow: 0 8px 14px rgba(34, 197, 94, 0.16);
+  pointer-events: none;
+}
+
+.rt-home .rt-corner-tag::after {
+  content: "";
+  width: 8px;
+  height: 8px;
+  border-radius: 2px;
+  border: 1px solid #16a34a;
+  background: #bbf7d0;
+  box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.52) inset;
+}
+
+.rt-home .rt-corner-tag--blue {
+  border-color: #93c5fd;
+  background: linear-gradient(135deg, #eff6ff 0%, #dbeafe 100%);
+  color: #1e3a8a;
+  box-shadow: 0 8px 14px rgba(59, 130, 246, 0.16);
+}
+
+.rt-home .rt-corner-tag--blue::after {
+  border-color: #3b82f6;
+  background: #bfdbfe;
+}
+
+.rt-home .rt-corner-tag--gold {
+  border-color: #fdba74;
+  background: linear-gradient(135deg, #fff7ed 0%, #ffedd5 100%);
+  color: #9a3412;
+  box-shadow: 0 8px 14px rgba(251, 146, 60, 0.16);
+}
+
+.rt-home .rt-corner-tag--gold::after {
+  border-color: #ea580c;
+  background: #fed7aa;
+}
+
+.rt-home .rt-corner-tag--cyan {
+  border-color: #7dd3fc;
+  background: linear-gradient(135deg, #ecfeff 0%, #cffafe 100%);
+  color: #0c4a6e;
+  box-shadow: 0 8px 14px rgba(6, 182, 212, 0.16);
+}
+
+.rt-home .rt-corner-tag--cyan::after {
+  border-color: #0891b2;
+  background: #a5f3fc;
 }
 
 .rt-home .rt-profile-stack {
@@ -1091,22 +1168,24 @@ body {
   </nav>
 
   <section class="rt-top-intro" id="section-overview">
-    <article class="rt-card rt-overview-card">
+    <article class="rt-card rt-overview-card rt-tag-card rt-tag-pad">
+      <span class="rt-corner-tag rt-corner-tag--blue">overview</span>
       <p class="rt-overview-name">Ruitong Liu</p>
-      <h1 class="rt-overview-title">Data-Centric AI for LLMs and Multimodal Intelligence</h1>
       <p class="rt-intro-text">
-        <span class="rt-welcome-line">Welcome to my homepage! <span class="rt-wave-hand" aria-hidden="true">👋</span></span>
+        <span class="rt-welcome-line">Welcome to my homepage! <span class="rt-wave-hand" aria-hidden="true">👋</span></span><br>
         I am currently a senior majoring in <a href="https://math.dlut.edu.cn/">Mathematics and Applied Mathematics</a> at
         <a href="https://www.dlut.edu.cn/">Dalian University of Technology</a>. I will start my graduate studies at the
         <a href="https://www.math.pku.edu.cn/index.htm">School of Mathematical Sciences</a>,
-        <a href="https://www.pku.edu.cn/">Peking University</a> in September 2026. My research focuses on large language models and multimodal large models, covering large-scale data engineering, complex reasoning optimization, training algorithms and full-stack training, KG+LLM, and mathematical formal reasoning. I am currently also working on research related to World Models. If you are interested in academic cooperation or exchanges in related fields, please feel free to contact me via email at any time!
+        <a href="https://www.pku.edu.cn/">Peking University</a> in September 2026. My research focuses on Large Language Models (LLMs) and Multimodal Large Language Models (MLLMs), covering large-scale data engineering, complex reasoning optimization, training algorithms and full-stack training, KG+LLM, and mathematical formal reasoning. I am currently also working on research related to World Models.<br>
+        If you are interested in academic cooperation or exchanges in related fields, please feel free to contact me via email at any time!
       </p>
       <div class="rt-focus-row">
-        <span class="rt-focus-pill">llm/mllm training (full-stack)</span>
-        <span class="rt-focus-pill">data-centric ai</span>
-        <span class="rt-focus-pill">mllm reasoning</span>
-        <span class="rt-focus-pill">world model formal math (lean)</span>
-        <span class="rt-focus-pill">unify</span>
+        <span class="rt-focus-pill">LLM/MLLM Training (Full-Stack)</span>
+        <span class="rt-focus-pill">Data-Centric AI</span>
+        <span class="rt-focus-pill">MLLM Reasoning</span>
+        <span class="rt-focus-pill">World Model</span>
+        <span class="rt-focus-pill">Formal Math (Lean)</span>
+        <span class="rt-focus-pill">Unify</span>
       </div>
       <div class="rt-chip-row">
         <a class="rt-chip" href="mailto:15668672116@163.com"><i class="fa fa-envelope" aria-hidden="true"></i> 15668672116@163.com</a>
@@ -1115,26 +1194,28 @@ body {
       </div>
       <div class="rt-overview-divider"></div>
       <div class="rt-profile-stack">
-        <section class="rt-profile-block">
+        <section class="rt-profile-block rt-tag-card rt-tag-pad">
+          <span class="rt-corner-tag rt-corner-tag--blue">education</span>
           <h3 class="rt-profile-head">Education</h3>
           <ul class="rt-profile-list">
             <li class="rt-profile-item">
               <div class="rt-profile-date">2022.09 - 2026.07</div>
               <div>
-                <p class="rt-profile-main"><a href="https://math.dlut.edu.cn/">大连理工大学数学科学学院</a></p>
+                <p class="rt-profile-main"><a href="https://math.dlut.edu.cn/">School of Mathematical Sciences, Dalian University of Technology</a></p>
                 <p class="rt-profile-sub">Mathematics and Applied Mathematics (B.S.)</p>
               </div>
             </li>
             <li class="rt-profile-item">
               <div class="rt-profile-date">2026.09 - 2028.09</div>
               <div>
-                <p class="rt-profile-main"><a href="https://www.math.pku.edu.cn/index.htm">北京大学数学科学学院</a></p>
-                <p class="rt-profile-sub">Graduate Studies (Planned)</p>
+                <p class="rt-profile-main"><a href="https://www.math.pku.edu.cn/index.htm">School of Mathematical Sciences, Peking University</a></p>
+                <p class="rt-profile-sub">Data Science and Big Data Technology (Graduate Studies, Planned)</p>
               </div>
             </li>
           </ul>
         </section>
-        <section class="rt-profile-block">
+        <section class="rt-profile-block rt-tag-card rt-tag-pad">
+          <span class="rt-corner-tag rt-corner-tag--cyan">internship</span>
           <h3 class="rt-profile-head">Internship</h3>
           <ul class="rt-profile-list rt-profile-list--intern">
             <li class="rt-profile-item rt-profile-item--intern">
@@ -1153,7 +1234,7 @@ body {
                 <div class="rt-profile-time">2025.09 - 2026.02</div>
               </div>
               <div class="rt-profile-role-line">
-                <span class="rt-profile-role">LLM Algorithm Research Intern</span>
+                <span class="rt-profile-role">LLM Algorithm <strong>Research</strong> Intern</span>
               </div>
             </li>
           </ul>
@@ -1163,7 +1244,8 @@ body {
   </section>
 
   <h2 class="rt-section-title" id="section-news"><i class="fa fa-bolt" aria-hidden="true"></i> What's New</h2>
-  <div class="rt-news-zone">
+  <div class="rt-news-zone rt-tag-card rt-tag-pad">
+    <span class="rt-corner-tag">news</span>
     <ul class="rt-timeline">
       <li>
         <span class="rt-time">2026-02</span>
@@ -1175,19 +1257,11 @@ body {
       </li>
       <li>
         <span class="rt-time">2026-01</span>
-        <div class="rt-news-text">The first paper was submitted to <strong>ICML 2026</strong>.</div>
+        <div class="rt-news-text">Two papers were submitted to <strong>ICML 2026</strong>.</div>
       </li>
       <li>
         <span class="rt-time">2026-01</span>
-        <div class="rt-news-text">The second paper was submitted to <strong>ICML 2026</strong>.</div>
-      </li>
-      <li>
-        <span class="rt-time">2026-01</span>
-        <div class="rt-news-text">The first paper was submitted to <strong>ACL 2026</strong>.</div>
-      </li>
-      <li>
-        <span class="rt-time">2026-01</span>
-        <div class="rt-news-text">The second paper was submitted to <strong>ACL 2026</strong>.</div>
+        <div class="rt-news-text">Two papers were submitted to <strong>ACL 2026</strong>.</div>
       </li>
       <li>
         <span class="rt-time">2025-08</span>
@@ -1201,7 +1275,8 @@ body {
   </div>
 
   <h2 class="rt-section-title" id="section-awards"><i class="fa fa-trophy" aria-hidden="true"></i> Awards</h2>
-  <div class="rt-awards-zone">
+  <div class="rt-awards-zone rt-tag-card rt-tag-pad">
+    <span class="rt-corner-tag rt-corner-tag--gold">awards</span>
     <div class="rt-award-grid">
       <article class="rt-award">
         <strong>2025 Model Excellent Communist Youth League Member</strong><br>
@@ -1249,7 +1324,8 @@ body {
   </div>
 
   <h2 class="rt-section-title" id="section-pubs"><i class="fa fa-book" aria-hidden="true"></i> Publications</h2>
-  <div class="rt-pubs-zone">
+  <div class="rt-pubs-zone rt-tag-card rt-tag-pad">
+    <span class="rt-corner-tag rt-corner-tag--blue">publications</span>
     <div class="rt-pub-grid">
       <article class="rt-pub-card">
         <a class="rt-pub-media" href="https://arxiv.org/pdf/2602.04290">
@@ -1360,18 +1436,21 @@ body {
 
   <h2 class="rt-section-title" id="section-visitor"><i class="fa fa-globe" aria-hidden="true"></i> Visitor</h2>
   <div class="rt-visitor-wrap">
-    <div class="rt-visitor-card rt-visitor-map">
+    <div class="rt-visitor-card rt-visitor-map rt-tag-card rt-tag-pad">
+      <span class="rt-corner-tag rt-corner-tag--cyan">map</span>
       <div class="rt-map-embed">
         <script type="text/javascript" id="clustrmaps" src="//clustrmaps.com/map_v2.js?d=wWuKIsCZO2yYZA7sXQVVhdoENIGHAUsZCAy6ZjG-Uhk&cl=ffffff&w=a"></script>
       </div>
       <div style="font-size:0.86em;color:#64748b;margin-top:6px;">Visitor Geography</div>
     </div>
     <div class="rt-visitor-bottom">
-      <div class="rt-service-card">
+      <div class="rt-service-card rt-tag-card rt-tag-pad">
+        <span class="rt-corner-tag rt-corner-tag--gold">service</span>
         <div class="rt-service-title">Service</div>
         <p class="rt-service-text">Reviewer/PC Member: Transactions on Knowledge Discovery from Data (TKDD)</p>
       </div>
-      <div class="rt-counter-card">
+      <div class="rt-counter-card rt-tag-card rt-tag-pad">
+        <span class="rt-corner-tag rt-corner-tag--cyan">counter</span>
         <div class="rt-counter-title">Visit Counter</div>
         <div id="busuanzi_value_site_pv" data-offset="27" class="rt-counter-value">--</div>
         <div class="rt-counter-label">Page Views (PV)</div>

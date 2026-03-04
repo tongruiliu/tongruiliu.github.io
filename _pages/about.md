@@ -26,6 +26,18 @@ body {
   padding-top: 0 !important;
 }
 
+@media (min-width: 1024px) {
+  #main {
+    max-width: min(1720px, 97vw) !important;
+  }
+
+  .page {
+    width: 82.5% !important;
+    margin-right: 0 !important;
+    padding-right: 0 !important;
+  }
+}
+
 .rt-cyber-bg {
   position: fixed;
   inset: 0;
@@ -195,6 +207,18 @@ body {
   transform: translateX(460%) skewX(-22deg);
 }
 
+.rt-home .rt-jump-item.is-active {
+  background: linear-gradient(135deg, rgba(30, 58, 138, 0.8) 0%, rgba(30, 64, 175, 0.72) 100%);
+  transform: translateY(-1px) scale(1.05);
+  border-color: rgba(186, 230, 253, 0.98);
+  box-shadow: 0 0 0 1px rgba(186, 230, 253, 0.5) inset, 0 0 18px rgba(56, 189, 248, 0.42), 0 18px 26px rgba(30, 64, 175, 0.3);
+}
+
+.rt-home .rt-jump-item.is-active::before {
+  opacity: 1;
+  transform: translateX(460%) skewX(-22deg);
+}
+
 .rt-home .rt-top-intro {
   margin: 14px 0 18px;
 }
@@ -253,6 +277,23 @@ body {
   line-height: 1.7;
 }
 
+.rt-home .rt-welcome-line {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  margin-right: 4px;
+  font-weight: 700;
+  color: #0f172a;
+}
+
+.rt-home .rt-wave-hand {
+  display: inline-block;
+  transform-origin: 72% 72%;
+  color: #0ea5e9;
+  text-shadow: 0 0 8px rgba(14, 165, 233, 0.45), 0 0 16px rgba(56, 189, 248, 0.28);
+  animation: rt-wave 2s ease-in-out infinite;
+}
+
 .rt-home .rt-focus-row {
   display: flex;
   flex-wrap: wrap;
@@ -263,24 +304,25 @@ body {
 .rt-home .rt-focus-pill {
   display: inline-flex;
   align-items: center;
-  gap: 6px;
-  border: 1px solid #d5e4f4;
-  background: linear-gradient(135deg, #f8fbff 0%, #ffffff 100%);
-  color: #1e3a8a;
-  border-radius: 999px;
-  padding: 5px 11px;
-  font-size: 0.83rem;
-  font-weight: 600;
+  border: 1px solid #c7dcf7;
+  border-left: 3px solid #38bdf8;
+  background: linear-gradient(135deg, #f3f9ff 0%, #ffffff 100%);
+  color: #0f2f70;
+  border-radius: 8px;
+  padding: 4px 10px 4px 9px;
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.01em;
+  text-transform: none;
 }
 
-.rt-home .rt-snapshot-row {
+.rt-home .rt-profile-stack {
   margin-top: 12px;
   display: grid;
-  grid-template-columns: minmax(0, 1fr) minmax(0, 1.8fr);
   gap: 12px;
 }
 
-.rt-home .rt-snapshot-item {
+.rt-home .rt-profile-block {
   border: 1px solid #dbe7f5;
   border-radius: 12px;
   background: linear-gradient(145deg, rgba(255, 255, 255, 0.92) 0%, rgba(245, 250, 255, 0.88) 100%);
@@ -289,18 +331,14 @@ body {
   transition: transform .22s ease, box-shadow .24s ease, border-color .22s ease;
 }
 
-.rt-home .rt-snapshot-item:hover {
-  transform: translateY(-3px) scale(1.012);
+.rt-home .rt-profile-block:hover {
+  transform: translateY(-3px) scale(1.008);
   border-color: #bfdbfe;
   box-shadow: 0 16px 24px rgba(96, 165, 250, 0.22);
 }
 
-.rt-home .rt-snapshot-item--internship {
-  padding: 12px 13px;
-}
-
-.rt-home .rt-snapshot-kicker {
-  margin: 0 0 5px;
+.rt-home .rt-profile-head {
+  margin: 0 0 8px;
   font-size: 0.76rem;
   letter-spacing: 0.12em;
   text-transform: uppercase;
@@ -308,51 +346,104 @@ body {
   font-weight: 800;
 }
 
-.rt-home .rt-snapshot-main {
-  margin: 0 0 6px;
+.rt-home .rt-profile-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: 8px;
+}
+
+.rt-home .rt-profile-list--intern {
+  gap: 10px;
+}
+
+.rt-home .rt-profile-item {
+  display: grid;
+  grid-template-columns: 160px minmax(0, 1fr);
+  gap: 12px;
+  align-items: start;
+  padding-top: 2px;
+}
+
+.rt-home .rt-profile-item + .rt-profile-item {
+  border-top: 1px dashed #dbe7f5;
+  padding-top: 10px;
+}
+
+.rt-home .rt-profile-date {
+  color: #1e3a8a;
+  font-size: 0.88rem;
+  font-weight: 700;
+  white-space: nowrap;
+}
+
+.rt-home .rt-profile-main {
+  margin: 0 0 4px;
   color: #0f172a;
   font-weight: 700;
   line-height: 1.45;
 }
 
-.rt-home .rt-snapshot-sub {
+.rt-home .rt-profile-main a {
+  color: #0f172a;
+}
+
+.rt-home .rt-profile-main a:hover {
+  color: #1d4ed8;
+}
+
+.rt-home .rt-profile-sub {
   margin: 0;
   color: #475569;
   font-size: 0.9rem;
   line-height: 1.5;
 }
 
-.rt-home .rt-role-meta {
-  color: #475569;
-  font-size: 0.88rem;
-}
-
-.rt-home .rt-snapshot-line {
-  margin-top: 5px;
+.rt-home .rt-profile-role-line {
+  margin-top: 2px;
   display: flex;
   flex-wrap: wrap;
   gap: 7px;
   align-items: center;
 }
 
-.rt-home .rt-snapshot-role {
+.rt-home .rt-profile-role {
   display: inline-flex;
   color: #334155;
   font-size: 0.93rem;
 }
 
-.rt-home .rt-snapshot-stack {
-  display: grid;
-  gap: 8px;
-}
-
-.rt-home .rt-snapshot-entry {
+.rt-home .rt-profile-item--intern {
+  display: block;
   padding-top: 2px;
 }
 
-.rt-home .rt-snapshot-entry + .rt-snapshot-entry {
+.rt-home .rt-profile-item--intern + .rt-profile-item--intern {
   border-top: 1px dashed #dbe7f5;
   padding-top: 10px;
+}
+
+.rt-home .rt-profile-top {
+  display: flex;
+  align-items: baseline;
+  gap: 10px;
+}
+
+.rt-home .rt-profile-company {
+  margin: 0;
+  color: #0f172a;
+  font-weight: 700;
+  line-height: 1.45;
+}
+
+.rt-home .rt-profile-time {
+  margin-left: auto;
+  color: #1e3a8a;
+  font-size: 0.88rem;
+  font-weight: 700;
+  white-space: nowrap;
+  text-align: right;
 }
 
 .rt-home .rt-spotlight {
@@ -884,6 +975,17 @@ body {
   }
 }
 
+@keyframes rt-wave {
+  0% { transform: rotate(0deg) scale(1); filter: drop-shadow(0 0 0 rgba(14, 165, 233, 0)); }
+  10% { transform: rotate(14deg) scale(1.03); filter: drop-shadow(0 0 6px rgba(14, 165, 233, 0.55)); }
+  20% { transform: rotate(-8deg) scale(1.02); filter: drop-shadow(0 0 8px rgba(56, 189, 248, 0.48)); }
+  30% { transform: rotate(12deg) scale(1.04); filter: drop-shadow(0 0 9px rgba(56, 189, 248, 0.52)); }
+  40% { transform: rotate(-5deg) scale(1.02); filter: drop-shadow(0 0 7px rgba(14, 165, 233, 0.45)); }
+  50% { transform: rotate(8deg) scale(1.03); filter: drop-shadow(0 0 8px rgba(56, 189, 248, 0.45)); }
+  60% { transform: rotate(0deg) scale(1); filter: drop-shadow(0 0 4px rgba(14, 165, 233, 0.3)); }
+  100% { transform: rotate(0deg) scale(1); filter: drop-shadow(0 0 0 rgba(14, 165, 233, 0)); }
+}
+
 @keyframes rt-cyber-scan {
   0% {
     transform: translateX(-35vw) rotate(-11deg);
@@ -906,12 +1008,16 @@ body {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
-  .rt-home .rt-snapshot-row,
   .rt-home .rt-award-grid,
   .rt-home .rt-pub-grid,
   .rt-home .rt-visitor-wrap,
   .rt-home .rt-visitor-bottom {
     grid-template-columns: 1fr;
+  }
+
+  .rt-home .rt-profile-item {
+    grid-template-columns: 1fr;
+    gap: 4px;
   }
 
   .rt-home .rt-pub-card {
@@ -963,6 +1069,14 @@ body {
   .rt-home .rt-jump-item::before {
     transition: none;
   }
+
+  .rt-home .rt-jump-item.is-active {
+    transform: none;
+  }
+
+  .rt-home .rt-wave-hand {
+    animation: none;
+  }
 }
 </style>
 
@@ -981,14 +1095,18 @@ body {
       <p class="rt-overview-name">Ruitong Liu</p>
       <h1 class="rt-overview-title">Data-Centric AI for LLMs and Multimodal Intelligence</h1>
       <p class="rt-intro-text">
-        Senior undergraduate at
-        <a href="https://www.dlut.edu.cn/">Dalian University of Technology</a>
-        (Mathematics and Applied Mathematics), working on scalable data synthesis, filtering, alignment, and structure-aware reasoning for trustworthy AI systems.
+        <span class="rt-welcome-line">Welcome to my homepage! <span class="rt-wave-hand" aria-hidden="true">👋</span></span>
+        I am currently a senior majoring in <a href="https://math.dlut.edu.cn/">Mathematics and Applied Mathematics</a> at
+        <a href="https://www.dlut.edu.cn/">Dalian University of Technology</a>. I will start my graduate studies at the
+        <a href="https://www.math.pku.edu.cn/index.htm">School of Mathematical Sciences</a>,
+        <a href="https://www.pku.edu.cn/">Peking University</a> in September 2026. My research focuses on large language models and multimodal large models, covering large-scale data engineering, complex reasoning optimization, training algorithms and full-stack training, KG+LLM, and mathematical formal reasoning. I am currently also working on research related to World Models. If you are interested in academic cooperation or exchanges in related fields, please feel free to contact me via email at any time!
       </p>
       <div class="rt-focus-row">
-        <span class="rt-focus-pill"><i class="fa fa-database" aria-hidden="true"></i> Data Synthesis &amp; Filtering</span>
-        <span class="rt-focus-pill"><i class="fa fa-sliders" aria-hidden="true"></i> LLM/MMLM Alignment</span>
-        <span class="rt-focus-pill"><i class="fa fa-sitemap" aria-hidden="true"></i> KG Reasoning</span>
+        <span class="rt-focus-pill">llm/mllm training (full-stack)</span>
+        <span class="rt-focus-pill">data-centric ai</span>
+        <span class="rt-focus-pill">mllm reasoning</span>
+        <span class="rt-focus-pill">world model formal math (lean)</span>
+        <span class="rt-focus-pill">unify</span>
       </div>
       <div class="rt-chip-row">
         <a class="rt-chip" href="mailto:15668672116@163.com"><i class="fa fa-envelope" aria-hidden="true"></i> 15668672116@163.com</a>
@@ -996,42 +1114,50 @@ body {
         <span class="rt-chip"><i class="fa fa-commenting" aria-hidden="true"></i> WeChat: ruitong_jerry</span>
       </div>
       <div class="rt-overview-divider"></div>
-      <p class="rt-intro-text">
-        My research centers on Data-Centric AI for Large Language Models (LLMs) and Multimodal LLMs, spanning from
-        large-scale data engineering to complex reasoning optimization.
-      </p>
-      <p class="rt-intro-text">
-        I focus on scalable frameworks for automated data synthesis and quality filtering, and design advanced alignment
-        algorithms to enhance model intelligence and reliability.
-      </p>
-      <p class="rt-intro-text">
-        I also investigate Knowledge Graphs (KGs) for structure-aware modeling to improve factual consistency and logical reasoning.
-      </p>
-      <div class="rt-overview-divider"></div>
-      <div class="rt-snapshot-row">
-        <article class="rt-snapshot-item">
-          <div class="rt-snapshot-kicker">Education</div>
-          <p class="rt-snapshot-main">Incoming Graduate Student</p>
-          <p class="rt-snapshot-sub">Big Data Program, School of Mathematical Sciences, <a href="https://www.pku.edu.cn/">Peking University</a></p>
-        </article>
-        <article class="rt-snapshot-item rt-snapshot-item--internship">
-          <div class="rt-snapshot-kicker">Internship</div>
-          <div class="rt-snapshot-stack">
-            <div class="rt-snapshot-entry">
-              <p class="rt-snapshot-main">Ubiquant-IQuest <span class="rt-role-meta">2026.02 - Present</span></p>
-              <div class="rt-snapshot-line">
-                <span class="rt-snapshot-role">LLM Algorithm Intern</span>
+      <div class="rt-profile-stack">
+        <section class="rt-profile-block">
+          <h3 class="rt-profile-head">Education</h3>
+          <ul class="rt-profile-list">
+            <li class="rt-profile-item">
+              <div class="rt-profile-date">2022.09 - 2026.07</div>
+              <div>
+                <p class="rt-profile-main"><a href="https://math.dlut.edu.cn/">大连理工大学数学科学学院</a></p>
+                <p class="rt-profile-sub">Mathematics and Applied Mathematics (B.S.)</p>
+              </div>
+            </li>
+            <li class="rt-profile-item">
+              <div class="rt-profile-date">2026.09 - 2028.09</div>
+              <div>
+                <p class="rt-profile-main"><a href="https://www.math.pku.edu.cn/index.htm">北京大学数学科学学院</a></p>
+                <p class="rt-profile-sub">Graduate Studies (Planned)</p>
+              </div>
+            </li>
+          </ul>
+        </section>
+        <section class="rt-profile-block">
+          <h3 class="rt-profile-head">Internship</h3>
+          <ul class="rt-profile-list rt-profile-list--intern">
+            <li class="rt-profile-item rt-profile-item--intern">
+              <div class="rt-profile-top">
+                <p class="rt-profile-company">Ubiquant-IQuest</p>
+                <div class="rt-profile-time">2026.02 - Present</div>
+              </div>
+              <div class="rt-profile-role-line">
+                <span class="rt-profile-role">LLM Algorithm Intern</span>
                 <span class="rt-spotlight">Talent Program</span>
               </div>
-            </div>
-            <div class="rt-snapshot-entry">
-              <p class="rt-snapshot-main">Institute for Advanced Algorithms Research (IAAR), Shanghai <span class="rt-role-meta">2025.09 - 2026.02</span></p>
-              <div class="rt-snapshot-line">
-                <span class="rt-snapshot-role">LLM Algorithm Research Intern</span>
+            </li>
+            <li class="rt-profile-item rt-profile-item--intern">
+              <div class="rt-profile-top">
+                <p class="rt-profile-company">Institute for Advanced Algorithms Research (IAAR), Shanghai</p>
+                <div class="rt-profile-time">2025.09 - 2026.02</div>
               </div>
-            </div>
-          </div>
-        </article>
+              <div class="rt-profile-role-line">
+                <span class="rt-profile-role">LLM Algorithm Research Intern</span>
+              </div>
+            </li>
+          </ul>
+        </section>
       </div>
     </article>
   </section>
@@ -1074,7 +1200,7 @@ body {
     </ul>
   </div>
 
-  <h2 class="rt-section-title" id="section-awards"><i class="fa fa-trophy" aria-hidden="true"></i> Selected Awards</h2>
+  <h2 class="rt-section-title" id="section-awards"><i class="fa fa-trophy" aria-hidden="true"></i> Awards</h2>
   <div class="rt-awards-zone">
     <div class="rt-award-grid">
       <article class="rt-award">
@@ -1247,7 +1373,7 @@ body {
       </div>
       <div class="rt-counter-card">
         <div class="rt-counter-title">Visit Counter</div>
-        <div id="busuanzi_value_site_pv" data-offset="20" class="rt-counter-value">--</div>
+        <div id="busuanzi_value_site_pv" data-offset="27" class="rt-counter-value">--</div>
         <div class="rt-counter-label">Page Views (PV)</div>
       </div>
     </div>
@@ -1281,5 +1407,75 @@ body {
     counterEl.setAttribute('data-offset-applied', 'true');
     clearInterval(timer);
   }, 500);
+})();
+</script>
+<script>
+(function () {
+  var navLinks = Array.prototype.slice.call(document.querySelectorAll('.rt-jump-nav .rt-jump-item[href^="#"]'));
+  if (!navLinks.length) {
+    return;
+  }
+
+  var sections = navLinks
+    .map(function (link) {
+      var id = link.getAttribute('href');
+      var el = id ? document.querySelector(id) : null;
+      return el ? { link: link, el: el } : null;
+    })
+    .filter(Boolean);
+
+  if (!sections.length) {
+    return;
+  }
+
+  function setActive(targetLink) {
+    sections.forEach(function (item) {
+      var active = item.link === targetLink;
+      item.link.classList.toggle('is-active', active);
+      if (active) {
+        item.link.setAttribute('aria-current', 'true');
+      } else {
+        item.link.removeAttribute('aria-current');
+      }
+    });
+  }
+
+  function updateActiveLink() {
+    var trigger = 130;
+    var current = sections[0];
+
+    for (var i = 0; i < sections.length; i += 1) {
+      var rect = sections[i].el.getBoundingClientRect();
+      if (rect.top <= trigger) {
+        current = sections[i];
+      } else {
+        break;
+      }
+    }
+
+    if (current) {
+      setActive(current.link);
+    }
+  }
+
+  var ticking = false;
+  function onScroll() {
+    if (ticking) {
+      return;
+    }
+    ticking = true;
+    requestAnimationFrame(function () {
+      updateActiveLink();
+      ticking = false;
+    });
+  }
+
+  window.addEventListener('scroll', onScroll, { passive: true });
+  window.addEventListener('resize', onScroll);
+  window.addEventListener('hashchange', function () {
+    setTimeout(updateActiveLink, 50);
+  });
+
+  updateActiveLink();
 })();
 </script>

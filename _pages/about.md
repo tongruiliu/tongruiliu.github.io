@@ -264,6 +264,10 @@ redirect_from:
   border-radius: 12px;
   padding: 12px 14px;
   position: relative;
+  display: grid;
+  grid-template-columns: 116px minmax(0, 1fr);
+  column-gap: 12px;
+  align-items: start;
   box-shadow: 0 10px 18px rgba(148, 163, 184, 0.14);
   transition: transform .22s ease, box-shadow .25s ease, border-color .25s ease;
   backdrop-filter: blur(5px);
@@ -309,13 +313,29 @@ redirect_from:
 }
 
 .rt-home .rt-time {
-  display: inline-block;
-  font-size: 0.8rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: flex-start;
+  min-height: 30px;
+  font-size: 0.76rem;
   letter-spacing: 0.08em;
   text-transform: uppercase;
   color: var(--rt-blue);
   font-weight: 700;
-  margin-bottom: 4px;
+  margin-bottom: 0;
+  padding: 2px 10px;
+  border-radius: 999px;
+  border: 1px solid #bfdbfe;
+  background: #eff6ff;
+}
+
+.rt-home .rt-news-text {
+  color: #334155;
+  line-height: 1.52;
+}
+
+.rt-home .rt-news-text strong {
+  color: #1d4ed8;
 }
 
 .rt-home .rt-award-grid {
@@ -638,6 +658,11 @@ redirect_from:
   .rt-home .rt-hero h1 {
     font-size: 1.45rem;
   }
+
+  .rt-home .rt-timeline li {
+    grid-template-columns: 1fr;
+    row-gap: 8px;
+  }
 }
 
 @media (prefers-reduced-motion: reduce) {
@@ -700,7 +725,6 @@ redirect_from:
       <ul class="rt-quick-list">
         <li><strong>Incoming Graduate Student</strong><br>Big Data program, School of Mathematical Sciences, <a href="https://www.pku.edu.cn/">Peking University</a></li>
         <li><strong>Current Role</strong><br>Intern at a top-tier quantitative firm in Beijing</li>
-        <li><strong>Service</strong><br>Reviewer/PC Member: Transactions on Knowledge Discovery from Data (TKDD)</li>
       </ul>
     </article>
   </section>
@@ -710,20 +734,40 @@ redirect_from:
     <p class="rt-note">For detailed paper information, please check the <a href="/Publications.html">Publications</a> page.</p>
     <ul class="rt-timeline">
       <li>
-        <span class="rt-time">February 2026</span><br>
-        A survey on LLM data preparation was accepted by <strong>JCST's 40th Anniversary Special Issue</strong>.
+        <span class="rt-time">2026-02</span>
+        <div class="rt-news-text">A survey on LLM data preparation was accepted by <strong>JCST's 40th Anniversary Special Issue</strong>.</div>
       </li>
       <li>
-        <span class="rt-time">January 2026</span><br>
-        One paper submitted to <strong>IJCAI 2026</strong>; two papers submitted to <strong>ICML 2026</strong>; two papers submitted to <strong>ACL 2026</strong>.
+        <span class="rt-time">2026-01</span>
+        <div class="rt-news-text">A paper was submitted to <strong>IJCAI 2026</strong>.</div>
       </li>
       <li>
-        <span class="rt-time">August 2025</span><br>
-        One paper submitted to <strong>TPAMI</strong>.
+        <span class="rt-time">2026-01</span>
+        <div class="rt-news-text">The first paper was submitted to <strong>ICML 2026</strong>.</div>
       </li>
       <li>
-        <span class="rt-time">July 2025</span><br>
-        One paper accepted by <strong>ICONIP 2025</strong>; pre-admitted to PKU through recommendation program (Bao Yan).
+        <span class="rt-time">2026-01</span>
+        <div class="rt-news-text">The second paper was submitted to <strong>ICML 2026</strong>.</div>
+      </li>
+      <li>
+        <span class="rt-time">2026-01</span>
+        <div class="rt-news-text">The first paper was submitted to <strong>ACL 2026</strong>.</div>
+      </li>
+      <li>
+        <span class="rt-time">2026-01</span>
+        <div class="rt-news-text">The second paper was submitted to <strong>ACL 2026</strong>.</div>
+      </li>
+      <li>
+        <span class="rt-time">2025-08</span>
+        <div class="rt-news-text">A paper was submitted to <strong>TPAMI</strong>.</div>
+      </li>
+      <li>
+        <span class="rt-time">2025-07</span>
+        <div class="rt-news-text">A paper was accepted by <strong>ICONIP 2025</strong>.</div>
+      </li>
+      <li>
+        <span class="rt-time">2025-07</span>
+        <div class="rt-news-text">I was pre-admitted to PKU through the postgraduate recommendation program (Bao Yan).</div>
       </li>
     </ul>
   </div>

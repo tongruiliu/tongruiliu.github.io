@@ -11,6 +11,10 @@ redirect_from:
   display: none;
 }
 
+.masthead {
+  display: none !important;
+}
+
 body {
   background:
     radial-gradient(1200px 620px at -10% -10%, rgba(37, 99, 235, 0.2) 0%, rgba(37, 99, 235, 0) 62%),
@@ -19,6 +23,7 @@ body {
     repeating-linear-gradient(0deg, rgba(59, 130, 246, 0.06) 0 1px, transparent 1px 34px),
     repeating-linear-gradient(90deg, rgba(59, 130, 246, 0.06) 0 1px, transparent 1px 34px);
   background-attachment: fixed;
+  padding-top: 0 !important;
 }
 
 .rt-cyber-bg {
@@ -171,10 +176,7 @@ body {
   box-shadow: 0 14px 22px rgba(96, 165, 250, 0.22);
 }
 
-.rt-home .rt-grid {
-  display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 14px;
+.rt-home .rt-top-intro {
   margin: 14px 0 18px;
 }
 
@@ -226,57 +228,79 @@ body {
   color: var(--rt-soft-ink);
 }
 
-.rt-home .rt-quick-list {
-  list-style: none;
+.rt-home .rt-intro-text {
   margin: 0;
-  padding: 0;
+  color: #334155;
+  line-height: 1.7;
 }
 
-.rt-home .rt-quick-list li {
-  padding: 8px 0;
-  border-bottom: 1px dashed #e2e8f0;
-}
-
-.rt-home .rt-quick-list li:last-child {
-  border-bottom: 0;
-}
-
-.rt-home .rt-quick-list li.rt-snap-subtitle {
-  padding: 10px 0 4px;
-  border-bottom: 0;
-}
-
-.rt-home .rt-quick-list li.rt-role-item {
-  padding: 10px 10px 9px;
-  border-bottom: 0;
-  margin-bottom: 6px;
-}
-
-.rt-home .rt-role-item {
-  border: 1px solid #e2ebf6;
-  border-radius: 10px;
-  background: #f8fbff;
-}
-
-.rt-home .rt-snap-subtitle {
-  margin: 10px 0 6px;
-  font-size: 0.86rem;
-  font-weight: 800;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-  color: #1e3a8a;
-}
-
-.rt-home .rt-role-head {
+.rt-home .rt-focus-row {
   display: flex;
   flex-wrap: wrap;
-  gap: 4px 8px;
-  align-items: baseline;
+  gap: 9px;
+  margin-top: 12px;
 }
 
-.rt-home .rt-role-org {
-  font-weight: 700;
+.rt-home .rt-focus-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  border: 1px solid #d5e4f4;
+  background: linear-gradient(135deg, #f8fbff 0%, #ffffff 100%);
   color: #1e3a8a;
+  border-radius: 999px;
+  padding: 5px 11px;
+  font-size: 0.83rem;
+  font-weight: 600;
+}
+
+.rt-home .rt-snapshot-row {
+  margin-top: 12px;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1.8fr);
+  gap: 12px;
+}
+
+.rt-home .rt-snapshot-item {
+  border: 1px solid #dbe7f5;
+  border-radius: 12px;
+  background: linear-gradient(145deg, rgba(255, 255, 255, 0.92) 0%, rgba(245, 250, 255, 0.88) 100%);
+  padding: 12px 12px 11px;
+  box-shadow: 0 9px 16px rgba(148, 163, 184, 0.14);
+  transition: transform .22s ease, box-shadow .24s ease, border-color .22s ease;
+}
+
+.rt-home .rt-snapshot-item:hover {
+  transform: translateY(-3px) scale(1.012);
+  border-color: #bfdbfe;
+  box-shadow: 0 16px 24px rgba(96, 165, 250, 0.22);
+}
+
+.rt-home .rt-snapshot-item--internship {
+  padding: 12px 13px;
+}
+
+.rt-home .rt-snapshot-kicker {
+  margin: 0 0 5px;
+  font-size: 0.76rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: #1e3a8a;
+  font-weight: 800;
+}
+
+.rt-home .rt-snapshot-main {
+  margin: 0 0 6px;
+  color: #0f172a;
+  font-weight: 700;
+  line-height: 1.45;
+}
+
+.rt-home .rt-snapshot-sub {
+  margin: 0;
+  color: #475569;
+  font-size: 0.9rem;
+  line-height: 1.5;
 }
 
 .rt-home .rt-role-meta {
@@ -284,7 +308,7 @@ body {
   font-size: 0.88rem;
 }
 
-.rt-home .rt-role-line {
+.rt-home .rt-snapshot-line {
   margin-top: 5px;
   display: flex;
   flex-wrap: wrap;
@@ -292,14 +316,29 @@ body {
   align-items: center;
 }
 
-.rt-home .rt-role-title {
+.rt-home .rt-snapshot-role {
   display: inline-flex;
   color: #334155;
+  font-size: 0.93rem;
+}
+
+.rt-home .rt-snapshot-stack {
+  display: grid;
+  gap: 8px;
+}
+
+.rt-home .rt-snapshot-entry {
+  padding-top: 2px;
+}
+
+.rt-home .rt-snapshot-entry + .rt-snapshot-entry {
+  border-top: 1px dashed #dbe7f5;
+  padding-top: 10px;
 }
 
 .rt-home .rt-spotlight {
   display: inline-block;
-  margin-left: 3px;
+  margin-left: 0;
   padding: 1px 7px;
   border-radius: 999px;
   border: 1px solid #fda4af;
@@ -714,7 +753,7 @@ body {
   display: grid;
   grid-template-columns: 1fr;
   gap: 12px;
-  max-width: 780px;
+  max-width: 900px;
   margin: 0 auto;
 }
 
@@ -731,6 +770,53 @@ body {
   transform: translateY(-3px) scale(1.012);
   border-color: #bfdbfe;
   box-shadow: 0 16px 26px rgba(96, 165, 250, 0.2);
+}
+
+.rt-home .rt-visitor-map {
+  padding: 10px 10px 12px;
+}
+
+.rt-home .rt-map-embed {
+  max-width: 620px;
+  margin: 0 auto;
+}
+
+.rt-home .rt-visitor-bottom {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px;
+}
+
+.rt-home .rt-service-card {
+  border: 1px solid var(--rt-line);
+  border-radius: 12px;
+  background: linear-gradient(145deg, rgba(255, 255, 255, 0.95) 0%, rgba(245, 250, 255, 0.9) 100%);
+  color: #1f2937;
+  padding: 15px 14px;
+  box-shadow: 0 10px 20px rgba(148, 163, 184, 0.16);
+  transition: transform .22s ease, box-shadow .24s ease, border-color .22s ease;
+}
+
+.rt-home .rt-service-card:hover {
+  transform: translateY(-3px) scale(1.012);
+  border-color: #bfdbfe;
+  box-shadow: 0 18px 28px rgba(96, 165, 250, 0.22);
+}
+
+.rt-home .rt-service-title {
+  margin: 0 0 6px;
+  font-size: 0.8rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: #1e3a8a;
+  font-weight: 800;
+}
+
+.rt-home .rt-service-text {
+  margin: 0;
+  color: #334155;
+  line-height: 1.5;
+  font-size: 0.93rem;
 }
 
 .rt-home .rt-counter-card {
@@ -801,10 +887,11 @@ body {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
-  .rt-home .rt-grid,
+  .rt-home .rt-snapshot-row,
   .rt-home .rt-award-grid,
   .rt-home .rt-pub-grid,
-  .rt-home .rt-visitor-wrap {
+  .rt-home .rt-visitor-wrap,
+  .rt-home .rt-visitor-bottom {
     grid-template-columns: 1fr;
   }
 
@@ -880,48 +967,44 @@ body {
     <a class="rt-jump-item" href="#section-visitor"><i class="fa fa-globe" aria-hidden="true"></i> Visitor</a>
   </nav>
 
-  <section class="rt-grid" id="section-overview">
+  <section class="rt-top-intro" id="section-overview">
     <article class="rt-card">
       <h2><i class="fa fa-flask" aria-hidden="true"></i> Research Overview</h2>
-      <p>
-        My research centers on Data-Centric AI for Large Language Models (LLMs) and Multimodal LLMs, spanning from
-        large-scale data engineering to complex reasoning optimization.
+      <p class="rt-intro-text">
+        My research centers on Data-Centric AI for Large Language Models (LLMs) and Multimodal LLMs, spanning scalable data synthesis,
+        data quality filtering, alignment optimization, and structure-aware reasoning with Knowledge Graphs to improve reliability and factual consistency.
       </p>
-      <p>
-        I focus on scalable frameworks for automated data synthesis and quality filtering, and design advanced alignment
-        algorithms to enhance model intelligence and reliability.
-      </p>
-      <p>
-        I also investigate Knowledge Graphs (KGs) for structure-aware modeling to improve factual consistency and logical reasoning.
-      </p>
+      <div class="rt-focus-row">
+        <span class="rt-focus-pill"><i class="fa fa-database" aria-hidden="true"></i> Data Synthesis &amp; Filtering</span>
+        <span class="rt-focus-pill"><i class="fa fa-sliders" aria-hidden="true"></i> LLM/MMLM Alignment</span>
+        <span class="rt-focus-pill"><i class="fa fa-sitemap" aria-hidden="true"></i> KG Reasoning</span>
+      </div>
     </article>
-    <article class="rt-card">
-      <h2><i class="fa fa-rocket" aria-hidden="true"></i> Snapshot</h2>
-      <ul class="rt-quick-list">
-        <li><strong>Incoming Graduate Student</strong><br>Big Data program, School of Mathematical Sciences, <a href="https://www.pku.edu.cn/">Peking University</a></li>
-        <li class="rt-snap-subtitle">Internship</li>
-        <li class="rt-role-item">
-          <div class="rt-role-head">
-            <span class="rt-role-org">Ubiquant-IQuest</span>
-            <span class="rt-role-meta">2026.02 - Present</span>
+    <div class="rt-snapshot-row">
+      <article class="rt-snapshot-item">
+        <div class="rt-snapshot-kicker">Education</div>
+        <p class="rt-snapshot-main">Incoming Graduate Student</p>
+        <p class="rt-snapshot-sub">Big Data Program, School of Mathematical Sciences, <a href="https://www.pku.edu.cn/">Peking University</a></p>
+      </article>
+      <article class="rt-snapshot-item rt-snapshot-item--internship">
+        <div class="rt-snapshot-kicker">Internship</div>
+        <div class="rt-snapshot-stack">
+          <div class="rt-snapshot-entry">
+            <p class="rt-snapshot-main">Ubiquant-IQuest <span class="rt-role-meta">2026.02 - Present</span></p>
+            <div class="rt-snapshot-line">
+              <span class="rt-snapshot-role">LLM Algorithm Intern</span>
+              <span class="rt-spotlight">Talent Program</span>
+            </div>
           </div>
-          <div class="rt-role-line">
-            <span class="rt-role-title">LLM Algorithm Intern</span>
-            <span class="rt-spotlight">Talent Program</span>
+          <div class="rt-snapshot-entry">
+            <p class="rt-snapshot-main">Institute for Advanced Algorithms Research (IAAR), Shanghai <span class="rt-role-meta">2025.09 - 2026.02</span></p>
+            <div class="rt-snapshot-line">
+              <span class="rt-snapshot-role">LLM Algorithm Research Intern</span>
+            </div>
           </div>
-        </li>
-        <li class="rt-role-item">
-          <div class="rt-role-head">
-            <span class="rt-role-org">Institute for Advanced Algorithms Research (IAAR), Shanghai</span>
-            <span class="rt-role-meta">2025.09 - 2026.02</span>
-          </div>
-          <div class="rt-role-line">
-            <span class="rt-role-title">LLM Algorithm Research Intern</span>
-          </div>
-        </li>
-        <li><strong>Service</strong><br>Reviewer/PC Member: Transactions on Knowledge Discovery from Data (TKDD)</li>
-      </ul>
-    </article>
+        </div>
+      </article>
+    </div>
   </section>
 
   <h2 class="rt-section-title" id="section-news"><i class="fa fa-bolt" aria-hidden="true"></i> What's New</h2>
@@ -1123,14 +1206,22 @@ body {
 
   <h2 class="rt-section-title" id="section-visitor"><i class="fa fa-globe" aria-hidden="true"></i> Visitor</h2>
   <div class="rt-visitor-wrap">
-    <div class="rt-visitor-card">
-      <script type="text/javascript" id="clustrmaps" src="//clustrmaps.com/map_v2.js?d=wWuKIsCZO2yYZA7sXQVVhdoENIGHAUsZCAy6ZjG-Uhk&cl=ffffff&w=a"></script>
+    <div class="rt-visitor-card rt-visitor-map">
+      <div class="rt-map-embed">
+        <script type="text/javascript" id="clustrmaps" src="//clustrmaps.com/map_v2.js?d=wWuKIsCZO2yYZA7sXQVVhdoENIGHAUsZCAy6ZjG-Uhk&cl=ffffff&w=a"></script>
+      </div>
       <div style="font-size:0.86em;color:#64748b;margin-top:6px;">Visitor Geography</div>
     </div>
-    <div class="rt-counter-card">
-      <div class="rt-counter-title">Visit Counter</div>
-      <div id="busuanzi_value_site_pv" data-offset="20" class="rt-counter-value">--</div>
-      <div class="rt-counter-label">Page Views (PV)</div>
+    <div class="rt-visitor-bottom">
+      <div class="rt-service-card">
+        <div class="rt-service-title">Service</div>
+        <p class="rt-service-text">Reviewer/PC Member: Transactions on Knowledge Discovery from Data (TKDD)</p>
+      </div>
+      <div class="rt-counter-card">
+        <div class="rt-counter-title">Visit Counter</div>
+        <div id="busuanzi_value_site_pv" data-offset="20" class="rt-counter-value">--</div>
+        <div class="rt-counter-label">Page Views (PV)</div>
+      </div>
     </div>
   </div>
 </div>

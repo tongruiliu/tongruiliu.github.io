@@ -145,6 +145,12 @@ body {
   background: rgba(255, 255, 255, 0.24);
 }
 
+.rt-home .rt-hero .rt-focus-pill {
+  background: rgba(255, 255, 255, 0.14);
+  border-color: rgba(255, 255, 255, 0.3);
+  color: #eaf2ff;
+}
+
 .rt-home .rt-jump-nav {
   display: grid;
   grid-template-columns: repeat(5, minmax(0, 1fr));
@@ -944,7 +950,7 @@ body {
 
 <div class="rt-cyber-bg" aria-hidden="true"></div>
 <div class="rt-home">
-  <section class="rt-hero">
+  <section class="rt-hero" id="section-overview">
     <p class="rt-eyebrow">Ruitong Liu</p>
     <h1>Data-Centric AI for LLMs and Multimodal Intelligence</h1>
     <p>
@@ -952,6 +958,11 @@ body {
       <a href="https://www.dlut.edu.cn/" style="color:#f8fafc; text-decoration: underline;">Dalian University of Technology</a>
       (Mathematics and Applied Mathematics), working on scalable data synthesis, filtering, alignment, and structure-aware reasoning for trustworthy AI systems.
     </p>
+    <div class="rt-focus-row">
+      <span class="rt-focus-pill"><i class="fa fa-database" aria-hidden="true"></i> Data Synthesis &amp; Filtering</span>
+      <span class="rt-focus-pill"><i class="fa fa-sliders" aria-hidden="true"></i> LLM/MMLM Alignment</span>
+      <span class="rt-focus-pill"><i class="fa fa-sitemap" aria-hidden="true"></i> KG Reasoning</span>
+    </div>
     <div class="rt-chip-row">
       <a class="rt-chip" href="mailto:15668672116@163.com"><i class="fa fa-envelope" aria-hidden="true"></i> 15668672116@163.com</a>
       <a class="rt-chip" href="mailto:ruitong.jerry@gmail.com"><i class="fa fa-envelope-o" aria-hidden="true"></i> ruitong.jerry@gmail.com</a>
@@ -967,19 +978,7 @@ body {
     <a class="rt-jump-item" href="#section-visitor"><i class="fa fa-globe" aria-hidden="true"></i> Visitor</a>
   </nav>
 
-  <section class="rt-top-intro" id="section-overview">
-    <article class="rt-card">
-      <h2><i class="fa fa-flask" aria-hidden="true"></i> Research Overview</h2>
-      <p class="rt-intro-text">
-        My research centers on Data-Centric AI for Large Language Models (LLMs) and Multimodal LLMs, spanning scalable data synthesis,
-        data quality filtering, alignment optimization, and structure-aware reasoning with Knowledge Graphs to improve reliability and factual consistency.
-      </p>
-      <div class="rt-focus-row">
-        <span class="rt-focus-pill"><i class="fa fa-database" aria-hidden="true"></i> Data Synthesis &amp; Filtering</span>
-        <span class="rt-focus-pill"><i class="fa fa-sliders" aria-hidden="true"></i> LLM/MMLM Alignment</span>
-        <span class="rt-focus-pill"><i class="fa fa-sitemap" aria-hidden="true"></i> KG Reasoning</span>
-      </div>
-    </article>
+  <section class="rt-top-intro">
     <div class="rt-snapshot-row">
       <article class="rt-snapshot-item">
         <div class="rt-snapshot-kicker">Education</div>

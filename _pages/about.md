@@ -193,11 +193,37 @@ redirect_from:
   border-bottom: 0;
 }
 
-.rt-home .rt-role-item {
+.rt-home .rt-quick-list li.rt-snap-subtitle {
+  padding: 10px 0 4px;
+  border-bottom: 0;
+}
+
+.rt-home .rt-quick-list li.rt-role-item {
   padding: 10px 10px 9px;
+  border-bottom: 0;
+  margin-bottom: 6px;
+}
+
+.rt-home .rt-role-item {
   border: 1px solid #e2ebf6;
   border-radius: 10px;
   background: #f8fbff;
+}
+
+.rt-home .rt-snap-subtitle {
+  margin: 10px 0 6px;
+  font-size: 0.86rem;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #1e3a8a;
+}
+
+.rt-home .rt-role-head {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px 8px;
+  align-items: baseline;
 }
 
 .rt-home .rt-role-org {
@@ -210,9 +236,16 @@ redirect_from:
   font-size: 0.88rem;
 }
 
+.rt-home .rt-role-line {
+  margin-top: 5px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 7px;
+  align-items: center;
+}
+
 .rt-home .rt-role-title {
-  display: inline-block;
-  margin-top: 4px;
+  display: inline-flex;
   color: #334155;
 }
 
@@ -494,7 +527,7 @@ redirect_from:
 
 .rt-home .rt-pub-grid {
   display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
+  grid-template-columns: 1fr;
   gap: 12px;
 }
 
@@ -538,6 +571,9 @@ redirect_from:
 }
 
 .rt-home .rt-pub-card {
+  display: grid;
+  grid-template-columns: minmax(240px, 31%) 1fr;
+  align-items: stretch;
   border: 1px solid var(--rt-line);
   border-radius: 12px;
   overflow: hidden;
@@ -548,17 +584,23 @@ redirect_from:
 }
 
 .rt-home .rt-pub-card:hover {
-  transform: translateY(-4px) scale(1.015);
+  transform: translateY(-3px) scale(1.01);
   border-color: #bfdbfe;
   box-shadow: 0 20px 32px rgba(96, 165, 250, 0.22);
+}
+
+.rt-home .rt-pub-media {
+  display: block;
+  border-right: 1px solid #e5edf5;
+  background: linear-gradient(135deg, #edf4ff 0%, #f8fbff 100%);
 }
 
 .rt-home .rt-pub-thumb {
   display: block;
   width: 100%;
-  height: 160px;
+  height: 100%;
+  min-height: 188px;
   object-fit: cover;
-  border-bottom: 1px solid #e5edf5;
   transition: transform .28s ease;
 }
 
@@ -694,6 +736,19 @@ redirect_from:
   .rt-home .rt-visitor-wrap {
     grid-template-columns: 1fr;
   }
+
+  .rt-home .rt-pub-card {
+    grid-template-columns: 1fr;
+  }
+
+  .rt-home .rt-pub-media {
+    border-right: 0;
+    border-bottom: 1px solid #e5edf5;
+  }
+
+  .rt-home .rt-pub-thumb {
+    min-height: 170px;
+  }
 }
 
 @media (max-width: 640px) {
@@ -770,15 +825,25 @@ redirect_from:
       <h2><i class="fa fa-rocket" aria-hidden="true"></i> Snapshot</h2>
       <ul class="rt-quick-list">
         <li><strong>Incoming Graduate Student</strong><br>Big Data program, School of Mathematical Sciences, <a href="https://www.pku.edu.cn/">Peking University</a></li>
+        <li class="rt-snap-subtitle">Internship</li>
         <li class="rt-role-item">
-          <span class="rt-role-org">Ubiquant-IQuest</span>
-          <span class="rt-role-meta"> · 2026.02 - Present</span><br>
-          <span class="rt-role-title">LLM Algorithm Intern (<span class="rt-spotlight">Talent Program</span>)</span>
+          <div class="rt-role-head">
+            <span class="rt-role-org">Ubiquant-IQuest</span>
+            <span class="rt-role-meta">2026.02 - Present</span>
+          </div>
+          <div class="rt-role-line">
+            <span class="rt-role-title">LLM Algorithm Intern</span>
+            <span class="rt-spotlight">Talent Program</span>
+          </div>
         </li>
         <li class="rt-role-item">
-          <span class="rt-role-org">Institute for Advanced Algorithms Research (IAAR), Shanghai</span>
-          <span class="rt-role-meta"> · 2025.09 - 2026.02</span><br>
-          <span class="rt-role-title">LLM Algorithm Research Intern</span>
+          <div class="rt-role-head">
+            <span class="rt-role-org">Institute for Advanced Algorithms Research (IAAR), Shanghai</span>
+            <span class="rt-role-meta">2025.09 - 2026.02</span>
+          </div>
+          <div class="rt-role-line">
+            <span class="rt-role-title">LLM Algorithm Research Intern</span>
+          </div>
         </li>
         <li><strong>Service</strong><br>Reviewer/PC Member: Transactions on Knowledge Discovery from Data (TKDD)</li>
       </ul>
@@ -819,17 +884,12 @@ redirect_from:
       </li>
       <li>
         <span class="rt-time">2025-07</span>
-        <div class="rt-news-text">A paper was accepted by <strong>ICONIP 2025</strong>.</div>
-      </li>
-      <li>
-        <span class="rt-time">2025-07</span>
         <div class="rt-news-text">I was pre-admitted to PKU through the postgraduate recommendation program (Bao Yan).</div>
       </li>
     </ul>
   </div>
 
   <h2 class="rt-section-title" id="section-awards"><i class="fa fa-trophy" aria-hidden="true"></i> Selected Awards</h2>
-  <p class="rt-note">For full honors and details, please visit <a href="/Awards/">Awards</a>.</p>
   <div class="rt-awards-zone">
     <div class="rt-award-grid">
       <article class="rt-award">
@@ -879,11 +939,10 @@ redirect_from:
 
   <h2 class="rt-section-title" id="section-pubs"><i class="fa fa-book" aria-hidden="true"></i> Publications</h2>
   <div class="rt-pubs-zone">
-    <p class="rt-note">Auto synced from your existing <a href="/publications/">Publications</a> page.</p>
     <div class="rt-pub-grid">
       <article class="rt-pub-card">
-        <a href="https://arxiv.org/pdf/2602.04290">
-          <img class="rt-pub-thumb" src="{{ '/images/pub_icml_guide.png' | relative_url }}" alt="Guided Verifier teaser">
+        <a class="rt-pub-media" href="https://arxiv.org/pdf/2602.04290">
+          <img class="rt-pub-thumb" src="{{ '/images/home_pubs/01.png' | relative_url }}" alt="Guided Verifier teaser">
         </a>
         <div class="rt-pub-body">
           <h3 class="rt-pub-title">Guided Verifier: Collaborative Multimodal Reasoning via Dynamic Process Supervision</h3>
@@ -898,8 +957,8 @@ redirect_from:
       </article>
 
       <article class="rt-pub-card">
-        <a href="https://arxiv.org/pdf/2602.10494">
-          <img class="rt-pub-thumb" src="{{ '/images/pub_canvas_cot.png' | relative_url }}" alt="Canvas-of-Thought teaser">
+        <a class="rt-pub-media" href="https://arxiv.org/pdf/2602.10494">
+          <img class="rt-pub-thumb" src="{{ '/images/home_pubs/02.png' | relative_url }}" alt="Canvas-of-Thought teaser">
         </a>
         <div class="rt-pub-body">
           <h3 class="rt-pub-title">Canvas-of-Thought: Grounding Reasoning via Mutable Structured States</h3>
@@ -913,8 +972,8 @@ redirect_from:
       </article>
 
       <article class="rt-pub-card">
-        <a href="https://arxiv.org/pdf/2510.08966">
-          <img class="rt-pub-thumb" src="{{ '/images/pub_www.png' | relative_url }}" alt="Semantic-Condition Tuning teaser">
+        <a class="rt-pub-media" href="https://arxiv.org/pdf/2510.08966">
+          <img class="rt-pub-thumb" src="{{ '/images/home_pubs/03.png' | relative_url }}" alt="Semantic-Condition Tuning teaser">
         </a>
         <div class="rt-pub-body">
           <h3 class="rt-pub-title">Semantic-Condition Tuning: Fusing Graph Context with Large Language Models for Knowledge Graph Completion</h3>
@@ -928,8 +987,8 @@ redirect_from:
       </article>
 
       <article class="rt-pub-card">
-        <a href="https://arxiv.org/pdf/2506.23137">
-          <img class="rt-pub-thumb" src="{{ '/images/pub_tpami.png' | relative_url }}" alt="Flow-Modulated Scoring teaser">
+        <a class="rt-pub-media" href="https://arxiv.org/pdf/2506.23137">
+          <img class="rt-pub-thumb" src="{{ '/images/home_pubs/04.png' | relative_url }}" alt="Flow-Modulated Scoring teaser">
         </a>
         <div class="rt-pub-body">
           <h3 class="rt-pub-title">Flow-Modulated Scoring for Semantic-Aware Knowledge Graph Completion</h3>
@@ -943,8 +1002,8 @@ redirect_from:
       </article>
 
       <article class="rt-pub-card">
-        <a href="https://drive.google.com/file/d/1TqwULwmD8f-cpokfcfYfapuC9bNxrztA/view?usp=sharing">
-          <img class="rt-pub-thumb" src="{{ '/images/pub_survey.png' | relative_url }}" alt="LLM data preparation survey teaser">
+        <a class="rt-pub-media" href="https://drive.google.com/file/d/1TqwULwmD8f-cpokfcfYfapuC9bNxrztA/view?usp=sharing">
+          <img class="rt-pub-thumb" src="{{ '/images/home_pubs/05.png' | relative_url }}" alt="LLM data preparation survey teaser">
         </a>
         <div class="rt-pub-body">
           <h3 class="rt-pub-title">Data Preparation for Large Language Models: A Survey</h3>
@@ -957,22 +1016,8 @@ redirect_from:
       </article>
 
       <article class="rt-pub-card">
-        <a href="https://link.springer.com/chapter/10.1007/978-981-95-4367-0_38">
-          <img class="rt-pub-thumb" src="{{ '/images/ICONIP.png' | relative_url }}" alt="ICONIP 2025 paper teaser">
-        </a>
-        <div class="rt-pub-body">
-          <h3 class="rt-pub-title">Context-Driven Knowledge Graph Completion with Semantic-Aware Relational Message Passing</h3>
-          <p class="rt-pub-authors">Siyuan Li, <strong>Ruitong Liu</strong>, Te Sun, Yan Wen, Ruihao Zhou, Jingyi Kang, Yunjia Wu</p>
-          <p class="rt-pub-meta">ICONIP 2025 Poster</p>
-          <div class="rt-pub-links">
-            <a class="rt-pill" href="https://link.springer.com/chapter/10.1007/978-981-95-4367-0_38">PDF</a>
-          </div>
-        </div>
-      </article>
-
-      <article class="rt-pub-card">
-        <a href="https://arxiv.org/pdf/2510.26495">
-          <img class="rt-pub-thumb" src="{{ '/images/t2sql.png' | relative_url }}" alt="Text-to-SQL paper teaser">
+        <a class="rt-pub-media" href="https://arxiv.org/pdf/2510.26495">
+          <img class="rt-pub-thumb" src="{{ '/images/home_pubs/06.png' | relative_url }}" alt="Text-to-SQL paper teaser">
         </a>
         <div class="rt-pub-body">
           <h3 class="rt-pub-title">Rethinking Text-to-SQL: Dynamic Multi-turn SQL Interaction for Real-world Database Exploration</h3>
@@ -980,20 +1025,22 @@ redirect_from:
           <p class="rt-pub-meta">ACL 2026 Under Review</p>
           <div class="rt-pub-links">
             <a class="rt-pill" href="https://arxiv.org/pdf/2510.26495">PDF</a>
+            <a class="rt-pill" href="https://github.com/Aurora-slz/DySQL-Bench.git">Code</a>
           </div>
         </div>
       </article>
 
       <article class="rt-pub-card">
-        <a href="https://drive.google.com/file/d/1KvE3DZ1ih_8kzPfQUeitKelu57EHNNkV/view?usp=sharing">
-          <img class="rt-pub-thumb" src="{{ '/images/acl2.png' | relative_url }}" alt="Temporal KGF paper teaser">
+        <a class="rt-pub-media" href="https://arxiv.org/pdf/2602.12389">
+          <img class="rt-pub-thumb" src="{{ '/images/home_pubs/07.png' | relative_url }}" alt="Temporal KGF paper teaser">
         </a>
         <div class="rt-pub-body">
           <h3 class="rt-pub-title">Evolving Beyond Snapshots: Harmonizing Structure and Sequence via Entity State Tuning for Temporal Knowledge Graph Forecasting</h3>
           <p class="rt-pub-authors">Yunjia Wu, yiyong xiao, Huang Pingyang, Peize Li, Siyuan Li#, <strong>Ruitong Liu#</strong>, Yan Wen, Te Sun, Fangyi Pei</p>
           <p class="rt-pub-meta">ACL 2026 Under Review</p>
           <div class="rt-pub-links">
-            <a class="rt-pill" href="https://drive.google.com/file/d/1KvE3DZ1ih_8kzPfQUeitKelu57EHNNkV/view?usp=sharing">PDF</a>
+            <a class="rt-pill" href="https://arxiv.org/pdf/2602.12389">PDF</a>
+            <a class="rt-pill" href="https://github.com/yuanwuyuan9/Evolving-Beyond-Snapshots.git">Code</a>
           </div>
         </div>
       </article>
@@ -1003,9 +1050,7 @@ redirect_from:
   <h2 class="rt-section-title" id="section-visitor"><i class="fa fa-globe" aria-hidden="true"></i> Visitor</h2>
   <div class="rt-visitor-wrap">
     <div class="rt-visitor-card">
-      <div style="display:inline-block; zoom:5;">
-        <script type="text/javascript" id="clstr_globe" src="https://clustrmaps.com/globe.js?d=wWuKIsCZO2yYZA7sXQVVhdoENIGHAUsZCAy6ZjG-Uhk"></script>
-      </div>
+      <script type="text/javascript" id="clustrmaps" src="//clustrmaps.com/map_v2.js?d=wWuKIsCZO2yYZA7sXQVVhdoENIGHAUsZCAy6ZjG-Uhk&cl=ffffff&w=a"></script>
       <div style="font-size:0.86em;color:#64748b;margin-top:6px;">Visitor Geography</div>
     </div>
     <div class="rt-counter-card">

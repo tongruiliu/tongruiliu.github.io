@@ -262,3 +262,86 @@
     }
   }
 }
+
+/*
+   Sidebar visual refresh
+   ========================================================================== */
+
+.sidebar {
+  @include breakpoint($large) {
+    .author__avatar img {
+      border: 2px solid rgba(255, 255, 255, 0.92);
+      box-shadow: 0 12px 26px rgba(37, 99, 235, 0.16);
+      transition: transform 0.24s ease, box-shadow 0.24s ease;
+    }
+
+    > div[itemscope] {
+      position: relative;
+      overflow: hidden;
+      border-radius: 16px;
+      padding: 14px 12px 12px;
+      border: 1px solid rgba(37, 99, 235, 0.12);
+      background: linear-gradient(145deg, rgba(255, 255, 255, 0.95) 0%, rgba(245, 250, 255, 0.9) 100%);
+      box-shadow: 0 18px 34px rgba(15, 23, 42, 0.12);
+      backdrop-filter: blur(4px);
+    }
+
+    > div[itemscope]::before {
+      content: "";
+      position: absolute;
+      width: 170px;
+      height: 170px;
+      right: -70px;
+      top: -70px;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(59, 130, 246, 0.22) 0%, rgba(59, 130, 246, 0) 72%);
+      pointer-events: none;
+    }
+
+    > div[itemscope]::after {
+      content: "";
+      position: absolute;
+      width: 150px;
+      height: 150px;
+      left: -65px;
+      bottom: -65px;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(14, 165, 233, 0.16) 0%, rgba(14, 165, 233, 0) 74%);
+      pointer-events: none;
+    }
+
+    > div[itemscope]:hover .author__avatar img {
+      transform: scale(1.025);
+      box-shadow: 0 18px 30px rgba(59, 130, 246, 0.24);
+    }
+
+    .author__name {
+      font-size: 1.08rem;
+      color: #0f172a;
+      font-weight: 800;
+      letter-spacing: 0.01em;
+    }
+
+    .author__bio {
+      color: #475569;
+      line-height: 1.55;
+    }
+
+    .author__urls li {
+      margin-bottom: 4px;
+    }
+
+    .author__urls a {
+      padding: 5px 8px;
+      border-radius: 9px;
+      transition: background 0.2s ease, transform 0.2s ease, color 0.2s ease;
+    }
+
+    .author__urls a:hover {
+      text-decoration: none;
+      background: rgba(37, 99, 235, 0.1);
+      color: #1d4ed8;
+      transform: translateX(2px);
+    }
+  }
+}

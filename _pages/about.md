@@ -486,7 +486,7 @@ body {
 }
 
 .rt-home .rt-profile-role {
-  display: inline-flex;
+  display: inline;
   color: #334155;
   font-size: 0.93rem;
 }
@@ -1199,17 +1199,17 @@ body {
           <h3 class="rt-profile-head">Education</h3>
           <ul class="rt-profile-list">
             <li class="rt-profile-item">
-              <div class="rt-profile-date">2022.09 - 2026.07</div>
-              <div>
-                <p class="rt-profile-main"><a href="https://math.dlut.edu.cn/">School of Mathematical Sciences, Dalian University of Technology</a></p>
-                <p class="rt-profile-sub">Mathematics and Applied Mathematics (B.S.)</p>
-              </div>
-            </li>
-            <li class="rt-profile-item">
               <div class="rt-profile-date">2026.09 - 2028.09</div>
               <div>
                 <p class="rt-profile-main"><a href="https://www.math.pku.edu.cn/index.htm">School of Mathematical Sciences, Peking University</a></p>
                 <p class="rt-profile-sub">Data Science and Big Data Technology (Graduate Studies, Planned)</p>
+              </div>
+            </li>
+            <li class="rt-profile-item">
+              <div class="rt-profile-date">2022.09 - 2026.07</div>
+              <div>
+                <p class="rt-profile-main"><a href="https://math.dlut.edu.cn/">School of Mathematical Sciences, Dalian University of Technology</a></p>
+                <p class="rt-profile-sub">Mathematics and Applied Mathematics (B.S.)</p>
               </div>
             </li>
           </ul>
@@ -1234,7 +1234,7 @@ body {
                 <div class="rt-profile-time">2025.09 - 2026.02</div>
               </div>
               <div class="rt-profile-role-line">
-                <span class="rt-profile-role">LLM Algorithm <strong>Research</strong> Intern</span>
+                <span class="rt-profile-role">LLM Algorithm&nbsp;<strong>Research</strong>&nbsp;Intern</span>
               </div>
             </li>
           </ul>

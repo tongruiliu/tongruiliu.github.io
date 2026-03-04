@@ -92,6 +92,37 @@ redirect_from:
   background: rgba(255, 255, 255, 0.24);
 }
 
+.rt-home .rt-jump-nav {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  gap: 10px;
+  margin: 14px 0 10px;
+}
+
+.rt-home .rt-jump-item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 7px;
+  border: 1px solid #d5e4f4;
+  background: linear-gradient(135deg, #f8fbff 0%, #ffffff 100%);
+  color: #1e3a8a;
+  border-radius: 11px;
+  padding: 10px 8px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  text-align: center;
+  transition: transform .22s ease, box-shadow .24s ease, background .22s ease, border-color .22s ease;
+  box-shadow: 0 8px 14px rgba(148, 163, 184, 0.14);
+}
+
+.rt-home .rt-jump-item:hover {
+  background: linear-gradient(135deg, #ecf5ff 0%, #ffffff 100%);
+  transform: translateY(-2px) scale(1.02);
+  border-color: #bfdbfe;
+  box-shadow: 0 14px 22px rgba(96, 165, 250, 0.22);
+}
+
 .rt-home .rt-grid {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -105,6 +136,32 @@ redirect_from:
   border-radius: 14px;
   padding: 16px 16px 14px;
   box-shadow: 0 10px 20px rgba(148, 163, 184, 0.12);
+  transition: transform .22s ease, box-shadow .24s ease, border-color .22s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.rt-home .rt-card::after {
+  content: "";
+  position: absolute;
+  right: -34px;
+  top: -30px;
+  width: 90px;
+  height: 90px;
+  border-radius: 999px;
+  background: radial-gradient(circle, rgba(37, 99, 235, 0.2) 0%, rgba(37, 99, 235, 0) 72%);
+  opacity: 0;
+  transition: opacity .24s ease;
+}
+
+.rt-home .rt-card:hover {
+  transform: translateY(-3px) scale(1.015);
+  border-color: #bfdbfe;
+  box-shadow: 0 16px 26px rgba(96, 165, 250, 0.22);
+}
+
+.rt-home .rt-card:hover::after {
+  opacity: 1;
 }
 
 .rt-home .rt-card h2,
@@ -154,15 +211,73 @@ redirect_from:
   list-style: none;
   margin: 0;
   padding: 0;
+  display: grid;
+  gap: 12px;
+}
+
+.rt-home .rt-news-zone {
+  position: relative;
+  border-radius: 16px;
+  padding: 14px;
+  margin-bottom: 6px;
+  overflow: hidden;
+  isolation: isolate;
+  background: linear-gradient(135deg, #edf5ff 0%, #f8fbff 52%, #ffffff 100%);
+  border: 1px solid #dbe8f6;
+}
+
+.rt-home .rt-news-zone::before {
+  content: "";
+  position: absolute;
+  width: 280px;
+  height: 280px;
+  border-radius: 999px;
+  top: -130px;
+  right: -90px;
+  background: radial-gradient(circle, rgba(37, 99, 235, 0.3) 0%, rgba(37, 99, 235, 0) 68%);
+  filter: blur(4px);
+  animation: rt-news-float 9s ease-in-out infinite;
+  z-index: -1;
+}
+
+.rt-home .rt-news-zone::after {
+  content: "";
+  position: absolute;
+  width: 220px;
+  height: 220px;
+  border-radius: 999px;
+  bottom: -110px;
+  left: -70px;
+  background: radial-gradient(circle, rgba(14, 165, 233, 0.26) 0%, rgba(14, 165, 233, 0) 72%);
+  filter: blur(3px);
+  animation: rt-news-float 12s ease-in-out infinite reverse;
+  z-index: -1;
+}
+
+.rt-home .rt-news-zone .rt-note {
+  margin-bottom: 12px;
 }
 
 .rt-home .rt-timeline li {
-  background: var(--rt-surface-soft);
-  border: 1px solid var(--rt-line);
+  background: linear-gradient(145deg, rgba(255, 255, 255, 0.88) 0%, rgba(247, 251, 255, 0.8) 100%);
+  border: 1px solid rgba(223, 234, 246, 0.9);
   border-radius: 12px;
   padding: 12px 14px;
-  margin-bottom: 10px;
   position: relative;
+  box-shadow: 0 10px 18px rgba(148, 163, 184, 0.14);
+  transition: transform .22s ease, box-shadow .25s ease, border-color .25s ease;
+  backdrop-filter: blur(5px);
+  cursor: pointer;
+}
+
+.rt-home .rt-timeline li:hover {
+  transform: translateY(-3px) scale(1.018);
+  box-shadow: 0 18px 30px rgba(96, 165, 250, 0.24);
+  border-color: #bfdbfe;
+}
+
+.rt-home .rt-timeline li:active {
+  transform: translateY(-1px) scale(1.01);
 }
 
 .rt-home .rt-timeline li::before {
@@ -174,6 +289,23 @@ redirect_from:
   width: 4px;
   border-radius: 12px 0 0 12px;
   background: linear-gradient(180deg, var(--rt-blue-2), #0ea5e9);
+}
+
+.rt-home .rt-timeline li::after {
+  content: "";
+  position: absolute;
+  top: -18px;
+  right: -14px;
+  width: 84px;
+  height: 84px;
+  border-radius: 999px;
+  background: radial-gradient(circle, rgba(191, 219, 254, 0.5) 0%, rgba(191, 219, 254, 0) 70%);
+  opacity: 0;
+  transition: opacity .25s ease;
+}
+
+.rt-home .rt-timeline li:hover::after {
+  opacity: 1;
 }
 
 .rt-home .rt-time {
@@ -192,11 +324,60 @@ redirect_from:
   gap: 12px;
 }
 
+.rt-home .rt-awards-zone {
+  position: relative;
+  border-radius: 16px;
+  padding: 14px;
+  margin-bottom: 6px;
+  overflow: hidden;
+  isolation: isolate;
+  background: linear-gradient(135deg, #fff8f2 0%, #fffcf8 52%, #ffffff 100%);
+  border: 1px solid #f7dfcf;
+}
+
+.rt-home .rt-awards-zone::before {
+  content: "";
+  position: absolute;
+  width: 260px;
+  height: 260px;
+  border-radius: 999px;
+  top: -120px;
+  right: -85px;
+  background: radial-gradient(circle, rgba(251, 146, 60, 0.28) 0%, rgba(251, 146, 60, 0) 70%);
+  filter: blur(3px);
+  animation: rt-news-float 10s ease-in-out infinite;
+  z-index: -1;
+}
+
+.rt-home .rt-awards-zone::after {
+  content: "";
+  position: absolute;
+  width: 220px;
+  height: 220px;
+  border-radius: 999px;
+  bottom: -100px;
+  left: -70px;
+  background: radial-gradient(circle, rgba(245, 158, 11, 0.24) 0%, rgba(245, 158, 11, 0) 72%);
+  filter: blur(3px);
+  animation: rt-news-float 12s ease-in-out infinite reverse;
+  z-index: -1;
+}
+
 .rt-home .rt-award {
   border: 1px solid #f1d2bf;
-  background: linear-gradient(135deg, #fff9f5 0%, #fff 100%);
+  background: linear-gradient(135deg, rgba(255, 249, 245, 0.88) 0%, rgba(255, 255, 255, 0.9) 100%);
   border-radius: 12px;
   padding: 12px;
+  transition: transform .22s ease, box-shadow .24s ease, border-color .22s ease;
+  box-shadow: 0 10px 18px rgba(251, 146, 60, 0.10);
+  backdrop-filter: blur(4px);
+  cursor: pointer;
+}
+
+.rt-home .rt-award:hover {
+  transform: translateY(-3px) scale(1.015);
+  border-color: #fdba74;
+  box-shadow: 0 18px 28px rgba(251, 146, 60, 0.20);
 }
 
 .rt-home .rt-award strong {
@@ -212,18 +393,110 @@ redirect_from:
   margin-top: 8px;
 }
 
+.rt-home .rt-award-collapse {
+  margin-top: 12px;
+  border: 1px dashed #f2c9ad;
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.72);
+  overflow: hidden;
+}
+
+.rt-home .rt-award-collapse summary {
+  list-style: none;
+  cursor: pointer;
+  padding: 12px 14px;
+  font-weight: 700;
+  color: #9a3412;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+}
+
+.rt-home .rt-award-collapse summary::-webkit-details-marker {
+  display: none;
+}
+
+.rt-home .rt-award-collapse summary::after {
+  content: "+";
+  font-size: 1.1rem;
+  line-height: 1;
+  transition: transform .22s ease;
+}
+
+.rt-home .rt-award-collapse[open] summary::after {
+  content: "-";
+}
+
+.rt-home .rt-award-list {
+  margin: 0;
+  padding: 0 14px 14px 24px;
+}
+
+.rt-home .rt-award-list li {
+  margin: 0 0 8px;
+  color: #7c2d12;
+}
+
 .rt-home .rt-pub-grid {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 12px;
 }
 
+.rt-home .rt-pubs-zone {
+  position: relative;
+  border-radius: 16px;
+  padding: 14px;
+  margin-bottom: 6px;
+  overflow: hidden;
+  isolation: isolate;
+  background: linear-gradient(135deg, #f3f8ff 0%, #f9fbff 56%, #ffffff 100%);
+  border: 1px solid #dbe8f7;
+}
+
+.rt-home .rt-pubs-zone::before {
+  content: "";
+  position: absolute;
+  width: 260px;
+  height: 260px;
+  border-radius: 999px;
+  top: -120px;
+  right: -85px;
+  background: radial-gradient(circle, rgba(59, 130, 246, 0.28) 0%, rgba(59, 130, 246, 0) 70%);
+  filter: blur(3px);
+  animation: rt-news-float 10.5s ease-in-out infinite;
+  z-index: -1;
+}
+
+.rt-home .rt-pubs-zone::after {
+  content: "";
+  position: absolute;
+  width: 220px;
+  height: 220px;
+  border-radius: 999px;
+  bottom: -100px;
+  left: -70px;
+  background: radial-gradient(circle, rgba(14, 165, 233, 0.24) 0%, rgba(14, 165, 233, 0) 72%);
+  filter: blur(3px);
+  animation: rt-news-float 11.8s ease-in-out infinite reverse;
+  z-index: -1;
+}
+
 .rt-home .rt-pub-card {
   border: 1px solid var(--rt-line);
   border-radius: 12px;
   overflow: hidden;
-  background: #fff;
+  background: linear-gradient(145deg, rgba(255, 255, 255, 0.9) 0%, rgba(248, 252, 255, 0.84) 100%);
   box-shadow: 0 8px 18px rgba(148, 163, 184, 0.12);
+  transition: transform .22s ease, box-shadow .24s ease, border-color .22s ease;
+  backdrop-filter: blur(4px);
+}
+
+.rt-home .rt-pub-card:hover {
+  transform: translateY(-4px) scale(1.015);
+  border-color: #bfdbfe;
+  box-shadow: 0 20px 32px rgba(96, 165, 250, 0.22);
 }
 
 .rt-home .rt-pub-thumb {
@@ -232,6 +505,11 @@ redirect_from:
   height: 160px;
   object-fit: cover;
   border-bottom: 1px solid #e5edf5;
+  transition: transform .28s ease;
+}
+
+.rt-home .rt-pub-card:hover .rt-pub-thumb {
+  transform: scale(1.03);
 }
 
 .rt-home .rt-pub-body {
@@ -284,6 +562,13 @@ redirect_from:
   background: #fff;
   padding: 12px;
   text-align: center;
+  transition: transform .22s ease, box-shadow .24s ease, border-color .22s ease;
+}
+
+.rt-home .rt-visitor-card:hover {
+  transform: translateY(-3px) scale(1.012);
+  border-color: #bfdbfe;
+  box-shadow: 0 16px 26px rgba(96, 165, 250, 0.2);
 }
 
 .rt-home .rt-counter-card {
@@ -294,6 +579,12 @@ redirect_from:
   text-align: center;
   padding: 18px 12px;
   box-shadow: 0 12px 24px rgba(15, 23, 42, 0.22);
+  transition: transform .22s ease, box-shadow .24s ease;
+}
+
+.rt-home .rt-counter-card:hover {
+  transform: translateY(-3px) scale(1.012);
+  box-shadow: 0 20px 34px rgba(37, 99, 235, 0.34);
 }
 
 .rt-home .rt-counter-title {
@@ -314,7 +605,23 @@ redirect_from:
   opacity: 0.85;
 }
 
+@keyframes rt-news-float {
+  0% {
+    transform: translate3d(0, 0, 0) scale(1);
+  }
+  50% {
+    transform: translate3d(0, -12px, 0) scale(1.06);
+  }
+  100% {
+    transform: translate3d(0, 0, 0) scale(1);
+  }
+}
+
 @media (max-width: 900px) {
+  .rt-home .rt-jump-nav {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
   .rt-home .rt-grid,
   .rt-home .rt-award-grid,
   .rt-home .rt-pub-grid,
@@ -330,6 +637,21 @@ redirect_from:
 
   .rt-home .rt-hero h1 {
     font-size: 1.45rem;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .rt-home .rt-news-zone::before,
+  .rt-home .rt-news-zone::after {
+    animation: none;
+  }
+
+  .rt-home .rt-timeline li {
+    transition: none;
+  }
+
+  .rt-home .rt-timeline li:hover {
+    transform: none;
   }
 }
 </style>
@@ -350,7 +672,15 @@ redirect_from:
     </div>
   </section>
 
-  <section class="rt-grid">
+  <nav class="rt-jump-nav" aria-label="Section Navigation">
+    <a class="rt-jump-item" href="#section-overview"><i class="fa fa-compass" aria-hidden="true"></i> Overview</a>
+    <a class="rt-jump-item" href="#section-news"><i class="fa fa-bolt" aria-hidden="true"></i> News</a>
+    <a class="rt-jump-item" href="#section-awards"><i class="fa fa-trophy" aria-hidden="true"></i> Awards</a>
+    <a class="rt-jump-item" href="#section-pubs"><i class="fa fa-book" aria-hidden="true"></i> Publications</a>
+    <a class="rt-jump-item" href="#section-visitor"><i class="fa fa-globe" aria-hidden="true"></i> Visitor</a>
+  </nav>
+
+  <section class="rt-grid" id="section-overview">
     <article class="rt-card">
       <h2><i class="fa fa-flask" aria-hidden="true"></i> Research Overview</h2>
       <p>
@@ -375,127 +705,198 @@ redirect_from:
     </article>
   </section>
 
-  <h2 class="rt-section-title"><i class="fa fa-bolt" aria-hidden="true"></i> What's New</h2>
-  <p class="rt-note">For detailed paper information, please check the <a href="/Publications.html">Publications</a> page.</p>
-  <ul class="rt-timeline">
-    <li>
-      <span class="rt-time">February 2026</span><br>
-      A survey on LLM data preparation was accepted by <strong>JCST's 40th Anniversary Special Issue</strong>.
-    </li>
-    <li>
-      <span class="rt-time">January 2026</span><br>
-      One paper submitted to <strong>IJCAI 2026</strong>; two papers submitted to <strong>ICML 2026</strong>; two papers submitted to <strong>ACL 2026</strong>.
-    </li>
-    <li>
-      <span class="rt-time">August 2025</span><br>
-      One paper submitted to <strong>TPAMI</strong>.
-    </li>
-    <li>
-      <span class="rt-time">July 2025</span><br>
-      One paper accepted by <strong>ICONIP 2025</strong>; pre-admitted to PKU through recommendation program (Bao Yan).
-    </li>
-  </ul>
+  <h2 class="rt-section-title" id="section-news"><i class="fa fa-bolt" aria-hidden="true"></i> What's New</h2>
+  <div class="rt-news-zone">
+    <p class="rt-note">For detailed paper information, please check the <a href="/Publications.html">Publications</a> page.</p>
+    <ul class="rt-timeline">
+      <li>
+        <span class="rt-time">February 2026</span><br>
+        A survey on LLM data preparation was accepted by <strong>JCST's 40th Anniversary Special Issue</strong>.
+      </li>
+      <li>
+        <span class="rt-time">January 2026</span><br>
+        One paper submitted to <strong>IJCAI 2026</strong>; two papers submitted to <strong>ICML 2026</strong>; two papers submitted to <strong>ACL 2026</strong>.
+      </li>
+      <li>
+        <span class="rt-time">August 2025</span><br>
+        One paper submitted to <strong>TPAMI</strong>.
+      </li>
+      <li>
+        <span class="rt-time">July 2025</span><br>
+        One paper accepted by <strong>ICONIP 2025</strong>; pre-admitted to PKU through recommendation program (Bao Yan).
+      </li>
+    </ul>
+  </div>
 
-  <h2 class="rt-section-title"><i class="fa fa-trophy" aria-hidden="true"></i> Selected Awards</h2>
+  <h2 class="rt-section-title" id="section-awards"><i class="fa fa-trophy" aria-hidden="true"></i> Selected Awards</h2>
   <p class="rt-note">For full honors and details, please visit <a href="/Awards/">Awards</a>.</p>
-  <div class="rt-award-grid">
-    <article class="rt-award">
-      <strong>2025 Model Excellent Communist Youth League Member</strong><br>
-      Dalian University of Technology (only 7 undergraduates university-wide)
-    </article>
-    <article class="rt-award">
-      <strong>2025 Five-Star Volunteer</strong><br>
-      Dalian University of Technology (600+ volunteer hours in 3 years)
-    </article>
-    <article class="rt-award">
-      <strong>2024 Top 10 Volunteers</strong><br>
-      Dalian University of Technology (all degree levels, only 10 students)
-    </article>
-    <article class="rt-award">
-      <strong>2024 National Scholarship</strong><br>
-      National-level competitive scholarship
-    </article>
+  <div class="rt-awards-zone">
+    <div class="rt-award-grid">
+      <article class="rt-award">
+        <strong>2025 Model Excellent Communist Youth League Member</strong><br>
+        Dalian University of Technology (only 7 undergraduates university-wide)
+      </article>
+      <article class="rt-award">
+        <strong>2025 Five-Star Volunteer</strong><br>
+        Dalian University of Technology (600+ volunteer hours in 3 years)
+      </article>
+      <article class="rt-award">
+        <strong>2024 Top 10 Volunteers</strong><br>
+        Dalian University of Technology (all degree levels, only 10 students)
+      </article>
+      <article class="rt-award">
+        <strong>2024 National Scholarship</strong><br>
+        National-level competitive scholarship
+      </article>
+    </div>
+
+    <div class="rt-service">
+      <strong>Academic Service:</strong> Reviewer/PC Member, Transactions on Knowledge Discovery from Data (TKDD)
+    </div>
+
+    <details class="rt-award-collapse">
+      <summary>Show All Awards & Honors</summary>
+      <ul class="rt-award-list">
+        <li>May 2025: Third Prize in the National Network Technology Track of the China University Computer Competition</li>
+        <li>January 2025: Excellent League Cadre, School of Mathematical Sciences</li>
+        <li>January 2025: Excellent Communist Youth League Member, Dalian University of Technology</li>
+        <li>October 2024: Top 10 College Students, School of Mathematical Sciences (&lt;=2%)</li>
+        <li>October 2024: Excellent Merit Student, Dalian University of Technology</li>
+        <li>October 2024: Four individual scholarships (Spiritual Civilization, Social Work, Social Practice, Cultural &amp; Sports Activities)</li>
+        <li>October 2024: First-Class Academic Excellence Scholarship</li>
+        <li>September 2024: Top 10 Volunteers, School of Mathematical Sciences (&lt;=2%)</li>
+        <li>July 2024: University-level Gold Award, China International Internet Plus Innovation &amp; Entrepreneurship Competition</li>
+        <li>July 2024: Became a full member of CPC after one-year probation</li>
+        <li>December 2023: Excellent Merit Student, Dalian University of Technology</li>
+        <li>December 2023: Excellent Communist Youth League Member, Dalian University of Technology</li>
+        <li>November 2023: Sunshine Education Scholarship</li>
+        <li>November 2023: Practical team received a national-level award</li>
+        <li>November 2023: Excellent Young Volunteer, Dalian University of Technology (&lt;=4%)</li>
+        <li>October 2023: Four individual scholarships (Spiritual Civilization, Cultural &amp; Sports Activities, Scientific &amp; Technological Innovation, Social Practice)</li>
+        <li>October 2023: Second-Class Academic Excellence Scholarship</li>
+        <li>October 2023: Practical team won University-level Second Prize</li>
+        <li>September 2023: Top 10 Volunteers, School of Mathematical Sciences (&lt;=2%)</li>
+        <li>June 2023: First Prize, Dalian Mathematics Competition</li>
+      </ul>
+    </details>
   </div>
 
-  <div class="rt-service">
-    <strong>Academic Service:</strong> Reviewer/PC Member, Transactions on Knowledge Discovery from Data (TKDD)
+  <h2 class="rt-section-title" id="section-pubs"><i class="fa fa-book" aria-hidden="true"></i> Selected Publications</h2>
+  <div class="rt-pubs-zone">
+    <p class="rt-note">Auto synced from your existing <a href="/publications/">Publications</a> page.</p>
+    <div class="rt-pub-grid">
+      <article class="rt-pub-card">
+        <a href="https://arxiv.org/pdf/2602.04290">
+          <img class="rt-pub-thumb" src="{{ '/images/pub_icml_guide.png' | relative_url }}" alt="Guided Verifier teaser">
+        </a>
+        <div class="rt-pub-body">
+          <h3 class="rt-pub-title">Guided Verifier: Collaborative Multimodal Reasoning via Dynamic Process Supervision</h3>
+          <p class="rt-pub-meta">ICML 2026 Under Review</p>
+          <div class="rt-pub-links">
+            <a class="rt-pill" href="https://arxiv.org/pdf/2602.04290">PDF</a>
+            <a class="rt-pill" href="https://github.com/tongruiliu/Guided-GRPO">Code</a>
+            <a class="rt-pill" href="https://huggingface.co/ruitongl/Guided-Verifier-8B">Model</a>
+          </div>
+        </div>
+      </article>
+
+      <article class="rt-pub-card">
+        <a href="https://arxiv.org/pdf/2602.10494">
+          <img class="rt-pub-thumb" src="{{ '/images/pub_canvas_cot.png' | relative_url }}" alt="Canvas-of-Thought teaser">
+        </a>
+        <div class="rt-pub-body">
+          <h3 class="rt-pub-title">Canvas-of-Thought: Grounding Reasoning via Mutable Structured States</h3>
+          <p class="rt-pub-meta">ICML 2026 Under Review</p>
+          <div class="rt-pub-links">
+            <a class="rt-pill" href="https://arxiv.org/pdf/2602.10494">PDF</a>
+            <a class="rt-pill" href="https://github.com/Zzzyxii/Canvas-CoT">Code</a>
+          </div>
+        </div>
+      </article>
+
+      <article class="rt-pub-card">
+        <a href="https://arxiv.org/pdf/2510.08966">
+          <img class="rt-pub-thumb" src="{{ '/images/pub_www.png' | relative_url }}" alt="Semantic-Condition Tuning teaser">
+        </a>
+        <div class="rt-pub-body">
+          <h3 class="rt-pub-title">Semantic-Condition Tuning: Fusing Graph Context with LLMs for KGC</h3>
+          <p class="rt-pub-meta">IJCAI 2026 Under Review</p>
+          <div class="rt-pub-links">
+            <a class="rt-pill" href="https://arxiv.org/pdf/2510.08966">PDF</a>
+            <a class="rt-pill" href="https://github.com/tongruiliu/GMT">Code</a>
+          </div>
+        </div>
+      </article>
+
+      <article class="rt-pub-card">
+        <a href="https://arxiv.org/pdf/2506.23137">
+          <img class="rt-pub-thumb" src="{{ '/images/pub_tpami.png' | relative_url }}" alt="Flow-Modulated Scoring teaser">
+        </a>
+        <div class="rt-pub-body">
+          <h3 class="rt-pub-title">Flow-Modulated Scoring for Semantic-Aware Knowledge Graph Completion</h3>
+          <p class="rt-pub-meta">TPAMI Under Review</p>
+          <div class="rt-pub-links">
+            <a class="rt-pill" href="https://arxiv.org/pdf/2506.23137">PDF</a>
+            <a class="rt-pill" href="https://github.com/yuanwuyuan9/FMS">Code</a>
+          </div>
+        </div>
+      </article>
+
+      <article class="rt-pub-card">
+        <a href="https://drive.google.com/file/d/1TqwULwmD8f-cpokfcfYfapuC9bNxrztA/view?usp=sharing">
+          <img class="rt-pub-thumb" src="{{ '/images/pub_survey.png' | relative_url }}" alt="LLM data preparation survey teaser">
+        </a>
+        <div class="rt-pub-body">
+          <h3 class="rt-pub-title">Data Preparation for Large Language Models: A Survey</h3>
+          <p class="rt-pub-meta">JCST 40th Anniversary Special Issue</p>
+          <div class="rt-pub-links">
+            <a class="rt-pill" href="https://drive.google.com/file/d/1TqwULwmD8f-cpokfcfYfapuC9bNxrztA/view?usp=sharing">PDF</a>
+          </div>
+        </div>
+      </article>
+
+      <article class="rt-pub-card">
+        <a href="https://link.springer.com/chapter/10.1007/978-981-95-4367-0_38">
+          <img class="rt-pub-thumb" src="{{ '/images/ICONIP.png' | relative_url }}" alt="ICONIP 2025 paper teaser">
+        </a>
+        <div class="rt-pub-body">
+          <h3 class="rt-pub-title">Context-Driven Knowledge Graph Completion with Semantic-Aware Relational Message Passing</h3>
+          <p class="rt-pub-meta">ICONIP 2025 Poster</p>
+          <div class="rt-pub-links">
+            <a class="rt-pill" href="https://link.springer.com/chapter/10.1007/978-981-95-4367-0_38">PDF</a>
+          </div>
+        </div>
+      </article>
+
+      <article class="rt-pub-card">
+        <a href="https://arxiv.org/pdf/2510.26495">
+          <img class="rt-pub-thumb" src="{{ '/images/t2sql.png' | relative_url }}" alt="Text-to-SQL paper teaser">
+        </a>
+        <div class="rt-pub-body">
+          <h3 class="rt-pub-title">Rethinking Text-to-SQL: Dynamic Multi-turn SQL Interaction for Real-world Database Exploration</h3>
+          <p class="rt-pub-meta">ACL 2026 Under Review</p>
+          <div class="rt-pub-links">
+            <a class="rt-pill" href="https://arxiv.org/pdf/2510.26495">PDF</a>
+          </div>
+        </div>
+      </article>
+
+      <article class="rt-pub-card">
+        <a href="https://drive.google.com/file/d/1KvE3DZ1ih_8kzPfQUeitKelu57EHNNkV/view?usp=sharing">
+          <img class="rt-pub-thumb" src="{{ '/images/acl2.png' | relative_url }}" alt="Temporal KGF paper teaser">
+        </a>
+        <div class="rt-pub-body">
+          <h3 class="rt-pub-title">Evolving Beyond Snapshots: Harmonizing Structure and Sequence via Entity State Tuning for Temporal KGF</h3>
+          <p class="rt-pub-meta">ACL 2026 Under Review</p>
+          <div class="rt-pub-links">
+            <a class="rt-pill" href="https://drive.google.com/file/d/1KvE3DZ1ih_8kzPfQUeitKelu57EHNNkV/view?usp=sharing">PDF</a>
+          </div>
+        </div>
+      </article>
+    </div>
   </div>
 
-  <h2 class="rt-section-title"><i class="fa fa-book" aria-hidden="true"></i> Selected Publications</h2>
-  <p class="rt-note">Auto synced from your existing <a href="/publications/">Publications</a> page.</p>
-  <div class="rt-pub-grid">
-    <article class="rt-pub-card">
-      <a href="https://arxiv.org/pdf/2602.04290">
-        <img class="rt-pub-thumb" src="{{ '/images/pub_icml_guide.png' | relative_url }}" alt="Guided Verifier teaser">
-      </a>
-      <div class="rt-pub-body">
-        <h3 class="rt-pub-title">Guided Verifier: Collaborative Multimodal Reasoning via Dynamic Process Supervision</h3>
-        <p class="rt-pub-meta">ICML 2026 Under Review</p>
-        <div class="rt-pub-links">
-          <a class="rt-pill" href="https://arxiv.org/pdf/2602.04290">PDF</a>
-          <a class="rt-pill" href="https://github.com/tongruiliu/Guided-GRPO">Code</a>
-          <a class="rt-pill" href="https://huggingface.co/ruitongl/Guided-Verifier-8B">Model</a>
-        </div>
-      </div>
-    </article>
-
-    <article class="rt-pub-card">
-      <a href="https://arxiv.org/pdf/2602.10494">
-        <img class="rt-pub-thumb" src="{{ '/images/pub_canvas_cot.png' | relative_url }}" alt="Canvas-of-Thought teaser">
-      </a>
-      <div class="rt-pub-body">
-        <h3 class="rt-pub-title">Canvas-of-Thought: Grounding Reasoning via Mutable Structured States</h3>
-        <p class="rt-pub-meta">ICML 2026 Under Review</p>
-        <div class="rt-pub-links">
-          <a class="rt-pill" href="https://arxiv.org/pdf/2602.10494">PDF</a>
-          <a class="rt-pill" href="https://github.com/Zzzyxii/Canvas-CoT">Code</a>
-        </div>
-      </div>
-    </article>
-
-    <article class="rt-pub-card">
-      <a href="https://arxiv.org/pdf/2510.08966">
-        <img class="rt-pub-thumb" src="{{ '/images/pub_www.png' | relative_url }}" alt="Semantic-Condition Tuning teaser">
-      </a>
-      <div class="rt-pub-body">
-        <h3 class="rt-pub-title">Semantic-Condition Tuning: Fusing Graph Context with LLMs for KGC</h3>
-        <p class="rt-pub-meta">IJCAI 2026 Under Review</p>
-        <div class="rt-pub-links">
-          <a class="rt-pill" href="https://arxiv.org/pdf/2510.08966">PDF</a>
-          <a class="rt-pill" href="https://github.com/tongruiliu/GMT">Code</a>
-        </div>
-      </div>
-    </article>
-
-    <article class="rt-pub-card">
-      <a href="https://arxiv.org/pdf/2506.23137">
-        <img class="rt-pub-thumb" src="{{ '/images/pub_tpami.png' | relative_url }}" alt="Flow-Modulated Scoring teaser">
-      </a>
-      <div class="rt-pub-body">
-        <h3 class="rt-pub-title">Flow-Modulated Scoring for Semantic-Aware Knowledge Graph Completion</h3>
-        <p class="rt-pub-meta">TPAMI Under Review</p>
-        <div class="rt-pub-links">
-          <a class="rt-pill" href="https://arxiv.org/pdf/2506.23137">PDF</a>
-          <a class="rt-pill" href="https://github.com/yuanwuyuan9/FMS">Code</a>
-        </div>
-      </div>
-    </article>
-
-    <article class="rt-pub-card">
-      <a href="https://drive.google.com/file/d/1TqwULwmD8f-cpokfcfYfapuC9bNxrztA/view?usp=sharing">
-        <img class="rt-pub-thumb" src="{{ '/images/pub_survey.png' | relative_url }}" alt="LLM data preparation survey teaser">
-      </a>
-      <div class="rt-pub-body">
-        <h3 class="rt-pub-title">Data Preparation for Large Language Models: A Survey</h3>
-        <p class="rt-pub-meta">JCST 40th Anniversary Special Issue</p>
-        <div class="rt-pub-links">
-          <a class="rt-pill" href="https://drive.google.com/file/d/1TqwULwmD8f-cpokfcfYfapuC9bNxrztA/view?usp=sharing">PDF</a>
-        </div>
-      </div>
-    </article>
-  </div>
-
-  <h2 class="rt-section-title"><i class="fa fa-globe" aria-hidden="true"></i> Visitor</h2>
+  <h2 class="rt-section-title" id="section-visitor"><i class="fa fa-globe" aria-hidden="true"></i> Visitor</h2>
   <div class="rt-visitor-wrap">
     <div class="rt-visitor-card">
       <div style="display:inline-block; zoom:5;">

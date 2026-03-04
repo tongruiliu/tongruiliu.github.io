@@ -193,6 +193,40 @@ redirect_from:
   border-bottom: 0;
 }
 
+.rt-home .rt-role-item {
+  padding: 10px 10px 9px;
+  border: 1px solid #e2ebf6;
+  border-radius: 10px;
+  background: #f8fbff;
+}
+
+.rt-home .rt-role-org {
+  font-weight: 700;
+  color: #1e3a8a;
+}
+
+.rt-home .rt-role-meta {
+  color: #475569;
+  font-size: 0.88rem;
+}
+
+.rt-home .rt-role-title {
+  display: inline-block;
+  margin-top: 4px;
+  color: #334155;
+}
+
+.rt-home .rt-spotlight {
+  display: inline-block;
+  margin-left: 3px;
+  padding: 1px 7px;
+  border-radius: 999px;
+  border: 1px solid #fda4af;
+  background: #fff1f2;
+  color: #be123c;
+  font-weight: 800;
+}
+
 .rt-home .rt-section-title {
   border: 0;
   padding: 0;
@@ -724,7 +758,17 @@ redirect_from:
       <h2><i class="fa fa-rocket" aria-hidden="true"></i> Snapshot</h2>
       <ul class="rt-quick-list">
         <li><strong>Incoming Graduate Student</strong><br>Big Data program, School of Mathematical Sciences, <a href="https://www.pku.edu.cn/">Peking University</a></li>
-        <li><strong>Current Role</strong><br>Intern at a top-tier quantitative firm in Beijing</li>
+        <li class="rt-role-item">
+          <span class="rt-role-org">Ubiquant-IQuest</span>
+          <span class="rt-role-meta"> · 2026.02 - Present</span><br>
+          <span class="rt-role-title">LLM Algorithm Intern (<span class="rt-spotlight">Talent Program</span>)</span>
+        </li>
+        <li class="rt-role-item">
+          <span class="rt-role-org">Institute for Advanced Algorithms Research (IAAR), Shanghai</span>
+          <span class="rt-role-meta"> · 2025.09 - 2026.02</span><br>
+          <span class="rt-role-title">LLM Algorithm Research Intern</span>
+        </li>
+        <li><strong>Service</strong><br>Reviewer/PC Member: Transactions on Knowledge Discovery from Data (TKDD)</li>
       </ul>
     </article>
   </section>
@@ -792,10 +836,6 @@ redirect_from:
         <strong>2024 National Scholarship</strong><br>
         National-level competitive scholarship
       </article>
-    </div>
-
-    <div class="rt-service">
-      <strong>Academic Service:</strong> Reviewer/PC Member, Transactions on Knowledge Discovery from Data (TKDD)
     </div>
 
     <details class="rt-award-collapse">

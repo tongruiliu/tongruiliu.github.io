@@ -76,110 +76,123 @@ body {
   text-decoration: none;
 }
 
-.rt-home .rt-hero {
-  background: linear-gradient(125deg, #0f172a 0%, #1e3a8a 55%, #2563eb 100%);
-  color: #e2e8f0;
-  border-radius: 18px;
-  padding: 30px 26px;
-  box-shadow: 0 16px 36px rgba(15, 23, 42, 0.2);
-  position: relative;
-  overflow: hidden;
-  margin-bottom: 18px;
+.rt-home .rt-overview-card {
+  margin-bottom: 2px;
+  padding: 18px 18px 16px;
 }
 
-.rt-home .rt-hero::after {
-  content: "";
-  position: absolute;
-  width: 220px;
-  height: 220px;
-  right: -70px;
-  top: -70px;
-  border-radius: 50%;
-  background: radial-gradient(circle, rgba(255, 255, 255, 0.22) 0%, rgba(255, 255, 255, 0) 72%);
-}
-
-.rt-home .rt-eyebrow {
-  margin: 0 0 6px;
-  font-size: 0.82rem;
-  letter-spacing: 0.14em;
+.rt-home .rt-overview-name {
+  margin: 0 0 4px;
+  font-size: 0.86rem;
+  letter-spacing: 0.12em;
   text-transform: uppercase;
-  font-weight: 600;
-  color: #bfdbfe;
+  color: #1d4ed8;
+  font-weight: 700;
 }
 
-.rt-home .rt-hero h1 {
-  margin: 0 0 8px;
-  color: #f8fafc;
+.rt-home .rt-overview-title {
+  margin: 0 0 10px;
+  font-size: 1.6rem;
+  line-height: 1.3;
+  color: #0f172a;
   border: 0;
   padding: 0;
-  font-size: 1.8rem;
-  line-height: 1.25;
 }
 
-.rt-home .rt-hero p {
-  margin: 0;
-  color: #dbeafe;
+.rt-home .rt-overview-divider {
+  border-top: 1px dashed #d8e5f3;
+  margin: 14px 0 12px;
 }
 
 .rt-home .rt-chip-row {
   display: flex;
   flex-wrap: wrap;
   gap: 10px;
-  margin-top: 18px;
+  margin-top: 12px;
 }
 
 .rt-home .rt-chip {
   display: inline-flex;
   align-items: center;
   gap: 7px;
-  background: rgba(255, 255, 255, 0.14);
-  border: 1px solid rgba(255, 255, 255, 0.26);
-  color: #eff6ff;
+  background: linear-gradient(135deg, #f8fbff 0%, #ffffff 100%);
+  border: 1px solid #d5e4f4;
+  color: #1e3a8a;
   padding: 7px 12px;
   border-radius: 999px;
   font-size: 0.88rem;
-  font-weight: 500;
+  font-weight: 600;
+  box-shadow: 0 8px 14px rgba(148, 163, 184, 0.12);
 }
 
 .rt-home .rt-chip:hover {
-  background: rgba(255, 255, 255, 0.24);
-}
-
-.rt-home .rt-hero .rt-focus-pill {
-  background: rgba(255, 255, 255, 0.14);
-  border-color: rgba(255, 255, 255, 0.3);
-  color: #eaf2ff;
+  background: linear-gradient(135deg, #ecf5ff 0%, #ffffff 100%);
 }
 
 .rt-home .rt-jump-nav {
   display: grid;
   grid-template-columns: repeat(5, minmax(0, 1fr));
   gap: 10px;
-  margin: 14px 0 10px;
+  margin: 4px 0 12px;
+  padding: 9px;
+  border-radius: 14px;
+  border: 1px solid rgba(56, 189, 248, 0.5);
+  background: linear-gradient(145deg, rgba(15, 23, 42, 0.72) 0%, rgba(15, 23, 42, 0.58) 100%);
+  box-shadow: 0 0 0 1px rgba(14, 165, 233, 0.18) inset, 0 14px 28px rgba(2, 8, 23, 0.28);
+  position: sticky;
+  top: 10px;
+  z-index: 15;
+  -webkit-backdrop-filter: blur(8px);
+  backdrop-filter: blur(8px);
 }
 
 .rt-home .rt-jump-item {
   display: flex;
   align-items: center;
   justify-content: center;
+  position: relative;
+  overflow: hidden;
   gap: 7px;
-  border: 1px solid #d5e4f4;
-  background: linear-gradient(135deg, #f8fbff 0%, #ffffff 100%);
-  color: #1e3a8a;
+  border: 1px solid rgba(56, 189, 248, 0.48);
+  background: linear-gradient(135deg, rgba(30, 41, 59, 0.78) 0%, rgba(15, 23, 42, 0.9) 100%);
+  color: #dbeafe;
   border-radius: 11px;
   padding: 10px 8px;
   font-size: 0.9rem;
   font-weight: 600;
   text-align: center;
   transition: transform .22s ease, box-shadow .24s ease, background .22s ease, border-color .22s ease;
-  box-shadow: 0 8px 14px rgba(148, 163, 184, 0.14);
+  box-shadow: 0 8px 16px rgba(2, 8, 23, 0.24), 0 0 0 1px rgba(59, 130, 246, 0.15) inset;
+}
+
+.rt-home .rt-jump-item > * {
+  position: relative;
+  z-index: 1;
+}
+
+.rt-home .rt-jump-item::before {
+  content: "";
+  position: absolute;
+  top: -20%;
+  left: -140%;
+  width: 55%;
+  height: 150%;
+  background: linear-gradient(100deg, rgba(125, 211, 252, 0) 0%, rgba(125, 211, 252, 0.14) 20%, rgba(224, 242, 254, 0.85) 50%, rgba(125, 211, 252, 0.14) 80%, rgba(125, 211, 252, 0) 100%);
+  transform: skewX(-22deg);
+  opacity: 0;
+  transition: transform .62s ease, opacity .22s ease;
 }
 
 .rt-home .rt-jump-item:hover {
-  background: linear-gradient(135deg, #ecf5ff 0%, #ffffff 100%);
+  background: linear-gradient(135deg, rgba(30, 58, 138, 0.72) 0%, rgba(30, 64, 175, 0.62) 100%);
   transform: translateY(-2px) scale(1.02);
-  border-color: #bfdbfe;
-  box-shadow: 0 14px 22px rgba(96, 165, 250, 0.22);
+  border-color: rgba(125, 211, 252, 0.9);
+  box-shadow: 0 0 0 1px rgba(125, 211, 252, 0.4) inset, 0 0 16px rgba(14, 165, 233, 0.38), 0 16px 24px rgba(37, 99, 235, 0.24);
+}
+
+.rt-home .rt-jump-item:hover::before {
+  opacity: 1;
+  transform: translateX(460%) skewX(-22deg);
 }
 
 .rt-home .rt-top-intro {
@@ -916,12 +929,12 @@ body {
 }
 
 @media (max-width: 640px) {
-  .rt-home .rt-hero {
-    padding: 22px 16px;
+  .rt-home .rt-overview-card {
+    padding: 15px 14px 14px;
   }
 
-  .rt-home .rt-hero h1 {
-    font-size: 1.45rem;
+  .rt-home .rt-overview-title {
+    font-size: 1.34rem;
   }
 
   .rt-home .rt-timeline li {
@@ -945,31 +958,16 @@ body {
   .rt-home .rt-timeline li:hover {
     transform: none;
   }
+
+  .rt-home .rt-jump-item,
+  .rt-home .rt-jump-item::before {
+    transition: none;
+  }
 }
 </style>
 
 <div class="rt-cyber-bg" aria-hidden="true"></div>
 <div class="rt-home">
-  <section class="rt-hero" id="section-overview">
-    <p class="rt-eyebrow">Ruitong Liu</p>
-    <h1>Data-Centric AI for LLMs and Multimodal Intelligence</h1>
-    <p>
-      Senior undergraduate at
-      <a href="https://www.dlut.edu.cn/" style="color:#f8fafc; text-decoration: underline;">Dalian University of Technology</a>
-      (Mathematics and Applied Mathematics), working on scalable data synthesis, filtering, alignment, and structure-aware reasoning for trustworthy AI systems.
-    </p>
-    <div class="rt-focus-row">
-      <span class="rt-focus-pill"><i class="fa fa-database" aria-hidden="true"></i> Data Synthesis &amp; Filtering</span>
-      <span class="rt-focus-pill"><i class="fa fa-sliders" aria-hidden="true"></i> LLM/MMLM Alignment</span>
-      <span class="rt-focus-pill"><i class="fa fa-sitemap" aria-hidden="true"></i> KG Reasoning</span>
-    </div>
-    <div class="rt-chip-row">
-      <a class="rt-chip" href="mailto:15668672116@163.com"><i class="fa fa-envelope" aria-hidden="true"></i> 15668672116@163.com</a>
-      <a class="rt-chip" href="mailto:ruitong.jerry@gmail.com"><i class="fa fa-envelope-o" aria-hidden="true"></i> ruitong.jerry@gmail.com</a>
-      <span class="rt-chip"><i class="fa fa-commenting" aria-hidden="true"></i> WeChat: ruitong_jerry</span>
-    </div>
-  </section>
-
   <nav class="rt-jump-nav" aria-label="Section Navigation">
     <a class="rt-jump-item" href="#section-overview"><i class="fa fa-compass" aria-hidden="true"></i> Overview</a>
     <a class="rt-jump-item" href="#section-news"><i class="fa fa-bolt" aria-hidden="true"></i> News</a>
@@ -978,37 +976,68 @@ body {
     <a class="rt-jump-item" href="#section-visitor"><i class="fa fa-globe" aria-hidden="true"></i> Visitor</a>
   </nav>
 
-  <section class="rt-top-intro">
-    <div class="rt-snapshot-row">
-      <article class="rt-snapshot-item">
-        <div class="rt-snapshot-kicker">Education</div>
-        <p class="rt-snapshot-main">Incoming Graduate Student</p>
-        <p class="rt-snapshot-sub">Big Data Program, School of Mathematical Sciences, <a href="https://www.pku.edu.cn/">Peking University</a></p>
-      </article>
-      <article class="rt-snapshot-item rt-snapshot-item--internship">
-        <div class="rt-snapshot-kicker">Internship</div>
-        <div class="rt-snapshot-stack">
-          <div class="rt-snapshot-entry">
-            <p class="rt-snapshot-main">Ubiquant-IQuest <span class="rt-role-meta">2026.02 - Present</span></p>
-            <div class="rt-snapshot-line">
-              <span class="rt-snapshot-role">LLM Algorithm Intern</span>
-              <span class="rt-spotlight">Talent Program</span>
+  <section class="rt-top-intro" id="section-overview">
+    <article class="rt-card rt-overview-card">
+      <p class="rt-overview-name">Ruitong Liu</p>
+      <h1 class="rt-overview-title">Data-Centric AI for LLMs and Multimodal Intelligence</h1>
+      <p class="rt-intro-text">
+        Senior undergraduate at
+        <a href="https://www.dlut.edu.cn/">Dalian University of Technology</a>
+        (Mathematics and Applied Mathematics), working on scalable data synthesis, filtering, alignment, and structure-aware reasoning for trustworthy AI systems.
+      </p>
+      <div class="rt-focus-row">
+        <span class="rt-focus-pill"><i class="fa fa-database" aria-hidden="true"></i> Data Synthesis &amp; Filtering</span>
+        <span class="rt-focus-pill"><i class="fa fa-sliders" aria-hidden="true"></i> LLM/MMLM Alignment</span>
+        <span class="rt-focus-pill"><i class="fa fa-sitemap" aria-hidden="true"></i> KG Reasoning</span>
+      </div>
+      <div class="rt-chip-row">
+        <a class="rt-chip" href="mailto:15668672116@163.com"><i class="fa fa-envelope" aria-hidden="true"></i> 15668672116@163.com</a>
+        <a class="rt-chip" href="mailto:ruitong.jerry@gmail.com"><i class="fa fa-envelope-o" aria-hidden="true"></i> ruitong.jerry@gmail.com</a>
+        <span class="rt-chip"><i class="fa fa-commenting" aria-hidden="true"></i> WeChat: ruitong_jerry</span>
+      </div>
+      <div class="rt-overview-divider"></div>
+      <p class="rt-intro-text">
+        My research centers on Data-Centric AI for Large Language Models (LLMs) and Multimodal LLMs, spanning from
+        large-scale data engineering to complex reasoning optimization.
+      </p>
+      <p class="rt-intro-text">
+        I focus on scalable frameworks for automated data synthesis and quality filtering, and design advanced alignment
+        algorithms to enhance model intelligence and reliability.
+      </p>
+      <p class="rt-intro-text">
+        I also investigate Knowledge Graphs (KGs) for structure-aware modeling to improve factual consistency and logical reasoning.
+      </p>
+      <div class="rt-overview-divider"></div>
+      <div class="rt-snapshot-row">
+        <article class="rt-snapshot-item">
+          <div class="rt-snapshot-kicker">Education</div>
+          <p class="rt-snapshot-main">Incoming Graduate Student</p>
+          <p class="rt-snapshot-sub">Big Data Program, School of Mathematical Sciences, <a href="https://www.pku.edu.cn/">Peking University</a></p>
+        </article>
+        <article class="rt-snapshot-item rt-snapshot-item--internship">
+          <div class="rt-snapshot-kicker">Internship</div>
+          <div class="rt-snapshot-stack">
+            <div class="rt-snapshot-entry">
+              <p class="rt-snapshot-main">Ubiquant-IQuest <span class="rt-role-meta">2026.02 - Present</span></p>
+              <div class="rt-snapshot-line">
+                <span class="rt-snapshot-role">LLM Algorithm Intern</span>
+                <span class="rt-spotlight">Talent Program</span>
+              </div>
+            </div>
+            <div class="rt-snapshot-entry">
+              <p class="rt-snapshot-main">Institute for Advanced Algorithms Research (IAAR), Shanghai <span class="rt-role-meta">2025.09 - 2026.02</span></p>
+              <div class="rt-snapshot-line">
+                <span class="rt-snapshot-role">LLM Algorithm Research Intern</span>
+              </div>
             </div>
           </div>
-          <div class="rt-snapshot-entry">
-            <p class="rt-snapshot-main">Institute for Advanced Algorithms Research (IAAR), Shanghai <span class="rt-role-meta">2025.09 - 2026.02</span></p>
-            <div class="rt-snapshot-line">
-              <span class="rt-snapshot-role">LLM Algorithm Research Intern</span>
-            </div>
-          </div>
-        </div>
-      </article>
-    </div>
+        </article>
+      </div>
+    </article>
   </section>
 
   <h2 class="rt-section-title" id="section-news"><i class="fa fa-bolt" aria-hidden="true"></i> What's New</h2>
   <div class="rt-news-zone">
-    <p class="rt-note">For detailed paper information, please check the <a href="/Publications.html">Publications</a> page.</p>
     <ul class="rt-timeline">
       <li>
         <span class="rt-time">2026-02</span>

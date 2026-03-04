@@ -1,6 +1,5 @@
 ---
 permalink: /
-title: "About"
 author_profile: true
 redirect_from: 
   - /about/
@@ -8,6 +7,53 @@ redirect_from:
 ---
 
 <style>
+#main > article.page > .page__inner-wrap > header {
+  display: none;
+}
+
+body {
+  background:
+    radial-gradient(1200px 620px at -10% -10%, rgba(37, 99, 235, 0.2) 0%, rgba(37, 99, 235, 0) 62%),
+    radial-gradient(980px 560px at 110% 0%, rgba(14, 165, 233, 0.16) 0%, rgba(14, 165, 233, 0) 58%),
+    linear-gradient(180deg, #f3f8ff 0%, #eef5ff 42%, #f7fbff 100%),
+    repeating-linear-gradient(0deg, rgba(59, 130, 246, 0.06) 0 1px, transparent 1px 34px),
+    repeating-linear-gradient(90deg, rgba(59, 130, 246, 0.06) 0 1px, transparent 1px 34px);
+  background-attachment: fixed;
+}
+
+.rt-cyber-bg {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 0;
+  overflow: hidden;
+}
+
+.rt-cyber-bg::before,
+.rt-cyber-bg::after {
+  content: "";
+  position: absolute;
+  width: 170vmax;
+  height: 28vmax;
+  left: -65vmax;
+  top: 20vh;
+  border-radius: 999px;
+  transform: rotate(-11deg);
+  filter: blur(16px);
+}
+
+.rt-cyber-bg::before {
+  background: linear-gradient(100deg, rgba(37, 99, 235, 0) 8%, rgba(59, 130, 246, 0.22) 45%, rgba(14, 165, 233, 0.24) 55%, rgba(14, 165, 233, 0) 78%);
+  animation: rt-cyber-scan 15s linear infinite;
+}
+
+.rt-cyber-bg::after {
+  top: 63vh;
+  background: linear-gradient(100deg, rgba(14, 165, 233, 0) 10%, rgba(56, 189, 248, 0.18) 46%, rgba(125, 211, 252, 0.2) 56%, rgba(125, 211, 252, 0) 80%);
+  animation: rt-cyber-scan 19s linear infinite reverse;
+  opacity: 0.72;
+}
+
 .rt-home {
   --rt-ink: #1f2937;
   --rt-soft-ink: #4b5563;
@@ -17,6 +63,8 @@ redirect_from:
   --rt-accent: #c2410c;
   --rt-surface: #ffffff;
   --rt-surface-soft: #f7fbff;
+  position: relative;
+  z-index: 1;
 }
 
 .rt-home a {
@@ -572,8 +620,8 @@ redirect_from:
 
 .rt-home .rt-pub-card {
   display: grid;
-  grid-template-columns: minmax(240px, 31%) 1fr;
-  align-items: stretch;
+  grid-template-columns: minmax(260px, 320px) 1fr;
+  align-items: start;
   border: 1px solid var(--rt-line);
   border-radius: 12px;
   overflow: hidden;
@@ -591,6 +639,9 @@ redirect_from:
 
 .rt-home .rt-pub-media {
   display: block;
+  align-self: start;
+  overflow: hidden;
+  aspect-ratio: 16 / 9;
   border-right: 1px solid #e5edf5;
   background: linear-gradient(135deg, #edf4ff 0%, #f8fbff 100%);
 }
@@ -599,8 +650,9 @@ redirect_from:
   display: block;
   width: 100%;
   height: 100%;
-  min-height: 188px;
+  aspect-ratio: 16 / 9;
   object-fit: cover;
+  object-position: center;
   transition: transform .28s ease;
 }
 
@@ -660,8 +712,10 @@ redirect_from:
 
 .rt-home .rt-visitor-wrap {
   display: grid;
-  grid-template-columns: 1.2fr 1fr;
+  grid-template-columns: 1fr;
   gap: 12px;
+  max-width: 780px;
+  margin: 0 auto;
 }
 
 .rt-home .rt-visitor-card {
@@ -685,7 +739,7 @@ redirect_from:
   background: linear-gradient(135deg, #0f172a 0%, #1e3a8a 55%, #2563eb 100%);
   color: #eff6ff;
   text-align: center;
-  padding: 18px 12px;
+  padding: 16px 14px;
   box-shadow: 0 12px 24px rgba(15, 23, 42, 0.22);
   transition: transform .22s ease, box-shadow .24s ease;
 }
@@ -725,6 +779,23 @@ redirect_from:
   }
 }
 
+@keyframes rt-cyber-scan {
+  0% {
+    transform: translateX(-35vw) rotate(-11deg);
+    opacity: 0;
+  }
+  14% {
+    opacity: 0.88;
+  }
+  65% {
+    opacity: 0.35;
+  }
+  100% {
+    transform: translateX(92vw) rotate(-11deg);
+    opacity: 0;
+  }
+}
+
 @media (max-width: 900px) {
   .rt-home .rt-jump-nav {
     grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -747,7 +818,7 @@ redirect_from:
   }
 
   .rt-home .rt-pub-thumb {
-    min-height: 170px;
+    aspect-ratio: 16 / 9;
   }
 }
 
@@ -768,7 +839,9 @@ redirect_from:
 
 @media (prefers-reduced-motion: reduce) {
   .rt-home .rt-news-zone::before,
-  .rt-home .rt-news-zone::after {
+  .rt-home .rt-news-zone::after,
+  .rt-cyber-bg::before,
+  .rt-cyber-bg::after {
     animation: none;
   }
 
@@ -782,6 +855,7 @@ redirect_from:
 }
 </style>
 
+<div class="rt-cyber-bg" aria-hidden="true"></div>
 <div class="rt-home">
   <section class="rt-hero">
     <p class="rt-eyebrow">Ruitong Liu</p>

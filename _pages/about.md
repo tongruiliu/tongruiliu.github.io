@@ -1299,6 +1299,7 @@ body {
     <details class="rt-award-collapse">
       <summary>Show All Awards & Honors</summary>
       <ul class="rt-award-list">
+        <li>October 2025: First-Class Academic Excellence Scholarship</li>
         <li>May 2025: Third Prize in the National Network Technology Track of the China University Computer Competition</li>
         <li>January 2025: Excellent League Cadre, School of Mathematical Sciences</li>
         <li>January 2025: Excellent Communist Youth League Member, Dalian University of Technology</li>

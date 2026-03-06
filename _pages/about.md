@@ -24,6 +24,16 @@ body {
     repeating-linear-gradient(90deg, rgba(59, 130, 246, 0.06) 0 1px, transparent 1px 34px);
   background-attachment: fixed;
   padding-top: 0 !important;
+  transition: background .45s ease;
+}
+
+body.rt-theme-dark {
+  background:
+    radial-gradient(1200px 620px at -10% -10%, rgba(59, 130, 246, 0.28) 0%, rgba(59, 130, 246, 0) 62%),
+    radial-gradient(980px 560px at 110% 0%, rgba(34, 211, 238, 0.2) 0%, rgba(34, 211, 238, 0) 58%),
+    linear-gradient(180deg, #020617 0%, #0b1223 46%, #0f172a 100%),
+    repeating-linear-gradient(0deg, rgba(56, 189, 248, 0.08) 0 1px, transparent 1px 36px),
+    repeating-linear-gradient(90deg, rgba(56, 189, 248, 0.08) 0 1px, transparent 1px 36px);
 }
 
 @media (min-width: 1024px) {
@@ -44,6 +54,36 @@ body {
   pointer-events: none;
   z-index: 0;
   overflow: hidden;
+}
+
+.rt-film-layer {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.rt-film-layer::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(circle at 50% 45%, rgba(0, 0, 0, 0) 38%, rgba(2, 6, 23, 0.15) 100%),
+    radial-gradient(circle at 0% 0%, rgba(15, 23, 42, 0.07) 0%, rgba(15, 23, 42, 0) 48%),
+    radial-gradient(circle at 100% 0%, rgba(15, 23, 42, 0.07) 0%, rgba(15, 23, 42, 0) 48%);
+}
+
+.rt-film-layer::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  opacity: .14;
+  mix-blend-mode: soft-light;
+  background-image:
+    radial-gradient(rgba(15, 23, 42, 0.28) .55px, transparent .7px),
+    radial-gradient(rgba(30, 41, 59, 0.2) .45px, transparent .6px);
+  background-size: 3px 3px, 5px 5px;
+  background-position: 0 0, 1px 1px;
 }
 
 .rt-cyber-bg::before,
@@ -80,9 +120,71 @@ body {
   --rt-accent: #c2410c;
   --rt-surface: #ffffff;
   --rt-surface-soft: #f7fbff;
+  --rt-panel-border: rgba(56, 189, 248, 0.44);
+  --rt-panel-inner-border: rgba(125, 211, 252, 0.3);
+  --rt-panel-bg: linear-gradient(135deg, rgba(248, 252, 255, 0.96) 0%, rgba(240, 248, 255, 0.92) 55%, rgba(255, 255, 255, 0.96) 100%);
+  --rt-panel-shadow: 0 0 0 1px rgba(56, 189, 248, 0.14), inset 0 0 0 1px rgba(125, 211, 252, 0.22), 0 14px 26px rgba(15, 23, 42, 0.16);
+  --rt-item-bg: linear-gradient(145deg, rgba(255, 255, 255, 0.94) 0%, rgba(245, 250, 255, 0.88) 100%);
   position: relative;
-  z-index: 1;
+  z-index: 2;
   font-size: 1.035rem;
+}
+
+.rt-home[data-theme="dark"] {
+  --rt-ink: #e2e8f0;
+  --rt-soft-ink: #94a3b8;
+  --rt-line: rgba(148, 163, 184, 0.35);
+  --rt-panel-border: rgba(56, 189, 248, 0.48);
+  --rt-panel-inner-border: rgba(125, 211, 252, 0.34);
+  --rt-panel-bg: linear-gradient(135deg, rgba(15, 23, 42, 0.94) 0%, rgba(15, 23, 42, 0.88) 60%, rgba(30, 41, 59, 0.9) 100%);
+  --rt-panel-shadow: 0 0 0 1px rgba(56, 189, 248, 0.2), inset 0 0 0 1px rgba(125, 211, 252, 0.22), 0 16px 28px rgba(2, 8, 23, 0.44);
+  --rt-item-bg: linear-gradient(145deg, rgba(30, 41, 59, 0.9) 0%, rgba(15, 23, 42, 0.9) 100%);
+}
+
+.rt-home[data-theme="dark"] .rt-card,
+.rt-home[data-theme="dark"] .rt-profile-block {
+  background: linear-gradient(145deg, rgba(15, 23, 42, 0.95) 0%, rgba(30, 41, 59, 0.9) 100%);
+  border-color: var(--rt-panel-border);
+}
+
+.rt-home[data-theme="dark"] .rt-intro-text,
+.rt-home[data-theme="dark"] .rt-profile-sub,
+.rt-home[data-theme="dark"] .rt-news-text,
+.rt-home[data-theme="dark"] .rt-note,
+.rt-home[data-theme="dark"] .rt-pub-authors,
+.rt-home[data-theme="dark"] .rt-pub-meta {
+  color: #94a3b8;
+}
+
+.rt-home[data-theme="dark"] .rt-profile-main,
+.rt-home[data-theme="dark"] .rt-profile-main a,
+.rt-home[data-theme="dark"] .rt-profile-company,
+.rt-home[data-theme="dark"] .rt-pub-title,
+.rt-home[data-theme="dark"] .rt-award strong {
+  color: #e2e8f0;
+}
+
+.rt-home[data-theme="dark"] .rt-focus-pill,
+.rt-home[data-theme="dark"] .rt-chip,
+.rt-home[data-theme="dark"] .rt-news-filter-btn,
+.rt-home[data-theme="dark"] .rt-pill {
+  border-color: rgba(125, 211, 252, 0.45);
+  background: linear-gradient(135deg, rgba(30, 41, 59, 0.92) 0%, rgba(15, 23, 42, 0.95) 100%);
+  color: #dbeafe;
+}
+
+.rt-home[data-theme="dark"] .rt-news-filter-btn.is-active {
+  color: #67e8f9;
+}
+
+.rt-home[data-theme="dark"] .rt-time {
+  border-color: rgba(125, 211, 252, 0.45);
+  background: rgba(30, 41, 59, 0.86);
+  color: #93c5fd;
+}
+
+.rt-home[data-theme="dark"] .rt-news-empty {
+  color: #94a3b8;
 }
 
 .rt-home a {
@@ -158,6 +260,34 @@ body {
   overflow: hidden;
   -webkit-backdrop-filter: blur(8px);
   backdrop-filter: blur(8px);
+}
+
+.rt-home .rt-theme-toggle {
+  position: fixed;
+  right: 14px;
+  top: 14px;
+  z-index: 28;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  border: 1px solid rgba(56, 189, 248, 0.62);
+  background: linear-gradient(135deg, rgba(15, 23, 42, 0.88) 0%, rgba(30, 41, 59, 0.88) 100%);
+  color: #dbeafe;
+  border-radius: 999px;
+  padding: 7px 12px;
+  font-size: 0.76rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  cursor: pointer;
+  box-shadow: 0 0 0 1px rgba(125, 211, 252, 0.2) inset, 0 12px 22px rgba(2, 8, 23, 0.3);
+  transition: transform .2s ease, box-shadow .24s ease, border-color .24s ease;
+}
+
+.rt-home .rt-theme-toggle:hover {
+  transform: translateY(-2px);
+  border-color: rgba(125, 211, 252, 0.9);
+  box-shadow: 0 0 0 1px rgba(186, 230, 253, 0.3) inset, 0 0 16px rgba(56, 189, 248, 0.35), 0 16px 24px rgba(2, 8, 23, 0.34);
 }
 
 .rt-home .rt-nav-progress {
@@ -583,6 +713,17 @@ body {
   gap: 8px;
 }
 
+.rt-home .rt-reveal {
+  opacity: 0;
+  transform: translateY(16px);
+  transition: opacity .56s ease, transform .56s ease;
+}
+
+.rt-home .rt-reveal.is-inview {
+  opacity: 1;
+  transform: translateY(0);
+}
+
 .rt-home .rt-title-glitch {
   position: relative;
   display: inline-block;
@@ -626,6 +767,67 @@ body {
   font-size: 0.93rem;
 }
 
+.rt-home .rt-news-zone,
+.rt-home .rt-awards-zone,
+.rt-home .rt-pubs-zone {
+  border-color: var(--rt-panel-border);
+  background: var(--rt-panel-bg);
+  box-shadow: var(--rt-panel-shadow);
+}
+
+.rt-home .rt-timeline li,
+.rt-home .rt-award,
+.rt-home .rt-pub-card {
+  border-color: var(--rt-panel-inner-border);
+  background: var(--rt-item-bg);
+}
+
+.rt-home .rt-news-filter {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin: 0 0 12px;
+}
+
+.rt-home .rt-news-filter-btn {
+  appearance: none;
+  border: 1px solid #bfdbfe;
+  background: linear-gradient(135deg, #f8fbff 0%, #eef6ff 100%);
+  color: #1e3a8a;
+  border-radius: 999px;
+  padding: 5px 11px;
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: transform .2s ease, box-shadow .22s ease, border-color .22s ease, background .22s ease;
+}
+
+.rt-home .rt-news-filter-btn:hover {
+  transform: translateY(-1px);
+  border-color: #7dd3fc;
+  box-shadow: 0 0 0 1px rgba(125, 211, 252, 0.45) inset, 0 8px 16px rgba(56, 189, 248, 0.2);
+}
+
+.rt-home .rt-news-filter-btn.is-active {
+  border-color: #67e8f9;
+  background: linear-gradient(135deg, #ecfeff 0%, #e0f2fe 100%);
+  color: #0c4a6e;
+  box-shadow: 0 0 0 1px rgba(103, 232, 249, 0.55) inset, 0 0 14px rgba(34, 211, 238, 0.34);
+}
+
+.rt-home .rt-timeline li.is-hidden {
+  display: none;
+}
+
+.rt-home .rt-news-empty {
+  margin: 2px 0 0 24px;
+  color: #64748b;
+  font-size: 0.88rem;
+  letter-spacing: 0.01em;
+}
+
 .rt-home .rt-timeline {
   list-style: none;
   margin: 0;
@@ -666,8 +868,9 @@ body {
   margin-bottom: 6px;
   overflow: hidden;
   isolation: isolate;
-  background: linear-gradient(135deg, #edf5ff 0%, #f8fbff 52%, #ffffff 100%);
-  border: 1px solid #dbe8f6;
+  background: var(--rt-panel-bg);
+  border: 1px solid var(--rt-panel-border);
+  box-shadow: var(--rt-panel-shadow);
 }
 
 .rt-home .rt-news-zone::before {
@@ -703,8 +906,8 @@ body {
 }
 
 .rt-home .rt-timeline li {
-  background: linear-gradient(145deg, rgba(255, 255, 255, 0.88) 0%, rgba(247, 251, 255, 0.8) 100%);
-  border: 1px solid rgba(223, 234, 246, 0.9);
+  background: var(--rt-item-bg);
+  border: 1px solid var(--rt-panel-inner-border);
   border-radius: 12px;
   padding: 12px 14px;
   position: relative;
@@ -807,8 +1010,9 @@ body {
   margin-bottom: 6px;
   overflow: hidden;
   isolation: isolate;
-  background: linear-gradient(135deg, #fff8f2 0%, #fffcf8 52%, #ffffff 100%);
-  border: 1px solid #f7dfcf;
+  background: var(--rt-panel-bg);
+  border: 1px solid var(--rt-panel-border);
+  box-shadow: var(--rt-panel-shadow);
 }
 
 .rt-home .rt-awards-zone::before {
@@ -840,8 +1044,8 @@ body {
 }
 
 .rt-home .rt-award {
-  border: 1px solid #f1d2bf;
-  background: linear-gradient(135deg, rgba(255, 249, 245, 0.88) 0%, rgba(255, 255, 255, 0.9) 100%);
+  border: 1px solid var(--rt-panel-inner-border);
+  background: var(--rt-item-bg);
   border-radius: 12px;
   padding: 12px;
   transition: transform .22s ease, box-shadow .24s ease, border-color .22s ease;
@@ -927,8 +1131,9 @@ body {
   margin-bottom: 6px;
   overflow: hidden;
   isolation: isolate;
-  background: linear-gradient(135deg, #f3f8ff 0%, #f9fbff 56%, #ffffff 100%);
-  border: 1px solid #dbe8f7;
+  background: var(--rt-panel-bg);
+  border: 1px solid var(--rt-panel-border);
+  box-shadow: var(--rt-panel-shadow);
 }
 
 .rt-home .rt-pubs-zone::before {
@@ -963,13 +1168,14 @@ body {
   display: grid;
   grid-template-columns: minmax(260px, 320px) 1fr;
   align-items: start;
-  border: 1px solid var(--rt-line);
+  border: 1px solid var(--rt-panel-inner-border);
   border-radius: 12px;
   overflow: hidden;
-  background: linear-gradient(145deg, rgba(255, 255, 255, 0.9) 0%, rgba(248, 252, 255, 0.84) 100%);
+  background: var(--rt-item-bg);
   box-shadow: 0 8px 18px rgba(148, 163, 184, 0.12);
   transition: transform .22s ease, box-shadow .24s ease, border-color .22s ease;
   backdrop-filter: blur(4px);
+  position: relative;
 }
 
 .rt-home .rt-pub-card:hover {
@@ -1040,27 +1246,74 @@ body {
   animation: rt-pub-scan .92s ease 1;
 }
 
+.rt-home .rt-pub-status {
+  position: absolute;
+  right: 12px;
+  top: 10px;
+  z-index: 4;
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  height: 22px;
+  padding: 0 9px;
+  border-radius: 999px;
+  border: 1px solid #93c5fd;
+  background: linear-gradient(135deg, #eff6ff 0%, #dbeafe 100%);
+  color: #1e3a8a;
+  font-size: 0.64rem;
+  font-weight: 800;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  box-shadow: 0 8px 14px rgba(59, 130, 246, 0.2);
+  pointer-events: none;
+}
+
+.rt-home .rt-pub-status::before {
+  content: "";
+  width: 7px;
+  height: 7px;
+  border-radius: 999px;
+  background: currentColor;
+  box-shadow: 0 0 8px currentColor;
+}
+
+.rt-home .rt-pub-status--review {
+  border-color: #7dd3fc;
+  background: linear-gradient(135deg, #ecfeff 0%, #cffafe 100%);
+  color: #0c4a6e;
+}
+
+.rt-home .rt-pub-status--accepted {
+  border-color: #86efac;
+  background: linear-gradient(135deg, #f0fdf4 0%, #dcfce7 100%);
+  color: #166534;
+}
+
 .rt-home .rt-pub-body {
-  padding: 12px;
+  padding: 14px 13px 12px;
 }
 
 .rt-home .rt-pub-title {
-  margin: 0 0 6px;
-  font-size: 0.98rem;
-  line-height: 1.35;
-  color: #1f2937;
+  margin: 0 0 7px;
+  font-size: 1.04rem;
+  line-height: 1.38;
+  color: #0f172a;
+  font-weight: 760;
 }
 
 .rt-home .rt-pub-meta {
-  margin: 0 0 10px;
-  font-size: 0.85rem;
+  margin: 0 0 11px;
+  font-size: 0.74rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
   color: #64748b;
+  font-weight: 700;
 }
 
 .rt-home .rt-pub-authors {
-  margin: 0 0 8px;
-  font-size: 0.84rem;
-  line-height: 1.45;
+  margin: 0 0 9px;
+  font-size: 0.82rem;
+  line-height: 1.5;
   color: #475569;
 }
 
@@ -1073,6 +1326,7 @@ body {
   display: flex;
   flex-wrap: wrap;
   gap: 8px;
+  margin-top: 2px;
 }
 
 .rt-home .rt-pill {
@@ -1081,9 +1335,11 @@ body {
   background: #f8fbff;
   color: #1d4ed8;
   border-radius: 999px;
-  padding: 4px 9px;
-  font-size: 0.8rem;
-  font-weight: 600;
+  padding: 4px 10px;
+  font-size: 0.76rem;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
 }
 
 .rt-home .rt-pill:hover {
@@ -1096,6 +1352,48 @@ body {
   gap: 12px;
   max-width: 900px;
   margin: 0 auto;
+}
+
+.rt-home .rt-console-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 8px;
+  border: 1px solid rgba(56, 189, 248, 0.5);
+  background: linear-gradient(135deg, rgba(2, 6, 23, 0.86) 0%, rgba(15, 23, 42, 0.78) 100%);
+  border-radius: 10px;
+  padding: 8px 10px;
+  box-shadow: 0 0 0 1px rgba(125, 211, 252, 0.2) inset, 0 10px 20px rgba(2, 8, 23, 0.26);
+}
+
+.rt-home .rt-console-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  border: 1px solid rgba(125, 211, 252, 0.42);
+  background: linear-gradient(135deg, rgba(30, 41, 59, 0.94) 0%, rgba(15, 23, 42, 0.9) 100%);
+  color: #dbeafe;
+  border-radius: 999px;
+  padding: 4px 9px;
+  font-size: 0.74rem;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+
+.rt-home .rt-console-chip--online {
+  border-color: rgba(74, 222, 128, 0.6);
+  color: #bbf7d0;
+}
+
+.rt-home .rt-console-dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 999px;
+  background: #4ade80;
+  box-shadow: 0 0 8px rgba(74, 222, 128, 0.92);
+  animation: rt-online-pulse 1.8s ease-in-out infinite;
 }
 
 .rt-home .rt-visitor-card {
@@ -1285,6 +1583,12 @@ body {
   100% { transform: rotate(20deg) translateY(64%); opacity: 0; }
 }
 
+@keyframes rt-online-pulse {
+  0% { box-shadow: 0 0 4px rgba(74, 222, 128, 0.65); opacity: .75; }
+  50% { box-shadow: 0 0 10px rgba(74, 222, 128, 1); opacity: 1; }
+  100% { box-shadow: 0 0 4px rgba(74, 222, 128, 0.65); opacity: .75; }
+}
+
 @keyframes rt-cyber-scan {
   0% {
     transform: translateX(-35vw) rotate(-11deg);
@@ -1303,6 +1607,13 @@ body {
 }
 
 @media (max-width: 900px) {
+  .rt-home .rt-theme-toggle {
+    right: 10px;
+    top: 10px;
+    padding: 6px 10px;
+    font-size: 0.72rem;
+  }
+
   .rt-home .rt-jump-nav {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
@@ -1388,11 +1699,25 @@ body {
   .rt-home .rt-nav-progress-fill {
     transition: none;
   }
+
+  .rt-home .rt-console-dot {
+    animation: none;
+  }
+
+  .rt-home .rt-reveal {
+    transition: none;
+    opacity: 1;
+    transform: none;
+  }
 }
 </style>
 
 <div class="rt-cyber-bg" aria-hidden="true"></div>
+<div class="rt-film-layer" aria-hidden="true"></div>
 <div class="rt-home">
+  <button class="rt-theme-toggle" id="rt-theme-toggle" type="button" aria-pressed="false">
+    <i class="fa fa-moon-o" aria-hidden="true"></i><span id="rt-theme-toggle-label">Dark</span>
+  </button>
   <nav class="rt-jump-nav" aria-label="Section Navigation">
     <span class="rt-nav-progress" aria-hidden="true"><span class="rt-nav-progress-fill"></span></span>
     <a class="rt-jump-item" href="#section-overview"><i class="fa fa-compass" aria-hidden="true"></i> Overview</a>
@@ -1403,7 +1728,7 @@ body {
   </nav>
 
   <section class="rt-top-intro" id="section-overview">
-    <article class="rt-card rt-overview-card rt-tag-card rt-tag-pad">
+    <article class="rt-card rt-overview-card rt-tag-card rt-tag-pad rt-reveal">
       <span class="rt-corner-tag rt-corner-tag--blue">overview</span>
       <p class="rt-overview-name">Ruitong Liu</p>
       <p class="rt-intro-text">
@@ -1478,39 +1803,46 @@ body {
     </article>
   </section>
 
-  <h2 class="rt-section-title" id="section-news"><i class="fa fa-bolt" aria-hidden="true"></i><span class="rt-title-glitch" data-text="What's New">What's New</span></h2>
-  <div class="rt-news-zone rt-tag-card rt-tag-pad">
+  <h2 class="rt-section-title rt-reveal" id="section-news"><i class="fa fa-bolt" aria-hidden="true"></i><span class="rt-title-glitch" data-text="What's New">What's New</span></h2>
+  <div class="rt-news-zone rt-tag-card rt-tag-pad rt-reveal">
     <span class="rt-corner-tag">news</span>
+    <div class="rt-news-filter" aria-label="News Filter">
+      <button class="rt-news-filter-btn is-active" type="button" data-filter="all" aria-pressed="true">All</button>
+      <button class="rt-news-filter-btn" type="button" data-filter="papers" aria-pressed="false">Papers</button>
+      <button class="rt-news-filter-btn" type="button" data-filter="awards" aria-pressed="false">Awards</button>
+      <button class="rt-news-filter-btn" type="button" data-filter="internship" aria-pressed="false">Internship</button>
+    </div>
     <ul class="rt-timeline">
-      <li>
+      <li data-news-type="papers">
         <span class="rt-time">2026-02</span>
         <div class="rt-news-text">A survey on LLM data preparation was accepted by <strong>JCST's 40th Anniversary Special Issue</strong>.</div>
       </li>
-      <li>
+      <li data-news-type="papers">
         <span class="rt-time">2026-01</span>
         <div class="rt-news-text">A paper was submitted to <strong>IJCAI 2026</strong>.</div>
       </li>
-      <li>
+      <li data-news-type="papers">
         <span class="rt-time">2026-01</span>
         <div class="rt-news-text">Two papers were submitted to <strong>ICML 2026</strong>.</div>
       </li>
-      <li>
+      <li data-news-type="papers">
         <span class="rt-time">2026-01</span>
         <div class="rt-news-text">Two papers were submitted to <strong>ACL 2026</strong>.</div>
       </li>
-      <li>
+      <li data-news-type="papers">
         <span class="rt-time">2025-08</span>
         <div class="rt-news-text">A paper was submitted to <strong>TPAMI</strong>.</div>
       </li>
-      <li>
+      <li data-news-type="awards">
         <span class="rt-time">2025-07</span>
         <div class="rt-news-text">I was pre-admitted to PKU through the postgraduate recommendation program (Bao Yan).</div>
       </li>
     </ul>
+    <p class="rt-news-empty" id="rt-news-empty" hidden>No updates in this category yet.</p>
   </div>
 
-  <h2 class="rt-section-title" id="section-awards"><i class="fa fa-trophy" aria-hidden="true"></i><span class="rt-title-glitch" data-text="Awards">Awards</span></h2>
-  <div class="rt-awards-zone rt-tag-card rt-tag-pad">
+  <h2 class="rt-section-title rt-reveal" id="section-awards"><i class="fa fa-trophy" aria-hidden="true"></i><span class="rt-title-glitch" data-text="Awards">Awards</span></h2>
+  <div class="rt-awards-zone rt-tag-card rt-tag-pad rt-reveal">
     <span class="rt-corner-tag rt-corner-tag--gold">awards</span>
     <div class="rt-award-grid">
       <article class="rt-award">
@@ -1559,12 +1891,13 @@ body {
     </details>
   </div>
 
-  <h2 class="rt-section-title" id="section-pubs"><i class="fa fa-book" aria-hidden="true"></i><span class="rt-title-glitch" data-text="Publications">Publications</span></h2>
+  <h2 class="rt-section-title rt-reveal" id="section-pubs"><i class="fa fa-book" aria-hidden="true"></i><span class="rt-title-glitch" data-text="Publications">Publications</span></h2>
   <p class="rt-note">*: co-first authors. #: corresponding author.</p>
-  <div class="rt-pubs-zone rt-tag-card rt-tag-pad">
+  <div class="rt-pubs-zone rt-tag-card rt-tag-pad rt-reveal">
     <span class="rt-corner-tag rt-corner-tag--blue">publications</span>
     <div class="rt-pub-grid">
       <article class="rt-pub-card">
+        <span class="rt-pub-status rt-pub-status--review">Under Review</span>
         <a class="rt-pub-media" href="https://arxiv.org/pdf/2602.04290">
           <img class="rt-pub-thumb" src="{{ '/images/home_pubs/01.png' | relative_url }}" alt="Guided Verifier teaser">
         </a>
@@ -1581,6 +1914,7 @@ body {
       </article>
 
       <article class="rt-pub-card">
+        <span class="rt-pub-status rt-pub-status--review">Under Review</span>
         <a class="rt-pub-media" href="https://arxiv.org/pdf/2602.10494">
           <img class="rt-pub-thumb" src="{{ '/images/home_pubs/02.png' | relative_url }}" alt="Canvas-of-Thought teaser">
         </a>
@@ -1596,6 +1930,7 @@ body {
       </article>
 
       <article class="rt-pub-card">
+        <span class="rt-pub-status rt-pub-status--review">Under Review</span>
         <a class="rt-pub-media" href="https://arxiv.org/pdf/2510.08966">
           <img class="rt-pub-thumb" src="{{ '/images/home_pubs/03.png' | relative_url }}" alt="Semantic-Condition Tuning teaser">
         </a>
@@ -1611,6 +1946,7 @@ body {
       </article>
 
       <article class="rt-pub-card">
+        <span class="rt-pub-status rt-pub-status--review">Under Review</span>
         <a class="rt-pub-media" href="https://arxiv.org/pdf/2506.23137">
           <img class="rt-pub-thumb" src="{{ '/images/home_pubs/04.png' | relative_url }}" alt="Flow-Modulated Scoring teaser">
         </a>
@@ -1626,6 +1962,7 @@ body {
       </article>
 
       <article class="rt-pub-card">
+        <span class="rt-pub-status rt-pub-status--accepted">Accepted</span>
         <a class="rt-pub-media" href="https://drive.google.com/file/d/1TqwULwmD8f-cpokfcfYfapuC9bNxrztA/view?usp=sharing">
           <img class="rt-pub-thumb" src="{{ '/images/home_pubs/05.png' | relative_url }}" alt="LLM data preparation survey teaser">
         </a>
@@ -1640,6 +1977,7 @@ body {
       </article>
 
       <article class="rt-pub-card">
+        <span class="rt-pub-status rt-pub-status--review">Under Review</span>
         <a class="rt-pub-media" href="https://arxiv.org/pdf/2510.26495">
           <img class="rt-pub-thumb" src="{{ '/images/home_pubs/06.png' | relative_url }}" alt="Text-to-SQL paper teaser">
         </a>
@@ -1655,6 +1993,7 @@ body {
       </article>
 
       <article class="rt-pub-card">
+        <span class="rt-pub-status rt-pub-status--review">Under Review</span>
         <a class="rt-pub-media" href="https://arxiv.org/pdf/2602.12389">
           <img class="rt-pub-thumb" src="{{ '/images/home_pubs/07.png' | relative_url }}" alt="Temporal KGF paper teaser">
         </a>
@@ -1671,8 +2010,13 @@ body {
     </div>
   </div>
 
-  <h2 class="rt-section-title" id="section-visitor"><i class="fa fa-globe" aria-hidden="true"></i><span class="rt-title-glitch" data-text="Visitor">Visitor</span></h2>
-  <div class="rt-visitor-wrap">
+  <h2 class="rt-section-title rt-reveal" id="section-visitor"><i class="fa fa-globe" aria-hidden="true"></i><span class="rt-title-glitch" data-text="Visitor">Visitor</span></h2>
+  <div class="rt-visitor-wrap rt-reveal">
+    <div class="rt-console-bar" aria-label="Visitor Console">
+      <span class="rt-console-chip"><i class="fa fa-microchip" aria-hidden="true"></i> Runtime</span>
+      <span class="rt-console-chip"><i class="fa fa-clock-o" aria-hidden="true"></i> <span id="rt-console-time">--:--:--</span></span>
+      <span class="rt-console-chip rt-console-chip--online"><span class="rt-console-dot" aria-hidden="true"></span> Online</span>
+    </div>
     <div class="rt-visitor-card rt-visitor-map rt-tag-card rt-tag-pad">
       <span class="rt-corner-tag rt-corner-tag--cyan">map</span>
       <div class="rt-map-embed">
@@ -1723,6 +2067,90 @@ body {
     counterEl.setAttribute('data-offset-applied', 'true');
     clearInterval(timer);
   }, 500);
+})();
+</script>
+<script>
+(function () {
+  var homeEl = document.querySelector('.rt-home');
+  var toggleBtn = document.getElementById('rt-theme-toggle');
+  var toggleLabel = document.getElementById('rt-theme-toggle-label');
+  var prefersReduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var storageKey = 'rt-home-theme';
+
+  if (!homeEl || !toggleBtn || !toggleLabel) {
+    return;
+  }
+
+  function readStoredTheme() {
+    try {
+      return localStorage.getItem(storageKey);
+    } catch (err) {
+      return null;
+    }
+  }
+
+  function writeStoredTheme(theme) {
+    try {
+      localStorage.setItem(storageKey, theme);
+    } catch (err) {
+      return;
+    }
+  }
+
+  function updateToggleUi(theme) {
+    var iconClass = theme === 'dark' ? 'fa fa-sun-o' : 'fa fa-moon-o';
+    var icon = toggleBtn.querySelector('i');
+    if (icon) {
+      icon.className = iconClass;
+    }
+    toggleLabel.textContent = theme === 'dark' ? 'Light' : 'Dark';
+    toggleBtn.setAttribute('aria-pressed', theme === 'dark' ? 'true' : 'false');
+  }
+
+  function applyTheme(theme) {
+    var safeTheme = theme === 'dark' ? 'dark' : 'light';
+    homeEl.setAttribute('data-theme', safeTheme);
+    document.body.classList.toggle('rt-theme-dark', safeTheme === 'dark');
+    updateToggleUi(safeTheme);
+    writeStoredTheme(safeTheme);
+  }
+
+  var initialTheme = readStoredTheme() || 'light';
+  applyTheme(initialTheme);
+
+  toggleBtn.addEventListener('click', function () {
+    var current = homeEl.getAttribute('data-theme') === 'dark' ? 'dark' : 'light';
+    applyTheme(current === 'dark' ? 'light' : 'dark');
+  });
+
+  var revealTargets = Array.prototype.slice.call(document.querySelectorAll('.rt-home .rt-reveal'));
+  if (!revealTargets.length) {
+    return;
+  }
+
+  if (prefersReduced || !('IntersectionObserver' in window)) {
+    revealTargets.forEach(function (el) {
+      el.classList.add('is-inview');
+    });
+    return;
+  }
+
+  var observer = new IntersectionObserver(function (entries, obs) {
+    entries.forEach(function (entry) {
+      if (!entry.isIntersecting) {
+        return;
+      }
+      entry.target.classList.add('is-inview');
+      obs.unobserve(entry.target);
+    });
+  }, {
+    threshold: 0.18,
+    rootMargin: '0px 0px -8% 0px'
+  });
+
+  revealTargets.forEach(function (el) {
+    observer.observe(el);
+  });
 })();
 </script>
 <script>
@@ -1807,5 +2235,60 @@ body {
 
   updateActiveLink();
   updateScrollProgress();
+})();
+</script>
+<script>
+(function () {
+  var filterButtons = Array.prototype.slice.call(document.querySelectorAll('.rt-news-filter-btn'));
+  var newsItems = Array.prototype.slice.call(document.querySelectorAll('.rt-timeline li[data-news-type]'));
+  var emptyHint = document.getElementById('rt-news-empty');
+  var timeEl = document.getElementById('rt-console-time');
+
+  function applyNewsFilter(kind) {
+    if (!newsItems.length) {
+      return;
+    }
+    newsItems.forEach(function (item) {
+      var type = item.getAttribute('data-news-type');
+      var visible = kind === 'all' || type === kind;
+      item.classList.toggle('is-hidden', !visible);
+    });
+    if (emptyHint) {
+      var hasVisible = newsItems.some(function (item) {
+        return !item.classList.contains('is-hidden');
+      });
+      emptyHint.hidden = hasVisible;
+    }
+  }
+
+  if (filterButtons.length && newsItems.length) {
+    filterButtons.forEach(function (button) {
+      button.addEventListener('click', function () {
+        var kind = button.getAttribute('data-filter') || 'all';
+        filterButtons.forEach(function (btn) {
+          var active = btn === button;
+          btn.classList.toggle('is-active', active);
+          btn.setAttribute('aria-pressed', active ? 'true' : 'false');
+        });
+        applyNewsFilter(kind);
+      });
+    });
+    applyNewsFilter('all');
+  }
+
+  function updateConsoleTime() {
+    if (!timeEl) {
+      return;
+    }
+    var now = new Date();
+    var dateText = now.toLocaleDateString('en-CA');
+    var timeText = now.toLocaleTimeString('en-GB', { hour12: false });
+    timeEl.textContent = dateText + ' ' + timeText;
+  }
+
+  if (timeEl) {
+    updateConsoleTime();
+    setInterval(updateConsoleTime, 1000);
+  }
 })();
 </script>

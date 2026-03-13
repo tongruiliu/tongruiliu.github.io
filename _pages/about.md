@@ -1989,10 +1989,6 @@ body.rt-theme-dark .sidebar .author__urls li {
       </li>
       <li>
         <span class="rt-time">2026-01</span>
-        <div class="rt-news-text">A paper was submitted to <strong>IJCAI 2026</strong>.</div>
-      </li>
-      <li>
-        <span class="rt-time">2026-01</span>
         <div class="rt-news-text">Two papers were submitted to <strong>ICML 2026</strong>.</div>
       </li>
       <li>

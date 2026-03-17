@@ -1984,6 +1984,10 @@ body.rt-theme-dark .sidebar .author__urls li {
     <span class="rt-corner-tag">news</span>
     <ul class="rt-timeline">
       <li>
+        <span class="rt-time">2026-03</span>
+        <div class="rt-news-text">One paper was submitted to <strong>EMNLP 2026</strong>.</div>
+      </li>
+      <li>
         <span class="rt-time">2026-02</span>
         <div class="rt-news-text">A survey on LLM data preparation was accepted by <strong>JCST's 40th Anniversary Special Issue</strong>.</div>
       </li>

@@ -1950,31 +1950,6 @@ body.rt-theme-dark .sidebar .author__urls li {
             </li>
           </ul>
         </section>
-        <section class="rt-profile-block rt-tag-card rt-tag-pad">
-          <span class="rt-corner-tag rt-corner-tag--cyan">internship</span>
-          <h3 class="rt-profile-head">Internship</h3>
-          <ul class="rt-profile-list rt-profile-list--intern">
-            <li class="rt-profile-item rt-profile-item--intern">
-              <div class="rt-profile-top">
-                <p class="rt-profile-company">Ubiquant-IQuest</p>
-                <div class="rt-profile-time">2026.02 - Present</div>
-              </div>
-              <div class="rt-profile-role-line">
-                <span class="rt-profile-role">LLM Algorithm Intern</span>
-                <span class="rt-spotlight">Talent Program</span>
-              </div>
-            </li>
-            <li class="rt-profile-item rt-profile-item--intern">
-              <div class="rt-profile-top">
-                <p class="rt-profile-company">Institute for Advanced Algorithms Research (IAAR), Shanghai</p>
-                <div class="rt-profile-time">2025.09 - 2026.02</div>
-              </div>
-              <div class="rt-profile-role-line">
-                <span class="rt-profile-role">LLM Algorithm&nbsp;<strong>Research</strong>&nbsp;Intern</span>
-              </div>
-            </li>
-          </ul>
-        </section>
       </div>
     </article>
   </section>

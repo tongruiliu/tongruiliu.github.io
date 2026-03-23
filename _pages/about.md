@@ -1909,7 +1909,7 @@ body.rt-theme-dark .sidebar .author__urls li {
       <p class="rt-overview-name">Ruitong Liu</p>
       <p class="rt-intro-text">
         <span class="rt-welcome-line">Welcome to my homepage! <span class="rt-wave-hand" aria-hidden="true">👋</span></span><br>
-        I am currently a senior majoring in <a href="https://math.dlut.edu.cn/">Mathematics and Applied Mathematics</a> at
+        I am currently a senior majoring at
         <a href="https://www.dlut.edu.cn/">Dalian University of Technology</a>. I will start my graduate studies at the
         <a href="https://www.math.pku.edu.cn/index.htm">School of Mathematical Sciences</a>,
         <a href="https://www.pku.edu.cn/">Peking University</a> in September 2026. My research focuses on Large Language Models (LLMs) and Multimodal Large Language Models (MLLMs), covering large-scale data engineering, complex reasoning optimization, training algorithms and full-stack training, KG+LLM, and mathematical formal reasoning. I am currently also working on research related to World Models(WMs).<br>

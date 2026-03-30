@@ -1912,7 +1912,7 @@ body.rt-theme-dark .sidebar .author__urls li {
         I am currently a senior majoring at
         <a href="https://www.dlut.edu.cn/">Dalian University of Technology</a>. I will start my graduate studies at the
         <a href="https://www.math.pku.edu.cn/index.htm">School of Mathematical Sciences</a>,
-        <a href="https://www.pku.edu.cn/">Peking University</a> in September 2026. My research focuses on Large Language Models (LLMs) and Multimodal Large Language Models (MLLMs), covering large-scale data engineering, complex reasoning optimization, training algorithms and full-stack training, KG+LLM, and mathematical formal reasoning. I am currently also working on research related to World Models(WMs).<br>
+        <a href="https://www.pku.edu.cn/">Peking University</a> in September 2026. My research focuses on Large Language Models (LLMs) and Multimodal Large Language Models (MLLMs), covering large-scale data engineering, complex reasoning optimization, training algorithms and full-stack training, KG+LLM, and mathematical formal reasoning. I am currently also working on research related to World Models(WMs).<br> Now i am interning in Beijing.
         If you are interested in academic cooperation or exchanges in related fields, please feel free to contact me via email at any time!
       </p>
       <div class="rt-focus-row">

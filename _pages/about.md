@@ -1960,7 +1960,7 @@ body.rt-theme-dark .sidebar .author__urls li {
     <ul class="rt-timeline">
       <li>
         <span class="rt-time">2026-04</span>
-        <div class="rt-news-text">Two papers were accepted to <strong>ACL 2026(One Main, One Findings.)</strong>. Congratulations to all co-authors.!</div>
+        <div class="rt-news-text">Two papers were accepted to <strong>ACL 2026 (One Main, One Findings.)</strong>. Congratulations to all co-authors.!</div>
       </li>
       <li>
         <span class="rt-time">2026-03</span>
@@ -2040,8 +2040,9 @@ body.rt-theme-dark .sidebar .author__urls li {
   <div class="rt-pubs-zone rt-tag-card rt-tag-pad rt-reveal">
     <span class="rt-corner-tag rt-corner-tag--blue">publications</span>
     <div class="rt-pub-grid">
+      
       <article class="rt-pub-card">
-        <span class="rt-pub-status rt-pub-status--review">Under Review</span>
+        <span class="rt-pub-status rt-pub-status--review">Accepted</span>
         <a class="rt-pub-media" href="https://arxiv.org/pdf/2510.26495">
           <img class="rt-pub-thumb" src="{{ '/images/home_pubs/06.png' | relative_url }}" alt="Text-to-SQL paper teaser">
         </a>
@@ -2057,7 +2058,7 @@ body.rt-theme-dark .sidebar .author__urls li {
       </article>
 
       <article class="rt-pub-card">
-        <span class="rt-pub-status rt-pub-status--review">Under Review</span>
+        <span class="rt-pub-status rt-pub-status--review">Accepted</span>
         <a class="rt-pub-media" href="https://arxiv.org/pdf/2602.12389">
           <img class="rt-pub-thumb" src="{{ '/images/home_pubs/07.png' | relative_url }}" alt="Temporal KGF paper teaser">
         </a>
@@ -2068,6 +2069,21 @@ body.rt-theme-dark .sidebar .author__urls li {
           <div class="rt-pub-links">
             <a class="rt-pill" href="https://arxiv.org/pdf/2602.12389">PDF</a>
             <a class="rt-pill" href="https://github.com/yuanwuyuan9/Evolving-Beyond-Snapshots.git">Code</a>
+          </div>
+        </div>
+      </article>
+
+      <article class="rt-pub-card">
+        <span class="rt-pub-status rt-pub-status--accepted">Accepted</span>
+        <a class="rt-pub-media" href="https://drive.google.com/file/d/1TqwULwmD8f-cpokfcfYfapuC9bNxrztA/view?usp=sharing">
+          <img class="rt-pub-thumb" src="{{ '/images/home_pubs/05.png' | relative_url }}" alt="LLM data preparation survey teaser">
+        </a>
+        <div class="rt-pub-body">
+          <h3 class="rt-pub-title">Data Preparation for Large Language Models: A Survey</h3>
+          <p class="rt-pub-authors">Hao Liang, Zhen Hao Wong, <strong>Ruitong Liu</strong>, Yuhan Wang, Meiyi Qiang, Zhengyang Zhao, Chengyu Shen, Conghui He#, Wentao Zhang#, Bin Cui#</p>
+          <p class="rt-pub-meta">JCST 40th Anniversary Special Issue</p>
+          <div class="rt-pub-links">
+            <a class="rt-pill" href="https://drive.google.com/file/d/1TqwULwmD8f-cpokfcfYfapuC9bNxrztA/view?usp=sharing">PDF</a>
           </div>
         </div>
       </article>
@@ -2136,21 +2152,7 @@ body.rt-theme-dark .sidebar .author__urls li {
           </div>
         </div>
       </article>
-
-      <article class="rt-pub-card">
-        <span class="rt-pub-status rt-pub-status--accepted">Accepted</span>
-        <a class="rt-pub-media" href="https://drive.google.com/file/d/1TqwULwmD8f-cpokfcfYfapuC9bNxrztA/view?usp=sharing">
-          <img class="rt-pub-thumb" src="{{ '/images/home_pubs/05.png' | relative_url }}" alt="LLM data preparation survey teaser">
-        </a>
-        <div class="rt-pub-body">
-          <h3 class="rt-pub-title">Data Preparation for Large Language Models: A Survey</h3>
-          <p class="rt-pub-authors">Hao Liang, Zhen Hao Wong, <strong>Ruitong Liu</strong>, Yuhan Wang, Meiyi Qiang, Zhengyang Zhao, Chengyu Shen, Conghui He#, Wentao Zhang#, Bin Cui#</p>
-          <p class="rt-pub-meta">JCST 40th Anniversary Special Issue</p>
-          <div class="rt-pub-links">
-            <a class="rt-pill" href="https://drive.google.com/file/d/1TqwULwmD8f-cpokfcfYfapuC9bNxrztA/view?usp=sharing">PDF</a>
-          </div>
-        </div>
-      </article>
+      
     </div>
   </div>
 

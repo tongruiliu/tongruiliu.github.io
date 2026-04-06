@@ -2042,6 +2042,38 @@ body.rt-theme-dark .sidebar .author__urls li {
     <div class="rt-pub-grid">
       <article class="rt-pub-card">
         <span class="rt-pub-status rt-pub-status--review">Under Review</span>
+        <a class="rt-pub-media" href="https://arxiv.org/pdf/2510.26495">
+          <img class="rt-pub-thumb" src="{{ '/images/home_pubs/06.png' | relative_url }}" alt="Text-to-SQL paper teaser">
+        </a>
+        <div class="rt-pub-body">
+          <h3 class="rt-pub-title">Rethinking Text-to-SQL: Dynamic Multi-turn SQL Interaction for Real-world Database Exploration</h3>
+          <p class="rt-pub-authors">Linzhuang Sun*, Tianyu Guo*, Hao Liang*, <strong>Ruitong Liu</strong>, Yuying Li, Qifeng Cai, Jingxuan Wei, Yuchen Wu, Bihui Yu, Xiangxiang Zhang, Wentao Zhang#, Bin CUI#</p>
+          <p class="rt-pub-meta">ACL 2026 Findings</p>
+          <div class="rt-pub-links">
+            <a class="rt-pill" href="https://arxiv.org/pdf/2510.26495">PDF</a>
+            <a class="rt-pill" href="https://github.com/Aurora-slz/DySQL-Bench.git">Code</a>
+          </div>
+        </div>
+      </article>
+
+      <article class="rt-pub-card">
+        <span class="rt-pub-status rt-pub-status--review">Under Review</span>
+        <a class="rt-pub-media" href="https://arxiv.org/pdf/2602.12389">
+          <img class="rt-pub-thumb" src="{{ '/images/home_pubs/07.png' | relative_url }}" alt="Temporal KGF paper teaser">
+        </a>
+        <div class="rt-pub-body">
+          <h3 class="rt-pub-title">Evolving Beyond Snapshots: Harmonizing Structure and Sequence via Entity State Tuning for Temporal Knowledge Graph Forecasting</h3>
+          <p class="rt-pub-authors">Yunjia Wu, yiyong xiao, Huang Pingyang, Peize Li, Siyuan Li#, <strong>Ruitong Liu#</strong>, Yan Wen, Te Sun, Fangyi Pei</p>
+          <p class="rt-pub-meta">ACL 2026 Main</p>
+          <div class="rt-pub-links">
+            <a class="rt-pill" href="https://arxiv.org/pdf/2602.12389">PDF</a>
+            <a class="rt-pill" href="https://github.com/yuanwuyuan9/Evolving-Beyond-Snapshots.git">Code</a>
+          </div>
+        </div>
+      </article>
+      
+      <article class="rt-pub-card">
+        <span class="rt-pub-status rt-pub-status--review">Under Review</span>
         <a class="rt-pub-media" href="https://arxiv.org/pdf/2602.04290">
           <img class="rt-pub-thumb" src="{{ '/images/home_pubs/01.png' | relative_url }}" alt="Guided Verifier teaser">
         </a>
@@ -2116,38 +2148,6 @@ body.rt-theme-dark .sidebar .author__urls li {
           <p class="rt-pub-meta">JCST 40th Anniversary Special Issue</p>
           <div class="rt-pub-links">
             <a class="rt-pill" href="https://drive.google.com/file/d/1TqwULwmD8f-cpokfcfYfapuC9bNxrztA/view?usp=sharing">PDF</a>
-          </div>
-        </div>
-      </article>
-
-      <article class="rt-pub-card">
-        <span class="rt-pub-status rt-pub-status--review">Under Review</span>
-        <a class="rt-pub-media" href="https://arxiv.org/pdf/2510.26495">
-          <img class="rt-pub-thumb" src="{{ '/images/home_pubs/06.png' | relative_url }}" alt="Text-to-SQL paper teaser">
-        </a>
-        <div class="rt-pub-body">
-          <h3 class="rt-pub-title">Rethinking Text-to-SQL: Dynamic Multi-turn SQL Interaction for Real-world Database Exploration</h3>
-          <p class="rt-pub-authors">Linzhuang Sun*, Tianyu Guo*, Hao Liang*, <strong>Ruitong Liu</strong>, Yuying Li, Qifeng Cai, Jingxuan Wei, Yuchen Wu, Bihui Yu, Xiangxiang Zhang, Wentao Zhang#, Bin CUI#</p>
-          <p class="rt-pub-meta">ACL 2026 Under Review</p>
-          <div class="rt-pub-links">
-            <a class="rt-pill" href="https://arxiv.org/pdf/2510.26495">PDF</a>
-            <a class="rt-pill" href="https://github.com/Aurora-slz/DySQL-Bench.git">Code</a>
-          </div>
-        </div>
-      </article>
-
-      <article class="rt-pub-card">
-        <span class="rt-pub-status rt-pub-status--review">Under Review</span>
-        <a class="rt-pub-media" href="https://arxiv.org/pdf/2602.12389">
-          <img class="rt-pub-thumb" src="{{ '/images/home_pubs/07.png' | relative_url }}" alt="Temporal KGF paper teaser">
-        </a>
-        <div class="rt-pub-body">
-          <h3 class="rt-pub-title">Evolving Beyond Snapshots: Harmonizing Structure and Sequence via Entity State Tuning for Temporal Knowledge Graph Forecasting</h3>
-          <p class="rt-pub-authors">Yunjia Wu, yiyong xiao, Huang Pingyang, Peize Li, Siyuan Li#, <strong>Ruitong Liu#</strong>, Yan Wen, Te Sun, Fangyi Pei</p>
-          <p class="rt-pub-meta">ACL 2026 Under Review</p>
-          <div class="rt-pub-links">
-            <a class="rt-pill" href="https://arxiv.org/pdf/2602.12389">PDF</a>
-            <a class="rt-pill" href="https://github.com/yuanwuyuan9/Evolving-Beyond-Snapshots.git">Code</a>
           </div>
         </div>
       </article>

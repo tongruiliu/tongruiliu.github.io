@@ -2042,7 +2042,7 @@ body.rt-theme-dark .sidebar .author__urls li {
     <div class="rt-pub-grid">
       
       <article class="rt-pub-card">
-        <span class="rt-pub-status rt-pub-status--review">Accepted</span>
+        <span class="rt-pub-status rt-pub-status--accepted">Accepted</span>
         <a class="rt-pub-media" href="https://arxiv.org/pdf/2510.26495">
           <img class="rt-pub-thumb" src="{{ '/images/home_pubs/06.png' | relative_url }}" alt="Text-to-SQL paper teaser">
         </a>
@@ -2058,7 +2058,7 @@ body.rt-theme-dark .sidebar .author__urls li {
       </article>
 
       <article class="rt-pub-card">
-        <span class="rt-pub-status rt-pub-status--review">Accepted</span>
+        <span class="rt-pub-status rt-pub-status--accepted">Accepted</span>
         <a class="rt-pub-media" href="https://arxiv.org/pdf/2602.12389">
           <img class="rt-pub-thumb" src="{{ '/images/home_pubs/07.png' | relative_url }}" alt="Temporal KGF paper teaser">
         </a>

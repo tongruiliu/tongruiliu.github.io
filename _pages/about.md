@@ -2075,7 +2075,7 @@ body.rt-theme-dark .sidebar .author__urls li {
 
       <article class="rt-pub-card">
         <span class="rt-pub-status rt-pub-status--accepted">Accepted</span>
-        <a class="rt-pub-media" href="https://drive.google.com/file/d/1TqwULwmD8f-cpokfcfYfapuC9bNxrztA/view?usp=sharing">
+        <a class="rt-pub-media" href="https://link.springer.com/article/10.1007/s11390-026-5948-8">
           <img class="rt-pub-thumb" src="{{ '/images/home_pubs/05.png' | relative_url }}" alt="LLM data preparation survey teaser">
         </a>
         <div class="rt-pub-body">

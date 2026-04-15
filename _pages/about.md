@@ -113,7 +113,7 @@ body.rt-theme-dark {
 
 .rt-home {
   --rt-ink: #1f2937;
-  --rt-soft-ink: #4b5563;
+  --rt-soft-ink: #4b5563;/volume/math/users/rtliu/verl/recipe/lean_tts_async/1_7b_tts_async_first_wheelhouse.sh
   --rt-line: #dce7ef;
   --rt-blue: #2563eb;
   --rt-blue-2: #3b82f6;
@@ -2064,7 +2064,7 @@ body.rt-theme-dark .sidebar .author__urls li {
         </a>
         <div class="rt-pub-body">
           <h3 class="rt-pub-title">Evolving Beyond Snapshots: Harmonizing Structure and Sequence via Entity State Tuning for Temporal Knowledge Graph Forecasting</h3>
-          <p class="rt-pub-authors">Yunjia Wu, yiyong xiao, Huang Pingyang, Peize Li, Siyuan Li#, <strong>Ruitong Liu#</strong>, Yan Wen, Te Sun, Fangyi Pei</p>
+          <p class="rt-pub-authors">Siyuan Li#*, Yunjia Wu*, yiyong xiao*, Huang Pingyang, Peize Li, <strong>Ruitong Liu#</strong>, Yan Wen, Te Sun</p>
           <p class="rt-pub-meta">ACL 2026 Main</p>
           <div class="rt-pub-links">
             <a class="rt-pill" href="https://arxiv.org/pdf/2602.12389">PDF</a>

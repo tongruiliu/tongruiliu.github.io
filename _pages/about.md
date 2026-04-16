@@ -2083,7 +2083,7 @@ body.rt-theme-dark .sidebar .author__urls li {
           <p class="rt-pub-authors">Hao Liang, Zhen Hao Wong, <strong>Ruitong Liu</strong>, Yuhan Wang, Meiyi Qiang, Zhengyang Zhao, Chengyu Shen, Conghui He#, Wentao Zhang#, Bin Cui#</p>
           <p class="rt-pub-meta">JCST 40th Anniversary Special Issue</p>
           <div class="rt-pub-links">
-            <a class="rt-pill" href="https://drive.google.com/file/d/1TqwULwmD8f-cpokfcfYfapuC9bNxrztA/view?usp=sharing">PDF</a>
+            <a class="rt-pill" href="https://link.springer.com/article/10.1007/s11390-026-5948-8">PDF</a>
           </div>
         </div>
       </article>

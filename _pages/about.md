@@ -2129,7 +2129,7 @@ body.rt-theme-dark .sidebar .author__urls li {
         <div class="rt-pub-body">
           <h3 class="rt-pub-title">Semantic-Condition Tuning: Fusing Graph Context with Large Language Models for Knowledge Graph Completion</h3>
           <p class="rt-pub-authors"><strong>Ruitong Liu</strong>, Yan Wen, Te Sun, Yunjia Wu, Pingyang Huang, Zihang Yu, Siyuan Li</p>
-          <p class="rt-pub-meta">IJCAI 2026 Under Review</p>
+          <p class="rt-pub-meta">EMNLP 2026 Under Review</p>
           <div class="rt-pub-links">
             <a class="rt-pill" href="https://arxiv.org/pdf/2510.08966">PDF</a>
             <a class="rt-pill" href="https://github.com/tongruiliu/GMT">Code</a>

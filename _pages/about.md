@@ -2174,7 +2174,7 @@ body.rt-theme-dark .sidebar .author__urls li {
       <div class="rt-service-card rt-tag-card rt-tag-pad">
         <span class="rt-corner-tag rt-corner-tag--gold">service</span>
         <div class="rt-service-title">Service</div>
-        <p class="rt-service-text">Reviewer/PC Member: Transactions on Knowledge Discovery from Data (TKDD)</p>
+        <p class="rt-service-text">Reviewer/PC Member: Transactions on Knowledge Discovery from Data (TKDD), Journal of Communications Software and Systems (JCOMSS)</p>
       </div>
       <div class="rt-counter-card rt-tag-card rt-tag-pad">
         <span class="rt-corner-tag rt-corner-tag--cyan">counter</span>

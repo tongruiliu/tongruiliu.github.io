@@ -1922,6 +1922,7 @@ body.rt-theme-dark .sidebar .author__urls li {
         <span class="rt-focus-pill">World Model</span>
         <span class="rt-focus-pill">Formal Math (Lean)</span>
         <span class="rt-focus-pill">Unify</span>
+        <span class="rt-focus-pill">LLM Edit</span>
       </div>
       <div class="rt-chip-row">
         <a class="rt-chip" href="mailto:15668672116@163.com"><i class="fa fa-envelope" aria-hidden="true"></i> 15668672116@163.com</a>
@@ -1958,6 +1959,10 @@ body.rt-theme-dark .sidebar .author__urls li {
   <div class="rt-news-zone rt-tag-card rt-tag-pad rt-reveal">
     <span class="rt-corner-tag">news</span>
     <ul class="rt-timeline">
+      <li>
+        <span class="rt-time">2026-05</span>
+        <div class="rt-news-text">One paper was submitted to <strong>NIPS 2026</strong>.</div>
+      </li>
       <li>
         <span class="rt-time">2026-04</span>
         <div class="rt-news-text">Two papers were accepted to <strong>ACL 2026 (One Main, One Findings.)</strong>. Congratulations to all co-authors.!</div>

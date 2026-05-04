@@ -1960,20 +1960,16 @@ body.rt-theme-dark .sidebar .author__urls li {
     <span class="rt-corner-tag">news</span>
     <ul class="rt-timeline">
       <li>
-        <span class="rt-time">2026-05</span>
-        <div class="rt-news-text">One paper was submitted to <strong>NIPS 2026</strong>.</div>
+        <span class="rt-time">2026-03</span>
+        <div class="rt-news-text">Two papers were submitted to <strong>EMNLP 2026</strong>.</div>
       </li>
       <li>
         <span class="rt-time">2026-04</span>
-        <div class="rt-news-text">Two papers were accepted to <strong>ACL 2026 (One Main, One Findings.)</strong>. Congratulations to all co-authors.!</div>
-      </li>
-      <li>
-        <span class="rt-time">2026-03</span>
-        <div class="rt-news-text">One paper was submitted to <strong>EMNLP 2026</strong>.</div>
+        <div class="rt-news-text">Two papers were accepted to <strong>ACL 2026 (One Main, One Findings.)</strong>. Congratulations to all co-authors!</div>
       </li>
       <li>
         <span class="rt-time">2026-02</span>
-        <div class="rt-news-text">A survey on LLM data preparation was accepted by <strong>JCST's 40th Anniversary Special Issue</strong>.</div>
+        <div class="rt-news-text">A survey on LLM data preparation was accepted by <strong>JCST's 40th Anniversary Special Issue</strong>. Congratulations to all co-authors!</div>
       </li>
       <li>
         <span class="rt-time">2026-01</span>
@@ -1981,7 +1977,7 @@ body.rt-theme-dark .sidebar .author__urls li {
       </li>
       <li>
         <span class="rt-time">2025-08</span>
-        <div class="rt-news-text">A paper was submitted to <strong>TPAMI</strong>.</div>
+        <div class="rt-news-text">One paper was submitted to <strong>TPAMI</strong>.</div>
       </li>
       <li>
         <span class="rt-time">2025-07</span>

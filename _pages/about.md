@@ -1912,13 +1912,12 @@ body.rt-theme-dark .sidebar .author__urls li {
         I am currently a senior majoring at
         <a href="https://www.dlut.edu.cn/">Dalian University of Technology</a>. I will start my graduate studies at the
         <a href="https://www.math.pku.edu.cn/index.htm">School of Mathematical Sciences</a>,
-        <a href="https://www.pku.edu.cn/">Peking University</a> in September 2026. My research focuses on Large Language Models (LLMs) and Multimodal Large Language Models (MLLMs), covering large-scale data engineering, complex reasoning optimization, training algorithms and full-stack training, KG+LLM, and mathematical formal reasoning. I am currently also working on research related to World Models(WMs).<br> Now i am interning in Beijing.
-        If you are interested in academic cooperation or exchanges in related fields, please feel free to contact me via email at any time!
+        <a href="https://www.pku.edu.cn/">Peking University</a> in September 2026. My research primarily focuses on <strong>Large Language Models (LLMs)</strong> and <strong>Multimodal Large Language Models (MLLMs)</strong>, with particular interests in multimodal reasoning, reinforcement learning and alignment, AI agents, LLM knowledge editing, and formal reasoning. My current research centers on complex reasoning optimization, reinforcement learning framework design, LLM knowledge editing and augmentation, Lean4 prove, as well as reliable agent systems for real-world applications. I am also interested in World Models and am actively exploring this direction.<br> Now i am interning in Beijing. If you are interested in academic cooperation or exchanges in related fields, please feel free to contact me via email at any time!
       </p>
       <div class="rt-focus-row">
         <span class="rt-focus-pill">LLM/MLLM Training (Full-Stack)</span>
-        <span class="rt-focus-pill">Data-Centric AI</span>
-        <span class="rt-focus-pill">MLLM Reasoning</span>
+        <span class="rt-focus-pill">Agent</span>
+        <span class="rt-focus-pill">Reasoning</span>
         <span class="rt-focus-pill">World Model</span>
         <span class="rt-focus-pill">Formal Math (Lean)</span>
         <span class="rt-focus-pill">Unify</span>

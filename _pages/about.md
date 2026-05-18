@@ -113,7 +113,7 @@ body.rt-theme-dark {
 
 .rt-home {
   --rt-ink: #1f2937;
-  --rt-soft-ink: #4b5563;/volume/math/users/rtliu/verl/recipe/lean_tts_async/1_7b_tts_async_first_wheelhouse.sh
+  --rt-soft-ink: #4b5563;
   --rt-line: #dce7ef;
   --rt-blue: #2563eb;
   --rt-blue-2: #3b82f6;
@@ -1519,9 +1519,27 @@ body.rt-theme-dark .sidebar .author__urls li {
 .rt-home .rt-visitor-wrap {
   display: grid;
   grid-template-columns: 1fr;
-  gap: 12px;
-  max-width: 900px;
-  margin: 0 auto;
+  gap: 10px;
+  max-width: 760px;
+  margin: 6px auto 0;
+}
+
+.rt-home .rt-visitor-terminal {
+  border: 1px solid rgba(56, 189, 248, 0.44);
+  border-radius: 0;
+  clip-path: polygon(0 0, calc(100% - 14px) 0, 100% 14px, 100% 100%, 0 100%);
+  background: linear-gradient(145deg, rgba(8, 12, 24, 0.92) 0%, rgba(15, 23, 42, 0.86) 100%);
+  box-shadow: 0 0 0 1px rgba(56, 189, 248, 0.16), inset 0 0 0 1px rgba(125, 211, 252, 0.18), 0 14px 26px rgba(2, 8, 23, 0.32);
+  padding: 10px;
+  overflow: hidden;
+}
+
+.rt-home .rt-visitor-terminal-body {
+  display: grid;
+  grid-template-columns: minmax(0, 1.1fr) minmax(220px, 0.9fr);
+  gap: 10px;
+  align-items: stretch;
+  margin-top: 10px;
 }
 
 .rt-home .rt-console-bar {
@@ -1532,9 +1550,9 @@ body.rt-theme-dark .sidebar .author__urls li {
   gap: 8px;
   border: 1px solid rgba(56, 189, 248, 0.5);
   background: linear-gradient(135deg, rgba(2, 6, 23, 0.86) 0%, rgba(15, 23, 42, 0.78) 100%);
-  border-radius: 10px;
-  padding: 8px 10px;
-  box-shadow: 0 0 0 1px rgba(125, 211, 252, 0.2) inset, 0 10px 20px rgba(2, 8, 23, 0.26);
+  border-radius: 8px;
+  padding: 7px 9px;
+  box-shadow: 0 0 0 1px rgba(125, 211, 252, 0.18) inset;
 }
 
 .rt-home .rt-console-chip {
@@ -1570,20 +1588,20 @@ body.rt-theme-dark .sidebar .author__urls li {
   border: 1px solid rgba(56, 189, 248, 0.45);
   border-radius: 0;
   clip-path: polygon(0 0, calc(100% - 14px) 0, 100% 14px, 100% 100%, 0 100%);
-  background: linear-gradient(145deg, rgba(15, 23, 42, 0.94) 0%, rgba(30, 41, 59, 0.9) 100%);
-  padding: 12px;
+  background: linear-gradient(145deg, rgba(15, 23, 42, 0.72) 0%, rgba(30, 41, 59, 0.66) 100%);
+  padding: 10px;
   text-align: center;
   color: #dbeafe;
   position: relative;
   overflow: hidden;
-  box-shadow: 0 0 0 1px rgba(56, 189, 248, 0.18), inset 0 0 0 1px rgba(125, 211, 252, 0.24), 0 18px 30px rgba(2, 8, 23, 0.34);
+  box-shadow: 0 0 0 1px rgba(56, 189, 248, 0.14), inset 0 0 0 1px rgba(125, 211, 252, 0.18);
   transition: transform .22s ease, box-shadow .24s ease, border-color .22s ease;
 }
 
 .rt-home .rt-visitor-card:hover {
-  transform: translateY(-3px) scale(1.012);
+  transform: translateY(-2px) scale(1.006);
   border-color: rgba(125, 211, 252, 0.95);
-  box-shadow: 0 0 0 1px rgba(125, 211, 252, 0.38), inset 0 0 0 1px rgba(186, 230, 253, 0.28), 0 22px 34px rgba(2, 8, 23, 0.38), 0 0 20px rgba(56, 189, 248, 0.26);
+  box-shadow: 0 0 0 1px rgba(125, 211, 252, 0.3), inset 0 0 0 1px rgba(186, 230, 253, 0.22), 0 0 16px rgba(56, 189, 248, 0.18);
 }
 
 .rt-home .rt-visitor-card::before,
@@ -1601,47 +1619,60 @@ body.rt-theme-dark .sidebar .author__urls li {
 }
 
 .rt-home .rt-map-caption {
-  font-size: 0.86em;
+  font-size: 0.78em;
   color: #93c5fd;
   margin-top: 6px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
 }
 
 .rt-home .rt-visitor-map {
-  padding: 10px 10px 12px;
+  padding: 10px;
 }
 
 .rt-home .rt-map-embed {
-  max-width: 620px;
+  max-width: 360px;
   margin: 0 auto;
   border: 1px solid rgba(125, 211, 252, 0.3);
-  border-radius: 10px;
-  padding: 7px;
+  border-radius: 8px;
+  padding: 6px;
   background: linear-gradient(135deg, rgba(15, 23, 42, 0.62) 0%, rgba(15, 23, 42, 0.3) 100%);
+}
+
+.rt-home .rt-map-embed img,
+.rt-home .rt-map-embed canvas,
+.rt-home .rt-map-embed iframe {
+  max-width: 100% !important;
+  height: auto !important;
 }
 
 .rt-home .rt-visitor-bottom {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 12px;
+  gap: 10px;
+}
+
+.rt-home .rt-visitor-terminal .rt-visitor-bottom {
+  grid-template-columns: 1fr;
 }
 
 .rt-home .rt-service-card {
   border: 1px solid rgba(56, 189, 248, 0.42);
   border-radius: 0;
   clip-path: polygon(0 0, calc(100% - 14px) 0, 100% 14px, 100% 100%, 0 100%);
-  background: linear-gradient(145deg, rgba(15, 23, 42, 0.93) 0%, rgba(30, 41, 59, 0.88) 100%);
+  background: linear-gradient(145deg, rgba(15, 23, 42, 0.72) 0%, rgba(30, 41, 59, 0.66) 100%);
   color: #dbeafe;
-  padding: 15px 14px;
+  padding: 13px 12px;
   position: relative;
   overflow: hidden;
-  box-shadow: 0 0 0 1px rgba(56, 189, 248, 0.18), inset 0 0 0 1px rgba(125, 211, 252, 0.22), 0 14px 26px rgba(2, 8, 23, 0.34);
+  box-shadow: 0 0 0 1px rgba(56, 189, 248, 0.14), inset 0 0 0 1px rgba(125, 211, 252, 0.18);
   transition: transform .22s ease, box-shadow .24s ease, border-color .22s ease;
 }
 
 .rt-home .rt-service-card:hover {
-  transform: translateY(-3px) scale(1.012);
+  transform: translateY(-2px) scale(1.006);
   border-color: rgba(125, 211, 252, 0.95);
-  box-shadow: 0 0 0 1px rgba(125, 211, 252, 0.38), inset 0 0 0 1px rgba(186, 230, 253, 0.28), 0 20px 30px rgba(2, 8, 23, 0.38), 0 0 20px rgba(56, 189, 248, 0.24);
+  box-shadow: 0 0 0 1px rgba(125, 211, 252, 0.3), inset 0 0 0 1px rgba(186, 230, 253, 0.22), 0 0 16px rgba(56, 189, 248, 0.18);
 }
 
 .rt-home .rt-service-title {
@@ -1664,19 +1695,19 @@ body.rt-theme-dark .sidebar .author__urls li {
   border: 1px solid rgba(56, 189, 248, 0.54);
   border-radius: 0;
   clip-path: polygon(0 0, calc(100% - 14px) 0, 100% 14px, 100% 100%, 0 100%);
-  background: linear-gradient(135deg, rgba(2, 6, 23, 0.98) 0%, rgba(30, 58, 138, 0.88) 56%, rgba(37, 99, 235, 0.76) 100%);
+  background: linear-gradient(135deg, rgba(2, 6, 23, 0.9) 0%, rgba(30, 58, 138, 0.72) 56%, rgba(37, 99, 235, 0.58) 100%);
   color: #eff6ff;
   text-align: center;
-  padding: 16px 14px;
+  padding: 13px 12px;
   position: relative;
   overflow: hidden;
-  box-shadow: 0 0 0 1px rgba(56, 189, 248, 0.2), inset 0 0 0 1px rgba(125, 211, 252, 0.2), 0 14px 28px rgba(2, 8, 23, 0.4);
+  box-shadow: 0 0 0 1px rgba(56, 189, 248, 0.14), inset 0 0 0 1px rgba(125, 211, 252, 0.18);
   transition: transform .22s ease, box-shadow .24s ease;
 }
 
 .rt-home .rt-counter-card:hover {
-  transform: translateY(-3px) scale(1.012);
-  box-shadow: 0 0 0 1px rgba(125, 211, 252, 0.42), inset 0 0 0 1px rgba(186, 230, 253, 0.3), 0 22px 36px rgba(2, 8, 23, 0.44), 0 0 24px rgba(56, 189, 248, 0.28);
+  transform: translateY(-2px) scale(1.006);
+  box-shadow: 0 0 0 1px rgba(125, 211, 252, 0.32), inset 0 0 0 1px rgba(186, 230, 253, 0.24), 0 0 18px rgba(56, 189, 248, 0.2);
 }
 
 .rt-home .rt-counter-title {
@@ -1687,7 +1718,7 @@ body.rt-theme-dark .sidebar .author__urls li {
 }
 
 .rt-home .rt-counter-value {
-  font-size: 2.2rem;
+  font-size: 1.82rem;
   font-weight: 700;
   margin: 2px 0;
 }
@@ -1790,13 +1821,37 @@ body.rt-theme-dark .sidebar .author__urls li {
   }
 
   .rt-home .rt-jump-nav {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
+    display: flex;
+    gap: 8px;
+    overflow-x: auto;
+    overscroll-behavior-x: contain;
+    scroll-snap-type: x proximity;
+    -webkit-overflow-scrolling: touch;
+    padding: 8px 8px 12px;
+  }
+
+  .rt-home .rt-jump-nav::-webkit-scrollbar {
+    height: 4px;
+  }
+
+  .rt-home .rt-jump-nav::-webkit-scrollbar-thumb {
+    background: rgba(125, 211, 252, 0.55);
+    border-radius: 999px;
+  }
+
+  .rt-home .rt-jump-item {
+    flex: 0 0 auto;
+    min-width: 132px;
+    padding: 9px 10px;
+    white-space: nowrap;
+    scroll-snap-align: start;
   }
 
   .rt-home .rt-award-grid,
   .rt-home .rt-pub-grid,
   .rt-home .rt-visitor-wrap,
-  .rt-home .rt-visitor-bottom {
+  .rt-home .rt-visitor-bottom,
+  .rt-home .rt-visitor-terminal-body {
     grid-template-columns: 1fr;
   }
 
@@ -1826,6 +1881,11 @@ body.rt-theme-dark .sidebar .author__urls li {
 
   .rt-home .rt-overview-title {
     font-size: 1.34rem;
+  }
+
+  .rt-home .rt-jump-item {
+    min-width: 124px;
+    font-size: 0.82rem;
   }
 
   .rt-home .rt-timeline li {
@@ -2044,7 +2104,7 @@ body.rt-theme-dark .sidebar .author__urls li {
       <article class="rt-pub-card">
         <span class="rt-pub-status rt-pub-status--accepted">Accepted</span>
         <a class="rt-pub-media" href="https://arxiv.org/pdf/2510.26495">
-          <img class="rt-pub-thumb" src="{{ '/images/home_pubs/06.png' | relative_url }}" alt="Text-to-SQL paper teaser">
+          <img class="rt-pub-thumb" src="{{ '/images/home_pubs/06.webp' | relative_url }}" alt="Text-to-SQL paper teaser" width="1200" height="675" loading="lazy" decoding="async">
         </a>
         <div class="rt-pub-body">
           <h3 class="rt-pub-title">Rethinking Text-to-SQL: Dynamic Multi-turn SQL Interaction for Real-world Database Exploration</h3>
@@ -2060,7 +2120,7 @@ body.rt-theme-dark .sidebar .author__urls li {
       <article class="rt-pub-card">
         <span class="rt-pub-status rt-pub-status--accepted">Accepted</span>
         <a class="rt-pub-media" href="https://arxiv.org/pdf/2602.12389">
-          <img class="rt-pub-thumb" src="{{ '/images/home_pubs/07.png' | relative_url }}" alt="Temporal KGF paper teaser">
+          <img class="rt-pub-thumb" src="{{ '/images/home_pubs/07.webp' | relative_url }}" alt="Temporal KGF paper teaser" width="1200" height="675" loading="lazy" decoding="async">
         </a>
         <div class="rt-pub-body">
           <h3 class="rt-pub-title">Evolving Beyond Snapshots: Harmonizing Structure and Sequence via Entity State Tuning for Temporal Knowledge Graph Forecasting</h3>
@@ -2076,7 +2136,7 @@ body.rt-theme-dark .sidebar .author__urls li {
       <article class="rt-pub-card">
         <span class="rt-pub-status rt-pub-status--accepted">Accepted</span>
         <a class="rt-pub-media" href="https://link.springer.com/article/10.1007/s11390-026-5948-8">
-          <img class="rt-pub-thumb" src="{{ '/images/home_pubs/05.png' | relative_url }}" alt="LLM data preparation survey teaser">
+          <img class="rt-pub-thumb" src="{{ '/images/home_pubs/05.webp' | relative_url }}" alt="LLM data preparation survey teaser" width="1200" height="675" loading="lazy" decoding="async">
         </a>
         <div class="rt-pub-body">
           <h3 class="rt-pub-title">Data Preparation for Large Language Models: A Survey</h3>
@@ -2091,7 +2151,7 @@ body.rt-theme-dark .sidebar .author__urls li {
       <article class="rt-pub-card">
         <span class="rt-pub-status rt-pub-status--review">Under Review</span>
         <a class="rt-pub-media" href="https://arxiv.org/pdf/2602.04290">
-          <img class="rt-pub-thumb" src="{{ '/images/home_pubs/01.png' | relative_url }}" alt="Guided Verifier teaser">
+          <img class="rt-pub-thumb" src="{{ '/images/home_pubs/01.webp' | relative_url }}" alt="Guided Verifier teaser" width="1200" height="675" loading="lazy" decoding="async">
         </a>
         <div class="rt-pub-body">
           <h3 class="rt-pub-title">Guided Verifier: Collaborative Multimodal Reasoning via Dynamic Process Supervision</h3>
@@ -2108,7 +2168,7 @@ body.rt-theme-dark .sidebar .author__urls li {
       <article class="rt-pub-card">
         <span class="rt-pub-status rt-pub-status--review">Under Review</span>
         <a class="rt-pub-media" href="https://arxiv.org/pdf/2602.10494">
-          <img class="rt-pub-thumb" src="{{ '/images/home_pubs/02.png' | relative_url }}" alt="Canvas-of-Thought teaser">
+          <img class="rt-pub-thumb" src="{{ '/images/home_pubs/02.webp' | relative_url }}" alt="Canvas-of-Thought teaser" width="1200" height="675" loading="lazy" decoding="async">
         </a>
         <div class="rt-pub-body">
           <h3 class="rt-pub-title">Canvas-of-Thought: Grounding Reasoning via Mutable Structured States</h3>
@@ -2124,7 +2184,7 @@ body.rt-theme-dark .sidebar .author__urls li {
       <article class="rt-pub-card">
         <span class="rt-pub-status rt-pub-status--review">Under Review</span>
         <a class="rt-pub-media" href="https://arxiv.org/pdf/2510.08966">
-          <img class="rt-pub-thumb" src="{{ '/images/home_pubs/03.png' | relative_url }}" alt="Semantic-Condition Tuning teaser">
+          <img class="rt-pub-thumb" src="{{ '/images/home_pubs/03.webp' | relative_url }}" alt="Semantic-Condition Tuning teaser" width="1200" height="675" loading="lazy" decoding="async">
         </a>
         <div class="rt-pub-body">
           <h3 class="rt-pub-title">Semantic-Condition Tuning: Fusing Graph Context with Large Language Models for Knowledge Graph Completion</h3>
@@ -2140,7 +2200,7 @@ body.rt-theme-dark .sidebar .author__urls li {
       <article class="rt-pub-card">
         <span class="rt-pub-status rt-pub-status--review">Under Review</span>
         <a class="rt-pub-media" href="https://arxiv.org/pdf/2506.23137">
-          <img class="rt-pub-thumb" src="{{ '/images/home_pubs/04.png' | relative_url }}" alt="Flow-Modulated Scoring teaser">
+          <img class="rt-pub-thumb" src="{{ '/images/home_pubs/04.webp' | relative_url }}" alt="Flow-Modulated Scoring teaser" width="1200" height="675" loading="lazy" decoding="async">
         </a>
         <div class="rt-pub-body">
           <h3 class="rt-pub-title">Flow-Modulated Scoring for Semantic-Aware Knowledge Graph Completion</h3>
@@ -2158,29 +2218,33 @@ body.rt-theme-dark .sidebar .author__urls li {
 
   <h2 class="rt-section-title rt-reveal" id="section-visitor"><i class="fa fa-globe" aria-hidden="true"></i><span class="rt-title-glitch" data-text="Visitor">Visitor</span></h2>
   <div class="rt-visitor-wrap rt-reveal">
-    <div class="rt-console-bar" aria-label="Visitor Console">
-      <span class="rt-console-chip"><i class="fa fa-microchip" aria-hidden="true"></i> Runtime</span>
-      <span class="rt-console-chip"><i class="fa fa-clock-o" aria-hidden="true"></i> <span id="rt-console-time">--:--:--</span></span>
-      <span class="rt-console-chip rt-console-chip--online"><span class="rt-console-dot" aria-hidden="true"></span> Online</span>
-    </div>
-    <div class="rt-visitor-card rt-visitor-map rt-tag-card rt-tag-pad">
-      <span class="rt-corner-tag rt-corner-tag--cyan">map</span>
-      <div class="rt-map-embed">
-        <script type="text/javascript" id="clustrmaps" src="//clustrmaps.com/map_v2.js?d=wWuKIsCZO2yYZA7sXQVVhdoENIGHAUsZCAy6ZjG-Uhk&cl=ffffff&w=a"></script>
+    <div class="rt-visitor-terminal">
+      <div class="rt-console-bar" aria-label="Visitor Console">
+        <span class="rt-console-chip"><i class="fa fa-microchip" aria-hidden="true"></i> Runtime</span>
+        <span class="rt-console-chip"><i class="fa fa-clock-o" aria-hidden="true"></i> <span id="rt-console-time">--:--:--</span></span>
+        <span class="rt-console-chip rt-console-chip--online"><span class="rt-console-dot" aria-hidden="true"></span> Online</span>
       </div>
-      <div class="rt-map-caption">Visitor Geography</div>
-    </div>
-    <div class="rt-visitor-bottom">
-      <div class="rt-service-card rt-tag-card rt-tag-pad">
-        <span class="rt-corner-tag rt-corner-tag--gold">service</span>
-        <div class="rt-service-title">Service</div>
-        <p class="rt-service-text">Reviewer/PC Member: Transactions on Knowledge Discovery from Data (TKDD), Journal of Communications Software and Systems (JCOMSS)</p>
-      </div>
-      <div class="rt-counter-card rt-tag-card rt-tag-pad">
-        <span class="rt-corner-tag rt-corner-tag--cyan">counter</span>
-        <div class="rt-counter-title">Visit Counter</div>
-        <div id="busuanzi_value_site_pv" data-offset="27" class="rt-counter-value">--</div>
-        <div class="rt-counter-label">Page Views (PV)</div>
+      <div class="rt-visitor-terminal-body">
+        <div class="rt-visitor-card rt-visitor-map rt-tag-card rt-tag-pad">
+          <span class="rt-corner-tag rt-corner-tag--cyan">map</span>
+          <div class="rt-map-embed">
+            <script type="text/javascript" id="clustrmaps" src="//clustrmaps.com/map_v2.js?d=wWuKIsCZO2yYZA7sXQVVhdoENIGHAUsZCAy6ZjG-Uhk&cl=ffffff&w=a"></script>
+          </div>
+          <div class="rt-map-caption">Visitor Geography</div>
+        </div>
+        <div class="rt-visitor-bottom">
+          <div class="rt-service-card rt-tag-card rt-tag-pad">
+            <span class="rt-corner-tag rt-corner-tag--gold">service</span>
+            <div class="rt-service-title">Service</div>
+            <p class="rt-service-text">Reviewer/PC Member: Transactions on Knowledge Discovery from Data (TKDD), Journal of Communications Software and Systems (JCOMSS)</p>
+          </div>
+          <div class="rt-counter-card rt-tag-card rt-tag-pad">
+            <span class="rt-corner-tag rt-corner-tag--cyan">counter</span>
+            <div class="rt-counter-title">Visit Counter</div>
+            <div id="busuanzi_value_site_pv" data-offset="27" class="rt-counter-value">--</div>
+            <div class="rt-counter-label">Page Views (PV)</div>
+          </div>
+        </div>
       </div>
     </div>
   </div>

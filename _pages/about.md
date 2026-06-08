@@ -2203,6 +2203,10 @@ body.rt-theme-dark .sidebar .author__urls li {
     <span class="rt-corner-tag">news</span>
     <ul class="rt-timeline">
       <li>
+        <span class="rt-time">2026-06</span>
+        <div class="rt-news-text">One paper was submitted to <strong>ICDM 2026</strong>.</div>
+      </li>
+      <li>
         <span class="rt-time">2026-05</span>
         <div class="rt-news-text">One paper was submitted to <strong>TPAMI</strong>.</div>
       </li>

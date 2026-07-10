@@ -2341,14 +2341,14 @@ body.rt-theme-dark .sidebar .author__urls li {
       </article>
       
       <article class="rt-pub-card">
-        <span class="rt-pub-status rt-pub-status--review">ACMMM 2026</span>
+        <span class="rt-pub-status rt-pub-status--review">Accepted</span>
         <a class="rt-pub-media" href="https://arxiv.org/pdf/2602.04290">
           <img class="rt-pub-thumb" src="{{ '/images/home_pubs/01.webp' | relative_url }}" alt="Guided Verifier teaser" width="1200" height="675" loading="lazy" decoding="async">
         </a>
         <div class="rt-pub-body">
           <h3 class="rt-pub-title">Guided Verifier: Collaborative Multimodal Reasoning via Dynamic Process Supervision</h3>
           <p class="rt-pub-authors">Lingzhuang Sun*, <strong>Ruitong Liu*</strong>, Yuxia Zhu*, Xiaohan Xu, Jingxuan Wei, Xiangxiang Zhang, Bihui Yu, Wentao Zhang#</p>
-          <p class="rt-pub-meta">ICML 2026 Under Review</p>
+          <p class="rt-pub-meta">ACMMM 2026</p>
           <div class="rt-pub-links">
             <a class="rt-pill" href="https://arxiv.org/pdf/2602.04290">PDF</a>
             <a class="rt-pill" href="https://github.com/tongruiliu/Guided-GRPO">Code</a>
@@ -2358,14 +2358,14 @@ body.rt-theme-dark .sidebar .author__urls li {
       </article>
 
       <article class="rt-pub-card">
-        <span class="rt-pub-status rt-pub-status--review">ACMMM 2026</span>
+        <span class="rt-pub-status rt-pub-status--review">Accepted</span>
         <a class="rt-pub-media" href="https://arxiv.org/pdf/2602.10494">
           <img class="rt-pub-thumb" src="{{ '/images/home_pubs/02.webp' | relative_url }}" alt="Canvas-of-Thought teaser" width="1200" height="675" loading="lazy" decoding="async">
         </a>
         <div class="rt-pub-body">
           <h3 class="rt-pub-title">Canvas-of-Thought: Grounding Reasoning via Mutable Structured States</h3>
           <p class="rt-pub-authors">Lingzhuang Sun*, Yuxia Zhu*, <strong>Ruitong Liu*</strong>, Hao Liang, Zheng Sun, Caijun Jia, Honghao He, Yuchen Wu, Siyuan Li, Jingxuan Wei, Xiangxiang Zhang, Bihui Yu, Wentao Zhang#</p>
-          <p class="rt-pub-meta">ICML 2026 Under Review</p>
+          <p class="rt-pub-meta">ACMMM 2026</p>
           <div class="rt-pub-links">
             <a class="rt-pill" href="https://arxiv.org/pdf/2602.10494">PDF</a>
             <a class="rt-pill" href="https://github.com/Zzzyxii/Canvas-CoT">Code</a>

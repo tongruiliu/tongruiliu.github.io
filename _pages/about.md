@@ -2341,7 +2341,7 @@ body.rt-theme-dark .sidebar .author__urls li {
       </article>
       
       <article class="rt-pub-card">
-        <span class="rt-pub-status rt-pub-status--review">Accepted</span>
+        <span class="rt-pub-status rt-pub-status--accepted">Accepted</span>
         <a class="rt-pub-media" href="https://arxiv.org/pdf/2602.04290">
           <img class="rt-pub-thumb" src="{{ '/images/home_pubs/01.webp' | relative_url }}" alt="Guided Verifier teaser" width="1200" height="675" loading="lazy" decoding="async">
         </a>
@@ -2358,7 +2358,7 @@ body.rt-theme-dark .sidebar .author__urls li {
       </article>
 
       <article class="rt-pub-card">
-        <span class="rt-pub-status rt-pub-status--review">Accepted</span>
+        <span class="rt-pub-status rt-pub-status--accepted">Accepted</span>
         <a class="rt-pub-media" href="https://arxiv.org/pdf/2602.10494">
           <img class="rt-pub-thumb" src="{{ '/images/home_pubs/02.webp' | relative_url }}" alt="Canvas-of-Thought teaser" width="1200" height="675" loading="lazy" decoding="async">
         </a>

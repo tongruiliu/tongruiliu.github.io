@@ -2203,6 +2203,10 @@ body.rt-theme-dark .sidebar .author__urls li {
     <span class="rt-corner-tag">news</span>
     <ul class="rt-timeline">
       <li>
+        <span class="rt-time">2026-07</span>
+        <div class="rt-news-text">Two paper were accepted by <strong>ACMMM 2026</strong>.</div>
+      </li>
+      <li>
         <span class="rt-time">2026-06</span>
         <div class="rt-news-text">One paper was submitted to <strong>ICDM 2026</strong>.</div>
       </li>
@@ -2212,7 +2216,7 @@ body.rt-theme-dark .sidebar .author__urls li {
       </li>
       <li>
         <span class="rt-time">2026-04</span>
-        <div class="rt-news-text">Two papers were accepted to <strong>ACL 2026 (One Main, One Findings.)</strong>. Congratulations to all co-authors!</div>
+        <div class="rt-news-text">Two papers were accepted by <strong>ACL 2026 (One Main, One Findings.)</strong>.</div>
       </li>
       <li>
         <span class="rt-time">2026-03</span>
@@ -2221,10 +2225,6 @@ body.rt-theme-dark .sidebar .author__urls li {
       <li>
         <span class="rt-time">2026-02</span>
         <div class="rt-news-text">A survey on LLM data preparation was accepted by <strong>JCST's 40th Anniversary Special Issue</strong>. Congratulations to all co-authors!</div>
-      </li>
-      <li>
-        <span class="rt-time">2026-01</span>
-        <div class="rt-news-text">Two papers were submitted to <strong>ICML 2026</strong>.</div>
       </li>
       <li>
         <span class="rt-time">2025-08</span>
@@ -2341,7 +2341,7 @@ body.rt-theme-dark .sidebar .author__urls li {
       </article>
       
       <article class="rt-pub-card">
-        <span class="rt-pub-status rt-pub-status--review">Under Review</span>
+        <span class="rt-pub-status rt-pub-status--review">ACMMM 2026</span>
         <a class="rt-pub-media" href="https://arxiv.org/pdf/2602.04290">
           <img class="rt-pub-thumb" src="{{ '/images/home_pubs/01.webp' | relative_url }}" alt="Guided Verifier teaser" width="1200" height="675" loading="lazy" decoding="async">
         </a>
@@ -2358,7 +2358,7 @@ body.rt-theme-dark .sidebar .author__urls li {
       </article>
 
       <article class="rt-pub-card">
-        <span class="rt-pub-status rt-pub-status--review">Under Review</span>
+        <span class="rt-pub-status rt-pub-status--review">ACMMM 2026</span>
         <a class="rt-pub-media" href="https://arxiv.org/pdf/2602.10494">
           <img class="rt-pub-thumb" src="{{ '/images/home_pubs/02.webp' | relative_url }}" alt="Canvas-of-Thought teaser" width="1200" height="675" loading="lazy" decoding="async">
         </a>

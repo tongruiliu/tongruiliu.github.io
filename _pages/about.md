@@ -2197,7 +2197,7 @@ body.rt-theme-dark .sidebar .author__urls li {
     <ul class="rt-timeline">
       <li>
         <span class="rt-time">2026-07</span>
-        <div class="rt-news-text">Two paper were submitted to <strong>AAAI 2026</strong>.</div>
+        <div class="rt-news-text">Two paper were submitted to <strong>AAAI 2027</strong>.</div>
       </li>
       <li>
         <span class="rt-time">2026-07</span>

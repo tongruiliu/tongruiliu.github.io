@@ -1535,20 +1535,21 @@ body.rt-theme-dark .sidebar .author__urls li {
   box-shadow: 0 0 8px rgba(59, 130, 246, 0.45);
 }
 
-.rt-home .rt-pub-line {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: baseline;
-  gap: 7px;
-  margin-bottom: 3px;
-}
-
 .rt-home .rt-pub-title {
+  display: block;
   font-size: 0.98rem;
   line-height: 1.4;
   color: #0f172a;
   font-weight: 720;
   text-decoration: none;
+  margin-bottom: 3px;
+}
+
+.rt-home .rt-pub-tags {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 7px;
 }
 
 .rt-home .rt-pub-title:hover {
@@ -1627,53 +1628,6 @@ body.rt-theme-dark .sidebar .author__urls li {
 .rt-home .rt-pub-authors strong {
   color: #0f172a;
   font-weight: 800;
-}
-
-.rt-home .rt-pub-links {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 12px;
-  margin-top: 2px;
-}
-
-.rt-home .rt-pub-link {
-  display: inline-flex;
-  align-items: center;
-  font-size: 0.72rem;
-  font-weight: 800;
-  letter-spacing: 0.06em;
-  text-transform: uppercase;
-  font-family: var(--rt-hud-font);
-  color: #1d4ed8;
-  text-decoration: none;
-  position: relative;
-  padding-left: 12px;
-}
-
-.rt-home .rt-pub-link::before {
-  content: "";
-  position: absolute;
-  left: 0;
-  top: 50%;
-  width: 5px;
-  height: 5px;
-  transform: translateY(-50%) rotate(45deg);
-  background: currentColor;
-  opacity: 0.7;
-}
-
-.rt-home .rt-pub-link:hover {
-  color: #be185d;
-  text-decoration: underline;
-  text-underline-offset: 3px;
-}
-
-.rt-home[data-theme="dark"] .rt-pub-link {
-  color: #7dd3fc;
-}
-
-.rt-home[data-theme="dark"] .rt-pub-link:hover {
-  color: #f9a8d4;
 }
 
 .rt-home .rt-visitor-wrap {
@@ -2293,93 +2247,65 @@ body.rt-theme-dark .sidebar .author__urls li {
         <ol class="rt-pub-list">
 
           <li class="rt-pub-item">
-            <div class="rt-pub-line">
-              <a class="rt-pub-title" href="https://arxiv.org/pdf/2510.26495">Rethinking Text-to-SQL: Dynamic Multi-turn SQL Interaction for Real-world Database Exploration</a>
-              <span class="rt-pub-badge rt-pub-badge--venue">ACL 2026 Findings</span>
-              <span class="rt-pub-badge rt-pub-badge--accepted">Accepted</span>
-            </div>
-            <p class="rt-pub-authors">Linzhuang Sun*, Tianyu Guo*, Hao Liang*, <strong>Ruitong Liu</strong>, Yuying Li, Qifeng Cai, Jingxuan Wei, Yuchen Wu, Bihui Yu, Xiangxiang Zhang, Wentao Zhang#, Bin CUI#</p>
-            <div class="rt-pub-links">
-              <a class="rt-pub-link" href="https://arxiv.org/pdf/2510.26495">PDF</a>
-              <a class="rt-pub-link" href="https://github.com/Aurora-slz/DySQL-Bench.git">Code</a>
-            </div>
-          </li>
-
-          <li class="rt-pub-item">
-            <div class="rt-pub-line">
-              <a class="rt-pub-title" href="https://arxiv.org/pdf/2602.12389">Evolving Beyond Snapshots: Harmonizing Structure and Sequence via Entity State Tuning for Temporal Knowledge Graph Forecasting</a>
+            <a class="rt-pub-title" href="https://arxiv.org/pdf/2602.12389">Evolving Beyond Snapshots: Harmonizing Structure and Sequence via Entity State Tuning for Temporal Knowledge Graph Forecasting</a>
+            <p class="rt-pub-authors">Siyuan Li#*, Yunjia Wu*, yiyong xiao*, Huang Pingyang, Peize Li, <strong>Ruitong Liu#</strong>, Yan Wen, Te Sun</p>
+            <div class="rt-pub-tags">
               <span class="rt-pub-badge rt-pub-badge--venue">ACL 2026 Main</span>
               <span class="rt-pub-badge rt-pub-badge--accepted">Accepted</span>
             </div>
-            <p class="rt-pub-authors">Siyuan Li#*, Yunjia Wu*, yiyong xiao*, Huang Pingyang, Peize Li, <strong>Ruitong Liu#</strong>, Yan Wen, Te Sun</p>
-            <div class="rt-pub-links">
-              <a class="rt-pub-link" href="https://arxiv.org/pdf/2602.12389">PDF</a>
-              <a class="rt-pub-link" href="https://github.com/yuanwuyuan9/Evolving-Beyond-Snapshots.git">Code</a>
+          </li>
+          
+          <li class="rt-pub-item">
+            <a class="rt-pub-title" href="https://arxiv.org/pdf/2510.26495">Rethinking Text-to-SQL: Dynamic Multi-turn SQL Interaction for Real-world Database Exploration</a>
+            <p class="rt-pub-authors">Linzhuang Sun*, Tianyu Guo*, Hao Liang*, <strong>Ruitong Liu</strong>, Yuying Li, Qifeng Cai, Jingxuan Wei, Yuchen Wu, Bihui Yu, Xiangxiang Zhang, Wentao Zhang#, Bin CUI#</p>
+            <div class="rt-pub-tags">
+              <span class="rt-pub-badge rt-pub-badge--venue">ACL 2026 Findings</span>
+              <span class="rt-pub-badge rt-pub-badge--accepted">Accepted</span>
             </div>
           </li>
 
           <li class="rt-pub-item">
-            <div class="rt-pub-line">
-              <a class="rt-pub-title" href="https://arxiv.org/pdf/2602.04290">Guided Verifier: Collaborative Multimodal Reasoning via Dynamic Process Supervision</a>
-              <span class="rt-pub-badge rt-pub-badge--venue">ACMMM 2026</span>
-              <span class="rt-pub-badge rt-pub-badge--accepted">Accepted</span>
-            </div>
+            <a class="rt-pub-title" href="https://arxiv.org/pdf/2602.04290">Guided Verifier: Collaborative Multimodal Reasoning via Dynamic Process Supervision</a>
             <p class="rt-pub-authors">Lingzhuang Sun*, <strong>Ruitong Liu*</strong>, Yuxia Zhu*, Xiaohan Xu, Jingxuan Wei, Xiangxiang Zhang, Bihui Yu, Wentao Zhang#</p>
-            <div class="rt-pub-links">
-              <a class="rt-pub-link" href="https://arxiv.org/pdf/2602.04290">PDF</a>
-              <a class="rt-pub-link" href="https://github.com/tongruiliu/Guided-GRPO">Code</a>
-              <a class="rt-pub-link" href="https://huggingface.co/ruitongl/Guided-Verifier-8B">Model</a>
-            </div>
-          </li>
-
-          <li class="rt-pub-item">
-            <div class="rt-pub-line">
-              <a class="rt-pub-title" href="https://arxiv.org/pdf/2602.10494">Canvas-of-Thought: Grounding Reasoning via Mutable Structured States</a>
+            <div class="rt-pub-tags">
               <span class="rt-pub-badge rt-pub-badge--venue">ACMMM 2026</span>
               <span class="rt-pub-badge rt-pub-badge--accepted">Accepted</span>
             </div>
+          </li>
+
+          <li class="rt-pub-item">
+            <a class="rt-pub-title" href="https://arxiv.org/pdf/2602.10494">Canvas-of-Thought: Grounding Reasoning via Mutable Structured States</a>
             <p class="rt-pub-authors">Lingzhuang Sun*, Yuxia Zhu*, <strong>Ruitong Liu*</strong>, Hao Liang, Zheng Sun, Caijun Jia, Honghao He, Yuchen Wu, Siyuan Li, Jingxuan Wei, Xiangxiang Zhang, Bihui Yu, Wentao Zhang#</p>
-            <div class="rt-pub-links">
-              <a class="rt-pub-link" href="https://arxiv.org/pdf/2602.10494">PDF</a>
-              <a class="rt-pub-link" href="https://github.com/Zzzyxii/Canvas-CoT">Code</a>
+            <div class="rt-pub-tags">
+              <span class="rt-pub-badge rt-pub-badge--venue">ACMMM 2026</span>
+              <span class="rt-pub-badge rt-pub-badge--accepted">Accepted</span>
             </div>
           </li>
 
           <li class="rt-pub-item">
-            <div class="rt-pub-line">
-              <a class="rt-pub-title" href="https://link.springer.com/article/10.1007/s11390-026-5948-8">Data Preparation for Large Language Models: A Survey</a>
+            <a class="rt-pub-title" href="https://link.springer.com/article/10.1007/s11390-026-5948-8">Data Preparation for Large Language Models: A Survey</a>
+            <p class="rt-pub-authors">Hao Liang, Zhen Hao Wong, <strong>Ruitong Liu</strong>, Yuhan Wang, Meiyi Qiang, Zhengyang Zhao, Chengyu Shen, Conghui He#, Wentao Zhang#, Bin Cui#</p>
+            <div class="rt-pub-tags">
               <span class="rt-pub-badge rt-pub-badge--venue">JCST 40th Anniversary Special Issue</span>
               <span class="rt-pub-badge rt-pub-badge--accepted">Accepted</span>
             </div>
-            <p class="rt-pub-authors">Hao Liang, Zhen Hao Wong, <strong>Ruitong Liu</strong>, Yuhan Wang, Meiyi Qiang, Zhengyang Zhao, Chengyu Shen, Conghui He#, Wentao Zhang#, Bin Cui#</p>
-            <div class="rt-pub-links">
-              <a class="rt-pub-link" href="https://link.springer.com/article/10.1007/s11390-026-5948-8">PDF</a>
-            </div>
           </li>
 
           <li class="rt-pub-item">
-            <div class="rt-pub-line">
-              <a class="rt-pub-title" href="https://arxiv.org/pdf/2510.08966">Semantic-Condition Tuning: Fusing Graph Context with Large Language Models for Knowledge Graph Completion</a>
+            <a class="rt-pub-title" href="https://arxiv.org/pdf/2510.08966">Semantic-Condition Tuning: Fusing Graph Context with Large Language Models for Knowledge Graph Completion</a>
+            <p class="rt-pub-authors"><strong>Ruitong Liu</strong>, Yan Wen, Te Sun, Yunjia Wu, Pingyang Huang, Zihang Yu, Siyuan Li</p>
+            <div class="rt-pub-tags">
               <span class="rt-pub-badge rt-pub-badge--venue">EMNLP 2026</span>
               <span class="rt-pub-badge rt-pub-badge--review">Under Review</span>
             </div>
-            <p class="rt-pub-authors"><strong>Ruitong Liu</strong>, Yan Wen, Te Sun, Yunjia Wu, Pingyang Huang, Zihang Yu, Siyuan Li</p>
-            <div class="rt-pub-links">
-              <a class="rt-pub-link" href="https://arxiv.org/pdf/2510.08966">PDF</a>
-              <a class="rt-pub-link" href="https://github.com/tongruiliu/GMT">Code</a>
-            </div>
           </li>
 
           <li class="rt-pub-item">
-            <div class="rt-pub-line">
-              <a class="rt-pub-title" href="https://arxiv.org/pdf/2506.23137">Flow-Modulated Scoring for Semantic-Aware Knowledge Graph Completion</a>
+            <a class="rt-pub-title" href="https://arxiv.org/pdf/2506.23137">Flow-Modulated Scoring for Semantic-Aware Knowledge Graph Completion</a>
+            <p class="rt-pub-authors">Siyuan Li, <strong>Ruitong Liu</strong>, Yan Wen, Te Sun, Andi Zhang, Yanbiao Ma#, Xiaoshuai Hao#</p>
+            <div class="rt-pub-tags">
               <span class="rt-pub-badge rt-pub-badge--venue">TPAMI</span>
               <span class="rt-pub-badge rt-pub-badge--review">Under Review</span>
-            </div>
-            <p class="rt-pub-authors">Siyuan Li, <strong>Ruitong Liu</strong>, Yan Wen, Te Sun, Andi Zhang, Yanbiao Ma#, Xiaoshuai Hao#</p>
-            <div class="rt-pub-links">
-              <a class="rt-pub-link" href="https://arxiv.org/pdf/2506.23137">PDF</a>
-              <a class="rt-pub-link" href="https://github.com/yuanwuyuan9/FMS">Code</a>
             </div>
           </li>
 

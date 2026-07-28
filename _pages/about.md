@@ -183,8 +183,7 @@ body.rt-theme-dark .rt-film-layer::after {
 .rt-home[data-theme="dark"] .rt-profile-sub,
 .rt-home[data-theme="dark"] .rt-news-text,
 .rt-home[data-theme="dark"] .rt-note,
-.rt-home[data-theme="dark"] .rt-pub-authors,
-.rt-home[data-theme="dark"] .rt-pub-meta {
+.rt-home[data-theme="dark"] .rt-pub-authors {
   color: #94a3b8;
 }
 
@@ -197,8 +196,7 @@ body.rt-theme-dark .rt-film-layer::after {
 }
 
 .rt-home[data-theme="dark"] .rt-focus-pill,
-.rt-home[data-theme="dark"] .rt-chip,
-.rt-home[data-theme="dark"] .rt-pill {
+.rt-home[data-theme="dark"] .rt-chip {
   border-color: rgba(125, 211, 252, 0.45);
   background: linear-gradient(135deg, rgba(30, 41, 59, 0.92) 0%, rgba(15, 23, 42, 0.95) 100%);
   color: #dbeafe;
@@ -228,15 +226,13 @@ body.rt-theme-dark .rt-film-layer::after {
   color: #7dd3fc;
 }
 
-.rt-home[data-theme="dark"] .rt-corner-tag,
-.rt-home[data-theme="dark"] .rt-pub-status {
+.rt-home[data-theme="dark"] .rt-corner-tag {
   background: linear-gradient(135deg, rgba(8, 13, 28, 0.94) 0%, rgba(30, 41, 59, 0.9) 100%);
   color: #e0f2fe;
   box-shadow: 0 0 0 1px rgba(125, 211, 252, 0.18) inset, 0 0 14px rgba(34, 211, 238, 0.16);
 }
 
-.rt-home[data-theme="dark"] .rt-corner-tag::after,
-.rt-home[data-theme="dark"] .rt-pub-status::before {
+.rt-home[data-theme="dark"] .rt-corner-tag::after {
   box-shadow: 0 0 8px currentColor;
 }
 
@@ -695,8 +691,7 @@ body.rt-theme-dark .sidebar .author__urls li {
 .rt-home .rt-news-zone,
 .rt-home .rt-awards-zone,
 .rt-home .rt-pubs-zone,
-.rt-home .rt-award,
-.rt-home .rt-pub-card {
+.rt-home .rt-award {
   border-radius: 0;
   clip-path: polygon(0 0, calc(100% - 14px) 0, 100% 14px, 100% 100%, 0 100%);
   box-shadow: 0 0 0 1px rgba(56, 189, 248, 0.18), inset 0 0 0 1px rgba(125, 211, 252, 0.24), inset 12px 0 18px rgba(244, 114, 182, 0.035), 0 12px 24px rgba(15, 23, 42, 0.14);
@@ -1128,8 +1123,7 @@ body.rt-theme-dark .sidebar .author__urls li {
 }
 
 .rt-home .rt-timeline li,
-.rt-home .rt-award,
-.rt-home .rt-pub-card {
+.rt-home .rt-award {
   border-color: var(--rt-panel-inner-border);
   background: var(--rt-item-bg);
 }
@@ -1426,10 +1420,9 @@ body.rt-theme-dark .sidebar .author__urls li {
   color: #7c2d12;
 }
 
-.rt-home .rt-pub-grid {
+.rt-home .rt-pub-years {
   display: grid;
-  grid-template-columns: 1fr;
-  gap: 12px;
+  gap: 18px;
 }
 
 .rt-home .rt-pubs-zone {
@@ -1472,173 +1465,161 @@ body.rt-theme-dark .sidebar .author__urls li {
   z-index: -1;
 }
 
-.rt-home .rt-pub-card {
+.rt-home .rt-pub-year {
   display: grid;
-  grid-template-columns: minmax(260px, 320px) 1fr;
+  grid-template-columns: 62px 1fr;
+  gap: 14px;
   align-items: start;
-  border: 1px solid var(--rt-panel-inner-border);
-  border-radius: 12px;
-  overflow: hidden;
+}
+
+.rt-home .rt-pub-year-label {
+  position: sticky;
+  top: 84px;
+  display: flex;
+  justify-content: flex-end;
+  padding-top: 4px;
+}
+
+.rt-home .rt-pub-year-num {
+  font-family: var(--rt-hud-font);
+  font-size: 1.06rem;
+  font-weight: 800;
+  letter-spacing: 0.04em;
+  color: #1d4ed8;
+  padding: 2px 8px;
+  border-right: 2px solid rgba(59, 130, 246, 0.5);
+}
+
+.rt-home[data-theme="dark"] .rt-pub-year-num {
+  color: #7dd3fc;
+  border-right-color: rgba(56, 189, 248, 0.55);
+}
+
+.rt-home .rt-pub-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: 4px;
+}
+
+.rt-home .rt-pub-item {
+  position: relative;
+  padding: 11px 12px 11px 15px;
+  border-radius: 10px;
+  border: 1px solid transparent;
+  transition: background .2s ease, border-color .2s ease, transform .2s ease;
+}
+
+.rt-home .rt-pub-item::before {
+  content: "";
+  position: absolute;
+  left: 3px;
+  top: 14px;
+  bottom: 14px;
+  width: 2px;
+  border-radius: 2px;
+  background: linear-gradient(180deg, rgba(59, 130, 246, 0.55), rgba(14, 165, 233, 0.25));
+  opacity: 0.45;
+  transition: opacity .2s ease, box-shadow .2s ease;
+}
+
+.rt-home .rt-pub-item:hover {
   background: var(--rt-item-bg);
-  box-shadow: 0 8px 18px rgba(148, 163, 184, 0.12);
-  transition: transform .22s ease, box-shadow .24s ease, border-color .22s ease;
-  backdrop-filter: blur(4px);
-  position: relative;
+  border-color: var(--rt-panel-inner-border);
+  transform: translateX(2px);
 }
 
-.rt-home .rt-pub-card:hover {
-  transform: translateY(-3px) scale(1.01);
-  border-color: rgba(244, 114, 182, 0.54);
-  box-shadow: 0 0 18px rgba(244, 114, 182, 0.14), 0 20px 32px rgba(96, 165, 250, 0.2);
-}
-
-.rt-home .rt-pub-media {
-  display: block;
-  position: relative;
-  isolation: isolate;
-  align-self: start;
-  overflow: hidden;
-  aspect-ratio: 16 / 9;
-  border-right: 1px solid #e5edf5;
-  background: linear-gradient(135deg, #edf4ff 0%, #f8fbff 100%);
-}
-
-.rt-home .rt-pub-media::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  z-index: 1;
-  pointer-events: none;
-  opacity: 0.36;
-  background:
-    linear-gradient(180deg, rgba(2, 6, 23, 0.1) 0%, rgba(15, 23, 42, 0) 34%, rgba(2, 6, 23, 0.14) 100%),
-    radial-gradient(circle at 92% 12%, rgba(244, 114, 182, 0.18) 0%, rgba(244, 114, 182, 0) 34%),
-    repeating-linear-gradient(0deg, rgba(148, 163, 184, 0.26) 0 1px, transparent 1px 14px),
-    repeating-linear-gradient(90deg, rgba(148, 163, 184, 0.2) 0 1px, transparent 1px 14px);
-  transition: opacity .26s ease;
-}
-
-.rt-home .rt-pub-media::after {
-  content: "";
-  position: absolute;
-  left: -46%;
-  top: -140%;
-  width: 58%;
-  height: 300%;
-  z-index: 2;
-  pointer-events: none;
-  opacity: 0;
-  background: linear-gradient(100deg, rgba(125, 211, 252, 0) 0%, rgba(224, 242, 254, 0.94) 44%, rgba(244, 114, 182, 0.62) 56%, rgba(125, 211, 252, 0) 100%);
-  transform: rotate(20deg) translateY(0);
-}
-
-.rt-home .rt-pub-thumb {
-  display: block;
-  width: 100%;
-  height: 100%;
-  aspect-ratio: 16 / 9;
-  object-fit: cover;
-  object-position: center;
-  transition: transform .28s ease;
-}
-
-.rt-home .rt-pub-card:hover .rt-pub-thumb {
-  transform: scale(1.03);
-}
-
-.rt-home .rt-pub-card:hover .rt-pub-media::before {
-  opacity: 0.58;
-}
-
-.rt-home .rt-pub-card:hover .rt-pub-media::after {
+.rt-home .rt-pub-item:hover::before {
   opacity: 1;
-  animation: rt-pub-scan .92s ease 1;
+  box-shadow: 0 0 8px rgba(59, 130, 246, 0.45);
 }
 
-.rt-home .rt-pub-status {
-  position: absolute;
-  right: 12px;
-  bottom: 10px;
-  z-index: 4;
+.rt-home .rt-pub-line {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 7px;
+  margin-bottom: 3px;
+}
+
+.rt-home .rt-pub-title {
+  font-size: 0.98rem;
+  line-height: 1.4;
+  color: #0f172a;
+  font-weight: 720;
+  text-decoration: none;
+}
+
+.rt-home .rt-pub-title:hover {
+  color: #1d4ed8;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.rt-home[data-theme="dark"] .rt-pub-title {
+  color: #e2e8f0;
+}
+
+.rt-home[data-theme="dark"] .rt-pub-title:hover {
+  color: #7dd3fc;
+}
+
+.rt-home .rt-pub-badge {
   display: inline-flex;
   align-items: center;
-  gap: 5px;
-  height: 22px;
-  padding: 0 9px;
-  border-radius: 0;
-  clip-path: polygon(0 0, calc(100% - 7px) 0, 100% 7px, 100% 100%, 7px 100%, 0 calc(100% - 7px));
-  border: 1px solid #93c5fd;
-  background: linear-gradient(135deg, #eff6ff 0%, #dbeafe 100%);
-  color: #1e3a8a;
-  font-size: 0.64rem;
+  gap: 4px;
+  height: 19px;
+  padding: 0 8px;
+  border-radius: 999px;
+  font-size: 0.62rem;
   font-weight: 800;
-  letter-spacing: 0.06em;
+  letter-spacing: 0.05em;
   text-transform: uppercase;
   font-family: var(--rt-hud-font);
-  box-shadow: 0 8px 14px rgba(59, 130, 246, 0.2);
-  pointer-events: none;
+  white-space: nowrap;
+  transform: translateY(-1px);
 }
 
-.rt-home .rt-pub-status::before {
-  content: "";
-  width: 7px;
-  height: 7px;
-  border-radius: 999px;
-  background: currentColor;
-  box-shadow: 0 0 8px currentColor;
+.rt-home .rt-pub-badge--venue {
+  border: 1px solid #c7d8eb;
+  background: #f1f6fd;
+  color: #1e40af;
 }
 
-.rt-home .rt-pub-status--review {
-  border-color: #f0abfc;
+.rt-home .rt-pub-badge--accepted {
+  border: 1px solid #86efac;
+  background: linear-gradient(135deg, #fefce8 0%, #dcfce7 100%);
+  color: #166534;
+}
+
+.rt-home .rt-pub-badge--review {
+  border: 1px solid #f0abfc;
   background: linear-gradient(135deg, #fdf4ff 0%, #cffafe 100%);
   color: #86198f;
 }
 
-.rt-home .rt-pub-status--accepted {
-  border-color: #fde047;
-  background: linear-gradient(135deg, #fefce8 0%, #dcfce7 100%);
-  color: #854d0e;
+.rt-home[data-theme="dark"] .rt-pub-badge--venue {
+  border-color: rgba(125, 211, 252, 0.4);
+  background: linear-gradient(135deg, rgba(30, 41, 59, 0.9) 0%, rgba(15, 23, 42, 0.94) 100%);
+  color: #bae6fd;
 }
 
-.rt-home[data-theme="dark"] .rt-pub-status--review {
+.rt-home[data-theme="dark"] .rt-pub-badge--accepted {
+  border-color: rgba(134, 239, 172, 0.55);
+  background: linear-gradient(135deg, rgba(20, 83, 45, 0.5) 0%, rgba(15, 23, 42, 0.92) 100%);
+  color: #86efac;
+}
+
+.rt-home[data-theme="dark"] .rt-pub-badge--review {
+  border-color: rgba(244, 114, 182, 0.6);
   background: linear-gradient(135deg, rgba(88, 28, 135, 0.48) 0%, rgba(15, 23, 42, 0.92) 100%);
-  border-color: rgba(244, 114, 182, 0.72);
   color: #f9a8d4;
-  box-shadow: 0 0 0 1px rgba(244, 114, 182, 0.18) inset, 0 0 12px rgba(244, 114, 182, 0.18);
-}
-
-.rt-home[data-theme="dark"] .rt-pub-status--accepted {
-  background: linear-gradient(135deg, rgba(113, 63, 18, 0.46) 0%, rgba(15, 23, 42, 0.92) 100%);
-  border-color: rgba(250, 204, 21, 0.72);
-  color: #fde68a;
-  box-shadow: 0 0 0 1px rgba(250, 204, 21, 0.18) inset, 0 0 12px rgba(250, 204, 21, 0.16);
-}
-
-.rt-home .rt-pub-body {
-  padding: 14px 13px 12px;
-}
-
-.rt-home .rt-pub-title {
-  margin: 0 0 7px;
-  font-size: 1.04rem;
-  line-height: 1.38;
-  color: #0f172a;
-  font-weight: 760;
-}
-
-.rt-home .rt-pub-meta {
-  margin: 0 0 11px;
-  font-size: 0.74rem;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-  color: #64748b;
-  font-weight: 700;
-  font-family: var(--rt-hud-font);
 }
 
 .rt-home .rt-pub-authors {
-  margin: 0 0 9px;
-  font-size: 0.82rem;
+  margin: 0 0 5px;
+  font-size: 0.8rem;
   line-height: 1.5;
   color: #475569;
 }
@@ -1651,33 +1632,47 @@ body.rt-theme-dark .sidebar .author__urls li {
 .rt-home .rt-pub-links {
   display: flex;
   flex-wrap: wrap;
-  gap: 8px;
+  gap: 12px;
   margin-top: 2px;
 }
 
-.rt-home .rt-pill {
-  display: inline-block;
-  border: 1px solid #c7d8eb;
-  background: #f8fbff;
-  color: #1d4ed8;
-  border-radius: 999px;
-  padding: 4px 10px;
-  font-size: 0.76rem;
-  font-weight: 700;
-  letter-spacing: 0.05em;
+.rt-home .rt-pub-link {
+  display: inline-flex;
+  align-items: center;
+  font-size: 0.72rem;
+  font-weight: 800;
+  letter-spacing: 0.06em;
   text-transform: uppercase;
   font-family: var(--rt-hud-font);
+  color: #1d4ed8;
+  text-decoration: none;
+  position: relative;
+  padding-left: 12px;
 }
 
-.rt-home .rt-pill:hover {
-  border-color: rgba(244, 114, 182, 0.48);
-  background: #fff0fb;
+.rt-home .rt-pub-link::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 50%;
+  width: 5px;
+  height: 5px;
+  transform: translateY(-50%) rotate(45deg);
+  background: currentColor;
+  opacity: 0.7;
+}
+
+.rt-home .rt-pub-link:hover {
   color: #be185d;
+  text-decoration: underline;
+  text-underline-offset: 3px;
 }
 
-.rt-home[data-theme="dark"] .rt-pill:hover {
-  border-color: rgba(244, 114, 182, 0.62);
-  background: linear-gradient(135deg, rgba(88, 28, 135, 0.46) 0%, rgba(15, 23, 42, 0.92) 100%);
+.rt-home[data-theme="dark"] .rt-pub-link {
+  color: #7dd3fc;
+}
+
+.rt-home[data-theme="dark"] .rt-pub-link:hover {
   color: #f9a8d4;
 }
 
@@ -1948,12 +1943,6 @@ body.rt-theme-dark .sidebar .author__urls li {
   100% { box-shadow: 0 0 0 2px rgba(191, 219, 254, 0.38), 0 0 8px rgba(56, 189, 248, 0.52); }
 }
 
-@keyframes rt-pub-scan {
-  0% { transform: rotate(20deg) translateY(-14%); opacity: 0; }
-  20% { opacity: 1; }
-  100% { transform: rotate(20deg) translateY(64%); opacity: 0; }
-}
-
 @keyframes rt-online-pulse {
   0% { box-shadow: 0 0 4px rgba(74, 222, 128, 0.65); opacity: .75; }
   50% { box-shadow: 0 0 10px rgba(74, 222, 128, 1); opacity: 1; }
@@ -2027,7 +2016,6 @@ body.rt-theme-dark .sidebar .author__urls li {
   }
 
   .rt-home .rt-award-grid,
-  .rt-home .rt-pub-grid,
   .rt-home .rt-visitor-wrap,
   .rt-home .rt-visitor-bottom,
   .rt-home .rt-visitor-terminal-body {
@@ -2039,17 +2027,21 @@ body.rt-theme-dark .sidebar .author__urls li {
     gap: 4px;
   }
 
-  .rt-home .rt-pub-card {
+  .rt-home .rt-pub-year {
     grid-template-columns: 1fr;
+    gap: 6px;
   }
 
-  .rt-home .rt-pub-media {
+  .rt-home .rt-pub-year-label {
+    position: static;
+    justify-content: flex-start;
+    padding-top: 0;
+  }
+
+  .rt-home .rt-pub-year-num {
     border-right: 0;
-    border-bottom: 1px solid #e5edf5;
-  }
-
-  .rt-home .rt-pub-thumb {
-    aspect-ratio: 16 / 9;
+    border-bottom: 2px solid rgba(59, 130, 246, 0.5);
+    padding: 0 0 3px;
   }
 }
 
@@ -2110,8 +2102,7 @@ body.rt-theme-dark .sidebar .author__urls li {
   .rt-home .rt-timeline::after,
   .rt-home .rt-timeline li::before,
   .rt-home .rt-title-glitch::before,
-  .rt-home .rt-title-glitch::after,
-  .rt-home .rt-pub-card:hover .rt-pub-media::after {
+  .rt-home .rt-title-glitch::after {
     animation: none;
   }
 
@@ -2295,120 +2286,106 @@ body.rt-theme-dark .sidebar .author__urls li {
   <p class="rt-note">*: co-first authors. #: corresponding author.</p>
   <div class="rt-pubs-zone rt-tag-card rt-tag-pad rt-reveal">
     <span class="rt-corner-tag rt-corner-tag--blue">publications</span>
-    <div class="rt-pub-grid">
-      
-      <article class="rt-pub-card">
-        <span class="rt-pub-status rt-pub-status--accepted">Accepted</span>
-        <a class="rt-pub-media" href="https://arxiv.org/pdf/2510.26495">
-          <img class="rt-pub-thumb" src="{{ '/images/home_pubs/06.webp' | relative_url }}" alt="Text-to-SQL paper teaser" width="1200" height="675" loading="lazy" decoding="async">
-        </a>
-        <div class="rt-pub-body">
-          <h3 class="rt-pub-title">Rethinking Text-to-SQL: Dynamic Multi-turn SQL Interaction for Real-world Database Exploration</h3>
-          <p class="rt-pub-authors">Linzhuang Sun*, Tianyu Guo*, Hao Liang*, <strong>Ruitong Liu</strong>, Yuying Li, Qifeng Cai, Jingxuan Wei, Yuchen Wu, Bihui Yu, Xiangxiang Zhang, Wentao Zhang#, Bin CUI#</p>
-          <p class="rt-pub-meta">ACL 2026 Findings</p>
-          <div class="rt-pub-links">
-            <a class="rt-pill" href="https://arxiv.org/pdf/2510.26495">PDF</a>
-            <a class="rt-pill" href="https://github.com/Aurora-slz/DySQL-Bench.git">Code</a>
-          </div>
-        </div>
-      </article>
+    <div class="rt-pub-years">
 
-      <article class="rt-pub-card">
-        <span class="rt-pub-status rt-pub-status--accepted">Accepted</span>
-        <a class="rt-pub-media" href="https://arxiv.org/pdf/2602.12389">
-          <img class="rt-pub-thumb" src="{{ '/images/home_pubs/07.webp' | relative_url }}" alt="Temporal KGF paper teaser" width="1200" height="675" loading="lazy" decoding="async">
-        </a>
-        <div class="rt-pub-body">
-          <h3 class="rt-pub-title">Evolving Beyond Snapshots: Harmonizing Structure and Sequence via Entity State Tuning for Temporal Knowledge Graph Forecasting</h3>
-          <p class="rt-pub-authors">Siyuan Li#*, Yunjia Wu*, yiyong xiao*, Huang Pingyang, Peize Li, <strong>Ruitong Liu#</strong>, Yan Wen, Te Sun</p>
-          <p class="rt-pub-meta">ACL 2026 Main</p>
-          <div class="rt-pub-links">
-            <a class="rt-pill" href="https://arxiv.org/pdf/2602.12389">PDF</a>
-            <a class="rt-pill" href="https://github.com/yuanwuyuan9/Evolving-Beyond-Snapshots.git">Code</a>
-          </div>
-        </div>
-      </article>
+      <section class="rt-pub-year">
+        <div class="rt-pub-year-label"><span class="rt-pub-year-num">2026</span></div>
+        <ol class="rt-pub-list">
 
-      <article class="rt-pub-card">
-        <span class="rt-pub-status rt-pub-status--accepted">Accepted</span>
-        <a class="rt-pub-media" href="https://link.springer.com/article/10.1007/s11390-026-5948-8">
-          <img class="rt-pub-thumb" src="{{ '/images/home_pubs/05.webp' | relative_url }}" alt="LLM data preparation survey teaser" width="1200" height="675" loading="lazy" decoding="async">
-        </a>
-        <div class="rt-pub-body">
-          <h3 class="rt-pub-title">Data Preparation for Large Language Models: A Survey</h3>
-          <p class="rt-pub-authors">Hao Liang, Zhen Hao Wong, <strong>Ruitong Liu</strong>, Yuhan Wang, Meiyi Qiang, Zhengyang Zhao, Chengyu Shen, Conghui He#, Wentao Zhang#, Bin Cui#</p>
-          <p class="rt-pub-meta">JCST 40th Anniversary Special Issue</p>
-          <div class="rt-pub-links">
-            <a class="rt-pill" href="https://link.springer.com/article/10.1007/s11390-026-5948-8">PDF</a>
-          </div>
-        </div>
-      </article>
-      
-      <article class="rt-pub-card">
-        <span class="rt-pub-status rt-pub-status--accepted">Accepted</span>
-        <a class="rt-pub-media" href="https://arxiv.org/pdf/2602.04290">
-          <img class="rt-pub-thumb" src="{{ '/images/home_pubs/01.webp' | relative_url }}" alt="Guided Verifier teaser" width="1200" height="675" loading="lazy" decoding="async">
-        </a>
-        <div class="rt-pub-body">
-          <h3 class="rt-pub-title">Guided Verifier: Collaborative Multimodal Reasoning via Dynamic Process Supervision</h3>
-          <p class="rt-pub-authors">Lingzhuang Sun*, <strong>Ruitong Liu*</strong>, Yuxia Zhu*, Xiaohan Xu, Jingxuan Wei, Xiangxiang Zhang, Bihui Yu, Wentao Zhang#</p>
-          <p class="rt-pub-meta">ACMMM 2026</p>
-          <div class="rt-pub-links">
-            <a class="rt-pill" href="https://arxiv.org/pdf/2602.04290">PDF</a>
-            <a class="rt-pill" href="https://github.com/tongruiliu/Guided-GRPO">Code</a>
-            <a class="rt-pill" href="https://huggingface.co/ruitongl/Guided-Verifier-8B">Model</a>
-          </div>
-        </div>
-      </article>
+          <li class="rt-pub-item">
+            <div class="rt-pub-line">
+              <a class="rt-pub-title" href="https://arxiv.org/pdf/2510.26495">Rethinking Text-to-SQL: Dynamic Multi-turn SQL Interaction for Real-world Database Exploration</a>
+              <span class="rt-pub-badge rt-pub-badge--venue">ACL 2026 Findings</span>
+              <span class="rt-pub-badge rt-pub-badge--accepted">Accepted</span>
+            </div>
+            <p class="rt-pub-authors">Linzhuang Sun*, Tianyu Guo*, Hao Liang*, <strong>Ruitong Liu</strong>, Yuying Li, Qifeng Cai, Jingxuan Wei, Yuchen Wu, Bihui Yu, Xiangxiang Zhang, Wentao Zhang#, Bin CUI#</p>
+            <div class="rt-pub-links">
+              <a class="rt-pub-link" href="https://arxiv.org/pdf/2510.26495">PDF</a>
+              <a class="rt-pub-link" href="https://github.com/Aurora-slz/DySQL-Bench.git">Code</a>
+            </div>
+          </li>
 
-      <article class="rt-pub-card">
-        <span class="rt-pub-status rt-pub-status--accepted">Accepted</span>
-        <a class="rt-pub-media" href="https://arxiv.org/pdf/2602.10494">
-          <img class="rt-pub-thumb" src="{{ '/images/home_pubs/02.webp' | relative_url }}" alt="Canvas-of-Thought teaser" width="1200" height="675" loading="lazy" decoding="async">
-        </a>
-        <div class="rt-pub-body">
-          <h3 class="rt-pub-title">Canvas-of-Thought: Grounding Reasoning via Mutable Structured States</h3>
-          <p class="rt-pub-authors">Lingzhuang Sun*, Yuxia Zhu*, <strong>Ruitong Liu*</strong>, Hao Liang, Zheng Sun, Caijun Jia, Honghao He, Yuchen Wu, Siyuan Li, Jingxuan Wei, Xiangxiang Zhang, Bihui Yu, Wentao Zhang#</p>
-          <p class="rt-pub-meta">ACMMM 2026</p>
-          <div class="rt-pub-links">
-            <a class="rt-pill" href="https://arxiv.org/pdf/2602.10494">PDF</a>
-            <a class="rt-pill" href="https://github.com/Zzzyxii/Canvas-CoT">Code</a>
-          </div>
-        </div>
-      </article>
+          <li class="rt-pub-item">
+            <div class="rt-pub-line">
+              <a class="rt-pub-title" href="https://arxiv.org/pdf/2602.12389">Evolving Beyond Snapshots: Harmonizing Structure and Sequence via Entity State Tuning for Temporal Knowledge Graph Forecasting</a>
+              <span class="rt-pub-badge rt-pub-badge--venue">ACL 2026 Main</span>
+              <span class="rt-pub-badge rt-pub-badge--accepted">Accepted</span>
+            </div>
+            <p class="rt-pub-authors">Siyuan Li#*, Yunjia Wu*, yiyong xiao*, Huang Pingyang, Peize Li, <strong>Ruitong Liu#</strong>, Yan Wen, Te Sun</p>
+            <div class="rt-pub-links">
+              <a class="rt-pub-link" href="https://arxiv.org/pdf/2602.12389">PDF</a>
+              <a class="rt-pub-link" href="https://github.com/yuanwuyuan9/Evolving-Beyond-Snapshots.git">Code</a>
+            </div>
+          </li>
 
-      <article class="rt-pub-card">
-        <span class="rt-pub-status rt-pub-status--review">Under Review</span>
-        <a class="rt-pub-media" href="https://arxiv.org/pdf/2510.08966">
-          <img class="rt-pub-thumb" src="{{ '/images/home_pubs/03.webp' | relative_url }}" alt="Semantic-Condition Tuning teaser" width="1200" height="675" loading="lazy" decoding="async">
-        </a>
-        <div class="rt-pub-body">
-          <h3 class="rt-pub-title">Semantic-Condition Tuning: Fusing Graph Context with Large Language Models for Knowledge Graph Completion</h3>
-          <p class="rt-pub-authors"><strong>Ruitong Liu</strong>, Yan Wen, Te Sun, Yunjia Wu, Pingyang Huang, Zihang Yu, Siyuan Li</p>
-          <p class="rt-pub-meta">EMNLP 2026 Under Review</p>
-          <div class="rt-pub-links">
-            <a class="rt-pill" href="https://arxiv.org/pdf/2510.08966">PDF</a>
-            <a class="rt-pill" href="https://github.com/tongruiliu/GMT">Code</a>
-          </div>
-        </div>
-      </article>
+          <li class="rt-pub-item">
+            <div class="rt-pub-line">
+              <a class="rt-pub-title" href="https://arxiv.org/pdf/2602.04290">Guided Verifier: Collaborative Multimodal Reasoning via Dynamic Process Supervision</a>
+              <span class="rt-pub-badge rt-pub-badge--venue">ACMMM 2026</span>
+              <span class="rt-pub-badge rt-pub-badge--accepted">Accepted</span>
+            </div>
+            <p class="rt-pub-authors">Lingzhuang Sun*, <strong>Ruitong Liu*</strong>, Yuxia Zhu*, Xiaohan Xu, Jingxuan Wei, Xiangxiang Zhang, Bihui Yu, Wentao Zhang#</p>
+            <div class="rt-pub-links">
+              <a class="rt-pub-link" href="https://arxiv.org/pdf/2602.04290">PDF</a>
+              <a class="rt-pub-link" href="https://github.com/tongruiliu/Guided-GRPO">Code</a>
+              <a class="rt-pub-link" href="https://huggingface.co/ruitongl/Guided-Verifier-8B">Model</a>
+            </div>
+          </li>
 
-      <article class="rt-pub-card">
-        <span class="rt-pub-status rt-pub-status--review">Under Review</span>
-        <a class="rt-pub-media" href="https://arxiv.org/pdf/2506.23137">
-          <img class="rt-pub-thumb" src="{{ '/images/home_pubs/04.webp' | relative_url }}" alt="Flow-Modulated Scoring teaser" width="1200" height="675" loading="lazy" decoding="async">
-        </a>
-        <div class="rt-pub-body">
-          <h3 class="rt-pub-title">Flow-Modulated Scoring for Semantic-Aware Knowledge Graph Completion</h3>
-          <p class="rt-pub-authors">Siyuan Li, <strong>Ruitong Liu</strong>, Yan Wen, Te Sun, Andi Zhang, Yanbiao Ma#, Xiaoshuai Hao#</p>
-          <p class="rt-pub-meta">TPAMI Under Review</p>
-          <div class="rt-pub-links">
-            <a class="rt-pill" href="https://arxiv.org/pdf/2506.23137">PDF</a>
-            <a class="rt-pill" href="https://github.com/yuanwuyuan9/FMS">Code</a>
-          </div>
-        </div>
-      </article>
-      
+          <li class="rt-pub-item">
+            <div class="rt-pub-line">
+              <a class="rt-pub-title" href="https://arxiv.org/pdf/2602.10494">Canvas-of-Thought: Grounding Reasoning via Mutable Structured States</a>
+              <span class="rt-pub-badge rt-pub-badge--venue">ACMMM 2026</span>
+              <span class="rt-pub-badge rt-pub-badge--accepted">Accepted</span>
+            </div>
+            <p class="rt-pub-authors">Lingzhuang Sun*, Yuxia Zhu*, <strong>Ruitong Liu*</strong>, Hao Liang, Zheng Sun, Caijun Jia, Honghao He, Yuchen Wu, Siyuan Li, Jingxuan Wei, Xiangxiang Zhang, Bihui Yu, Wentao Zhang#</p>
+            <div class="rt-pub-links">
+              <a class="rt-pub-link" href="https://arxiv.org/pdf/2602.10494">PDF</a>
+              <a class="rt-pub-link" href="https://github.com/Zzzyxii/Canvas-CoT">Code</a>
+            </div>
+          </li>
+
+          <li class="rt-pub-item">
+            <div class="rt-pub-line">
+              <a class="rt-pub-title" href="https://link.springer.com/article/10.1007/s11390-026-5948-8">Data Preparation for Large Language Models: A Survey</a>
+              <span class="rt-pub-badge rt-pub-badge--venue">JCST 40th Anniversary Special Issue</span>
+              <span class="rt-pub-badge rt-pub-badge--accepted">Accepted</span>
+            </div>
+            <p class="rt-pub-authors">Hao Liang, Zhen Hao Wong, <strong>Ruitong Liu</strong>, Yuhan Wang, Meiyi Qiang, Zhengyang Zhao, Chengyu Shen, Conghui He#, Wentao Zhang#, Bin Cui#</p>
+            <div class="rt-pub-links">
+              <a class="rt-pub-link" href="https://link.springer.com/article/10.1007/s11390-026-5948-8">PDF</a>
+            </div>
+          </li>
+
+          <li class="rt-pub-item">
+            <div class="rt-pub-line">
+              <a class="rt-pub-title" href="https://arxiv.org/pdf/2510.08966">Semantic-Condition Tuning: Fusing Graph Context with Large Language Models for Knowledge Graph Completion</a>
+              <span class="rt-pub-badge rt-pub-badge--venue">EMNLP 2026</span>
+              <span class="rt-pub-badge rt-pub-badge--review">Under Review</span>
+            </div>
+            <p class="rt-pub-authors"><strong>Ruitong Liu</strong>, Yan Wen, Te Sun, Yunjia Wu, Pingyang Huang, Zihang Yu, Siyuan Li</p>
+            <div class="rt-pub-links">
+              <a class="rt-pub-link" href="https://arxiv.org/pdf/2510.08966">PDF</a>
+              <a class="rt-pub-link" href="https://github.com/tongruiliu/GMT">Code</a>
+            </div>
+          </li>
+
+          <li class="rt-pub-item">
+            <div class="rt-pub-line">
+              <a class="rt-pub-title" href="https://arxiv.org/pdf/2506.23137">Flow-Modulated Scoring for Semantic-Aware Knowledge Graph Completion</a>
+              <span class="rt-pub-badge rt-pub-badge--venue">TPAMI</span>
+              <span class="rt-pub-badge rt-pub-badge--review">Under Review</span>
+            </div>
+            <p class="rt-pub-authors">Siyuan Li, <strong>Ruitong Liu</strong>, Yan Wen, Te Sun, Andi Zhang, Yanbiao Ma#, Xiaoshuai Hao#</p>
+            <div class="rt-pub-links">
+              <a class="rt-pub-link" href="https://arxiv.org/pdf/2506.23137">PDF</a>
+              <a class="rt-pub-link" href="https://github.com/yuanwuyuan9/FMS">Code</a>
+            </div>
+          </li>
+
+        </ol>
+      </section>
+
     </div>
   </div>
 

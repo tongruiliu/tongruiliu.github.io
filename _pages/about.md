@@ -2296,7 +2296,7 @@ body.rt-theme-dark .sidebar .author__urls li {
         <ol class="rt-pub-list">
 
           <li class="rt-pub-item">
-            <a class="rt-pub-title" href="https://arxiv.org/pdf/2602.12389">Evolving Beyond Snapshots: Harmonizing Structure and Sequence via Entity State Tuning for Temporal Knowledge Graph Forecasting</a>
+            <a class="rt-pub-title" href="https://openreview.net/forum?id=y2cvGUIjjT&referrer=%5Bthe%20profile%20of%20Ruitong%20Liu%5D(%2Fprofile%3Fid%3D~Ruitong_Liu4)">Evolving Beyond Snapshots: Harmonizing Structure and Sequence via Entity State Tuning for Temporal Knowledge Graph Forecasting</a>
             <p class="rt-pub-authors">Siyuan Li#*, Yunjia Wu*, yiyong xiao*, Huang Pingyang, Peize Li, <strong>Ruitong Liu#</strong>, Yan Wen, Te Sun</p>
             <div class="rt-pub-tags">
               <span class="rt-pub-badge rt-pub-badge--venue">ACL 2026 Main</span>
@@ -2305,7 +2305,7 @@ body.rt-theme-dark .sidebar .author__urls li {
           </li>
           
           <li class="rt-pub-item">
-            <a class="rt-pub-title" href="https://arxiv.org/pdf/2510.26495">Rethinking Text-to-SQL: Dynamic Multi-turn SQL Interaction for Real-world Database Exploration</a>
+            <a class="rt-pub-title" href="https://openreview.net/forum?id=GUlV71sobA&referrer=%5Bthe%20profile%20of%20Ruitong%20Liu%5D(%2Fprofile%3Fid%3D~Ruitong_Liu4)">Rethinking Text-to-SQL: Dynamic Multi-turn SQL Interaction for Real-world Database Exploration</a>
             <p class="rt-pub-authors">Linzhuang Sun*, Tianyu Guo*, Hao Liang*, <strong>Ruitong Liu</strong>, Yuying Li, Qifeng Cai, Jingxuan Wei, Yuchen Wu, Bihui Yu, Xiangxiang Zhang, Wentao Zhang#, Bin CUI#</p>
             <div class="rt-pub-tags">
               <span class="rt-pub-badge rt-pub-badge--venue">ACL 2026 Findings</span>
@@ -2314,7 +2314,7 @@ body.rt-theme-dark .sidebar .author__urls li {
           </li>
 
           <li class="rt-pub-item">
-            <a class="rt-pub-title" href="https://arxiv.org/pdf/2602.04290">Guided Verifier: Collaborative Multimodal Reasoning via Dynamic Process Supervision</a>
+            <a class="rt-pub-title" href="https://openreview.net/forum?id=zltUzE2TGX&referrer=%5Bthe%20profile%20of%20Ruitong%20Liu%5D(%2Fprofile%3Fid%3D~Ruitong_Liu4)">Guided Verifier: Collaborative Multimodal Reasoning via Dynamic Process Supervision</a>
             <p class="rt-pub-authors">Lingzhuang Sun*, <strong>Ruitong Liu*</strong>, Yuxia Zhu*, Xiaohan Xu, Jingxuan Wei, Xiangxiang Zhang, Bihui Yu, Wentao Zhang#</p>
             <div class="rt-pub-tags">
               <span class="rt-pub-badge rt-pub-badge--venue">ACMMM 2026</span>
@@ -2323,7 +2323,7 @@ body.rt-theme-dark .sidebar .author__urls li {
           </li>
 
           <li class="rt-pub-item">
-            <a class="rt-pub-title" href="https://arxiv.org/pdf/2602.10494">Canvas-of-Thought: Grounding Reasoning via Mutable Structured States</a>
+            <a class="rt-pub-title" href="https://openreview.net/forum?id=J9Cb7BhwrD&referrer=%5Bthe%20profile%20of%20Ruitong%20Liu%5D(%2Fprofile%3Fid%3D~Ruitong_Liu4)">Canvas-of-Thought: Grounding Reasoning via Mutable Structured States</a>
             <p class="rt-pub-authors">Lingzhuang Sun*, Yuxia Zhu*, <strong>Ruitong Liu*</strong>, Hao Liang, Zheng Sun, Caijun Jia, Honghao He, Yuchen Wu, Siyuan Li, Jingxuan Wei, Xiangxiang Zhang, Bihui Yu, Wentao Zhang#</p>
             <div class="rt-pub-tags">
               <span class="rt-pub-badge rt-pub-badge--venue">ACMMM 2026</span>
@@ -2352,6 +2352,15 @@ body.rt-theme-dark .sidebar .author__urls li {
           <li class="rt-pub-item">
             <a class="rt-pub-title" href="https://arxiv.org/pdf/2506.23137">Flow-Modulated Scoring for Semantic-Aware Knowledge Graph Completion</a>
             <p class="rt-pub-authors">Siyuan Li, <strong>Ruitong Liu</strong>, Yan Wen, Te Sun, Andi Zhang, Yanbiao Ma#, Xiaoshuai Hao#</p>
+            <div class="rt-pub-tags">
+              <span class="rt-pub-badge rt-pub-badge--venue">TPAMI</span>
+              <span class="rt-pub-badge rt-pub-badge--review">Under Review</span>
+            </div>
+          </li>
+
+          <li class="rt-pub-item">
+            <a class="rt-pub-title" href="https://arxiv.org/abs/2607.01978">Multimodal Knowledge Edit-Scoped Generalization for Online Recursive MLLM Editing</a>
+            <p class="rt-pub-authors">Siyuan Li, Youyuan Zhang, <strong>Ruitong Liu</strong>, Junxi Wang, Jing Li#</p>
             <div class="rt-pub-tags">
               <span class="rt-pub-badge rt-pub-badge--venue">TPAMI</span>
               <span class="rt-pub-badge rt-pub-badge--review">Under Review</span>

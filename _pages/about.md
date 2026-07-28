@@ -1110,8 +1110,21 @@ body.rt-theme-dark .sidebar .author__urls li {
 
 .rt-home .rt-note {
   margin: 0 0 10px;
-  color: #6b7280;
+  color: #1f2937;
   font-size: 0.93rem;
+}
+
+.rt-home .rt-note strong {
+  color: #0f172a;
+  font-weight: 800;
+}
+
+.rt-home .rt-note-term {
+  font-weight: 600;
+}
+
+.rt-home[data-theme="dark"] .rt-note strong {
+  color: #f1f5f9;
 }
 
 .rt-home .rt-news-zone,
@@ -1131,10 +1144,43 @@ body.rt-theme-dark .sidebar .author__urls li {
 .rt-home .rt-timeline {
   list-style: none;
   margin: 0;
-  padding: 0 0 0 24px;
+  padding: 4px 2px 4px 24px;
   display: grid;
   gap: 12px;
   position: relative;
+}
+
+.rt-home .rt-scroll-win {
+  max-height: 468px;
+  overflow-y: auto;
+  overflow-x: hidden;
+  overscroll-behavior: contain;
+  padding: 0 8px 0 2px;
+  scrollbar-width: thin;
+  scrollbar-color: rgba(59, 130, 246, 0.55) transparent;
+  -webkit-mask-image: linear-gradient(180deg, transparent 0, #000 14px, #000 calc(100% - 22px), transparent 100%);
+          mask-image: linear-gradient(180deg, transparent 0, #000 14px, #000 calc(100% - 22px), transparent 100%);
+}
+
+.rt-home .rt-news-scroll {
+  max-height: 535px;
+}
+
+.rt-home .rt-scroll-win::-webkit-scrollbar {
+  width: 7px;
+}
+
+.rt-home .rt-scroll-win::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.rt-home .rt-scroll-win::-webkit-scrollbar-thumb {
+  background: linear-gradient(180deg, rgba(56, 189, 248, 0.7), rgba(59, 130, 246, 0.7));
+  border-radius: 999px;
+}
+
+.rt-home .rt-scroll-win::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(180deg, rgba(56, 189, 248, 0.95), rgba(59, 130, 246, 0.95));
 }
 
 .rt-home .rt-timeline::before {
@@ -1423,6 +1469,7 @@ body.rt-theme-dark .sidebar .author__urls li {
 .rt-home .rt-pub-years {
   display: grid;
   gap: 18px;
+  max-height: 520px;
 }
 
 .rt-home .rt-pubs-zone {
@@ -1474,7 +1521,7 @@ body.rt-theme-dark .sidebar .author__urls li {
 
 .rt-home .rt-pub-year-label {
   position: sticky;
-  top: 84px;
+  top: 18px;
   display: flex;
   justify-content: flex-end;
   padding-top: 4px;
@@ -2146,6 +2193,7 @@ body.rt-theme-dark .sidebar .author__urls li {
   <h2 class="rt-section-title rt-reveal" id="section-news" data-hud="LOG.01"><i class="fa fa-bolt" aria-hidden="true"></i><span class="rt-title-glitch" data-text="What's New">What's New</span></h2>
   <div class="rt-news-zone rt-tag-card rt-tag-pad rt-reveal">
     <span class="rt-corner-tag">news</span>
+    <div class="rt-scroll-win rt-news-scroll">
     <ul class="rt-timeline">
       <li>
         <span class="rt-time">2026-07</span>
@@ -2184,6 +2232,7 @@ body.rt-theme-dark .sidebar .author__urls li {
         <div class="rt-news-text">I was pre-admitted to PKU through the postgraduate recommendation program (Bao Yan).</div>
       </li>
     </ul>
+    </div>
   </div>
 
   <h2 class="rt-section-title rt-reveal" id="section-awards" data-hud="ACHV.02"><i class="fa fa-trophy" aria-hidden="true"></i><span class="rt-title-glitch" data-text="Awards">Awards</span></h2>
@@ -2237,10 +2286,10 @@ body.rt-theme-dark .sidebar .author__urls li {
   </div>
 
   <h2 class="rt-section-title rt-reveal" id="section-pubs" data-hud="PAPER.03"><i class="fa fa-book" aria-hidden="true"></i><span class="rt-title-glitch" data-text="Publications">Publications</span></h2>
-  <p class="rt-note">*: co-first authors. #: corresponding author.</p>
+  <p class="rt-note"><strong>*</strong>: <span class="rt-note-term">co-first authors</span>. &nbsp;<strong>#</strong>: <span class="rt-note-term">corresponding author</span>.</p>
   <div class="rt-pubs-zone rt-tag-card rt-tag-pad rt-reveal">
     <span class="rt-corner-tag rt-corner-tag--blue">publications</span>
-    <div class="rt-pub-years">
+    <div class="rt-pub-years rt-scroll-win">
 
       <section class="rt-pub-year">
         <div class="rt-pub-year-label"><span class="rt-pub-year-num">2026</span></div>

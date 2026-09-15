@@ -944,6 +944,30 @@ body.rt-theme-dark .sidebar .author__urls li {
   padding-top: 10px;
 }
 
+.rt-home .rt-profile-item--logo {
+  grid-template-columns: 160px minmax(0, 1fr) auto;
+  align-items: center;
+}
+
+.rt-home .rt-profile-body {
+  min-width: 0;
+}
+
+.rt-home .rt-profile-logo {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.rt-home .rt-profile-logo img {
+  max-height: 30px;
+  max-width: 136px;
+  height: auto;
+  width: auto;
+  object-fit: contain;
+  display: block;
+}
+
 .rt-home .rt-profile-date {
   color: #1e3a8a;
   font-size: 0.88rem;
@@ -2188,19 +2212,23 @@ body.rt-theme-dark .sidebar .author__urls li {
         <section class="rt-profile-block rt-tag-card rt-tag-pad">
           <span class="rt-corner-tag rt-corner-tag--blue">intern</span>
           <h3 class="rt-profile-head">Intern</h3>
-          <ul class="rt-profile-list">
-            <li class="rt-profile-item">
+          <ul class="rt-profile-list rt-profile-list--intern">
+            <li class="rt-profile-item rt-profile-item--logo">
               <div class="rt-profile-date">2026.02 - 2027.02</div>
-              <div>
-                <p class="rt-profile-main">Ubiquant</p>
-                <p class="rt-profile-sub">Beijing</p>
+              <div class="rt-profile-body">
+                <p class="rt-profile-main"><a href="https://www.ubiquant.com/" target="_blank" rel="noopener noreferrer">Ubiquant</a> · Beijing</p>
+              </div>
+              <div class="rt-profile-logo">
+                <img src="{{ '/images/logo-ubiquant.svg' | relative_url }}" alt="Ubiquant logo" loading="lazy">
               </div>
             </li>
-            <li class="rt-profile-item">
+            <li class="rt-profile-item rt-profile-item--logo">
               <div class="rt-profile-date">2025.09 - 2026.02</div>
-              <div>
-                <p class="rt-profile-main">IAAR</p>
-                <p class="rt-profile-sub">Shanghai</p>
+              <div class="rt-profile-body">
+                <p class="rt-profile-main"><a href="https://iaar.ac.cn/" target="_blank" rel="noopener noreferrer">IAAR</a> · Shanghai</p>
+              </div>
+              <div class="rt-profile-logo">
+                <img src="{{ '/images/logo-iaar.png' | relative_url }}" alt="IAAR logo" loading="lazy">
               </div>
             </li>
           </ul>
@@ -2669,5 +2697,26 @@ body.rt-theme-dark .sidebar .author__urls li {
     updateConsoleTime();
     setInterval(updateConsoleTime, 1000);
   }
+})();
+</script>
+<script>
+/* Forward wheel scrolling to the whole page once an inner scroll window
+   reaches its top/bottom edge, so it never traps the page scroll. */
+(function () {
+  var wins = document.querySelectorAll('.rt-scroll-win');
+  Array.prototype.forEach.call(wins, function (win) {
+    win.addEventListener('wheel', function (e) {
+      var dy = e.deltaY;
+      if (!dy) { return; }
+      if (e.deltaMode === 1) { dy *= 16; }                 // lines -> px
+      else if (e.deltaMode === 2) { dy *= win.clientHeight; } // pages -> px
+      var atTop = win.scrollTop <= 0;
+      var atBottom = Math.ceil(win.scrollTop + win.clientHeight) >= win.scrollHeight;
+      if ((dy < 0 && atTop) || (dy > 0 && atBottom)) {
+        e.preventDefault();
+        window.scrollBy(0, dy);
+      }
+    }, { passive: false });
+  });
 })();
 </script>

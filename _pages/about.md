@@ -2145,10 +2145,9 @@ body.rt-theme-dark .sidebar .author__urls li {
       <p class="rt-overview-name">Ruitong Liu</p>
       <p class="rt-intro-text">
         <span class="rt-welcome-line">Welcome to my homepage! <span class="rt-wave-hand" aria-hidden="true">👋</span></span><br>
-        I am currently a senior majoring at
-        <a href="https://www.dlut.edu.cn/">Dalian University of Technology</a>. I will start my graduate studies at the
+        I am currently a master's student at the
         <a href="https://www.math.pku.edu.cn/index.htm">School of Mathematical Sciences</a>,
-        <a href="https://www.pku.edu.cn/">Peking University</a> in September 2026. My research primarily focuses on <strong>Large Language Models (LLMs)</strong> and <strong>Multimodal Large Language Models (MLLMs)</strong>, with particular interests in multimodal reasoning, reinforcement learning and alignment, AI agents, LLM knowledge editing, and formal reasoning. My current research centers on complex reasoning optimization, reinforcement learning framework design, LLM knowledge editing and augmentation, Lean4 prove, as well as reliable agent systems for real-world applications. I am also interested in World Models and am actively exploring this direction.<br> Now i am interning in Beijing. If you are interested in academic cooperation or exchanges in related fields, please feel free to contact me via email at any time!
+        <a href="https://www.pku.edu.cn/">Peking University</a>. My research primarily focuses on <strong>Large Language Models (LLMs)</strong> and <strong>Multimodal Large Language Models (MLLMs)</strong>, with particular interests in multimodal reasoning, reinforcement learning and alignment, AI agents, LLM knowledge editing, and formal reasoning. My current research centers on complex reasoning optimization, reinforcement learning framework design, LLM knowledge editing and augmentation, Lean4 prove, as well as reliable agent systems for real-world applications. I am also interested in World Models and am actively exploring this direction.<br> Now i am interning in Beijing. If you are interested in academic cooperation or exchanges in related fields, please feel free to contact me via email at any time!
       </p>
       <div class="rt-focus-row">
         <span class="rt-focus-pill">LLM/MLLM Training (Full-Stack)</span>
@@ -2182,6 +2181,26 @@ body.rt-theme-dark .sidebar .author__urls li {
               <div>
                 <p class="rt-profile-main"><a href="https://math.dlut.edu.cn/">School of Mathematical Sciences, Dalian University of Technology</a></p>
                 <p class="rt-profile-sub">Mathematics and Applied Mathematics (B.S.)</p>
+              </div>
+            </li>
+          </ul>
+        </section>
+        <section class="rt-profile-block rt-tag-card rt-tag-pad">
+          <span class="rt-corner-tag rt-corner-tag--blue">intern</span>
+          <h3 class="rt-profile-head">Intern</h3>
+          <ul class="rt-profile-list">
+            <li class="rt-profile-item">
+              <div class="rt-profile-date">2026.02 - 2027.02</div>
+              <div>
+                <p class="rt-profile-main">Ubiquant</p>
+                <p class="rt-profile-sub">Beijing</p>
+              </div>
+            </li>
+            <li class="rt-profile-item">
+              <div class="rt-profile-date">2025.09 - 2026.02</div>
+              <div>
+                <p class="rt-profile-main">IAAR</p>
+                <p class="rt-profile-sub">Shanghai</p>
               </div>
             </li>
           </ul>

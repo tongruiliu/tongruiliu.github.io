@@ -1154,7 +1154,7 @@ body.rt-theme-dark .sidebar .author__urls li {
   max-height: 468px;
   overflow-y: auto;
   overflow-x: hidden;
-  overscroll-behavior: contain;
+  overscroll-behavior-y: auto;
   padding: 0 8px 0 2px;
   scrollbar-width: thin;
   scrollbar-color: rgba(59, 130, 246, 0.55) transparent;
@@ -2196,16 +2196,16 @@ body.rt-theme-dark .sidebar .author__urls li {
     <div class="rt-scroll-win rt-news-scroll">
     <ul class="rt-timeline">
       <li>
-        <span class="rt-time">2026-07</span>
-        <div class="rt-news-text">Two paper were submitted to <strong>AAAI 2027</strong>.</div>
+        <span class="rt-time">2026-09</span>
+        <div class="rt-news-text">Three papers were submitted to <strong>ICLR 2027</strong>.</div>
       </li>
       <li>
         <span class="rt-time">2026-07</span>
-        <div class="rt-news-text">Two paper were accepted by <strong>ACMMM 2026</strong>.</div>
+        <div class="rt-news-text">Two papers were submitted to <strong>AAAI 2027</strong>.</div>
       </li>
       <li>
-        <span class="rt-time">2026-06</span>
-        <div class="rt-news-text">One paper was submitted to <strong>ICDM 2026</strong>.</div>
+        <span class="rt-time">2026-07</span>
+        <div class="rt-news-text">Two papers were accepted by <strong>ACMMM 2026</strong>.</div>
       </li>
       <li>
         <span class="rt-time">2026-05</span>
@@ -2214,10 +2214,6 @@ body.rt-theme-dark .sidebar .author__urls li {
       <li>
         <span class="rt-time">2026-04</span>
         <div class="rt-news-text">Two papers were accepted by <strong>ACL 2026 (One Main, One Findings.)</strong>.</div>
-      </li>
-      <li>
-        <span class="rt-time">2026-03</span>
-        <div class="rt-news-text">One paper wa submitted to <strong>EMNLP 2026</strong>.</div>
       </li>
       <li>
         <span class="rt-time">2026-02</span>

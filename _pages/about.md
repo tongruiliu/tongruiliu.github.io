@@ -956,16 +956,26 @@ body.rt-theme-dark .sidebar .author__urls li {
 .rt-home .rt-profile-logo {
   display: flex;
   align-items: center;
-  justify-content: flex-end;
+  justify-content: center;
+  padding: 6px 12px;
+  border: 1px solid #e2e8f0;
+  border-radius: 10px;
+  background: #f8fafc;
+  box-shadow: 0 1px 2px rgba(15, 23, 42, 0.05);
 }
 
 .rt-home .rt-profile-logo img {
-  max-height: 30px;
-  max-width: 136px;
-  height: auto;
+  height: 26px;
   width: auto;
+  max-width: 132px;
   object-fit: contain;
   display: block;
+}
+
+.rt-home[data-theme="dark"] .rt-profile-logo {
+  border-color: rgba(148, 163, 184, 0.35);
+  background: rgba(226, 232, 240, 0.06);
+  box-shadow: none;
 }
 
 .rt-home .rt-profile-date {

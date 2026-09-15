@@ -957,11 +957,23 @@ body.rt-theme-dark .sidebar .author__urls li {
   display: flex;
   align-items: center;
   justify-content: center;
+  gap: 10px;
   padding: 6px 12px;
   border: 1px solid #e2e8f0;
   border-radius: 10px;
   background: #f8fafc;
   box-shadow: 0 1px 2px rgba(15, 23, 42, 0.05);
+}
+
+.rt-home .rt-logo-sep {
+  width: 1px;
+  align-self: stretch;
+  margin: 2px 0;
+  background: #dbe7f5;
+}
+
+.rt-home[data-theme="dark"] .rt-logo-sep {
+  background: rgba(148, 163, 184, 0.3);
 }
 
 .rt-home .rt-profile-logo img {
@@ -2238,6 +2250,8 @@ body.rt-theme-dark .sidebar .author__urls li {
                 <p class="rt-profile-main"><a href="https://iaar.ac.cn/" target="_blank" rel="noopener noreferrer">IAAR</a> · Shanghai</p>
               </div>
               <div class="rt-profile-logo">
+                <img src="{{ '/images/logo-originhub.png' | relative_url }}" alt="OriginHub (元枢智汇) logo" loading="lazy">
+                <span class="rt-logo-sep" aria-hidden="true"></span>
                 <img src="{{ '/images/logo-iaar.png' | relative_url }}" alt="IAAR logo" loading="lazy">
               </div>
             </li>

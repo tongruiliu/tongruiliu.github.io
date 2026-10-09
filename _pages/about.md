@@ -2268,7 +2268,7 @@ body.rt-theme-dark .sidebar .author__urls li {
     <ul class="rt-timeline">
       <li>
         <span class="rt-time">2026-09</span>
-        <div class="rt-news-text">Four papers were submitted to <strong>ICLR 2027</strong>.</div>
+        <div class="rt-news-text">Three papers were submitted to <strong>ICLR 2027</strong>.</div>
       </li>
       <li>
         <span class="rt-time">2026-07</span>
@@ -2311,8 +2311,8 @@ body.rt-theme-dark .sidebar .author__urls li {
         Dalian University of Technology (only 7 undergraduates university-wide)
       </article>
       <article class="rt-award">
-        <strong>2025 Five-Star Volunteer</strong><br>
-        Dalian University of Technology (600+ volunteer hours in 3 years)
+        <strong>2026 Liaoning Province Outstanding Graduate</strong><br>
+        Provincial-level honor
       </article>
       <article class="rt-award">
         <strong>2024 Top 10 Volunteers</strong><br>
@@ -2327,6 +2327,8 @@ body.rt-theme-dark .sidebar .author__urls li {
     <details class="rt-award-collapse">
       <summary>Show All Awards & Honors</summary>
       <ul class="rt-award-list">
+        <li>July 2026: Liaoning Province Outstanding Graduate (provincial-level honor)</li>
+        <li>November 2025: Five-Star Volunteer, Dalian University of Technology (600+ volunteer hours in 3 years)</li>
         <li>October 2025: First-Class Academic Excellence Scholarship</li>
         <li>May 2025: Third Prize in the National Network Technology Track of the China University Computer Competition</li>
         <li>January 2025: Excellent League Cadre, School of Mathematical Sciences</li>

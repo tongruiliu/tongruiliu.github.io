@@ -984,6 +984,10 @@ body.rt-theme-dark .sidebar .author__urls li {
   display: block;
 }
 
+.rt-home .rt-profile-logo img.rt-logo-ubiquant {
+  height: 20px;
+}
+
 .rt-home[data-theme="dark"] .rt-profile-logo {
   border-color: rgba(148, 163, 184, 0.35);
   background: rgba(226, 232, 240, 0.06);
@@ -2241,7 +2245,7 @@ body.rt-theme-dark .sidebar .author__urls li {
                 <p class="rt-profile-main"><a href="https://www.ubiquant.com/" target="_blank" rel="noopener noreferrer">Ubiquant</a> · Beijing</p>
               </div>
               <div class="rt-profile-logo">
-                <img src="{{ '/images/logo-ubiquant.svg' | relative_url }}" alt="Ubiquant logo" loading="lazy">
+                <img class="rt-logo-ubiquant" src="{{ '/images/logo-ubiquant.svg' | relative_url }}" alt="Ubiquant logo" loading="lazy">
               </div>
             </li>
             <li class="rt-profile-item rt-profile-item--logo">
@@ -2361,6 +2365,40 @@ body.rt-theme-dark .sidebar .author__urls li {
     <div class="rt-pub-years rt-scroll-win">
 
       <section class="rt-pub-year">
+        <div class="rt-pub-year-label"><span class="rt-pub-year-num">2027</span></div>
+        <ol class="rt-pub-list">
+
+          <li class="rt-pub-item">
+            <a class="rt-pub-title" href="https://arxiv.org/pdf/2610.14746">BridgeWAM: Bridging Video and Action Experts via Latent Bridge Queries</a>
+            <p class="rt-pub-authors">Jiaxin Fang, <strong>Ruitong Liu</strong>, Zeyu Lai, Xingyu Wang, Mingyuan Jia, Pingyue Sheng, Weikang Wan, Mengdi Xu#, Yuxiang Gao#</p>
+            <div class="rt-pub-tags">
+              <span class="rt-pub-badge rt-pub-badge--venue">ICLR 2027</span>
+              <span class="rt-pub-badge rt-pub-badge--review">Under Review</span>
+            </div>
+          </li>
+
+          <li class="rt-pub-item">
+            <span class="rt-pub-title">Reap: Uncovering Monte-carlo proof search with lightweight model</span>
+            <p class="rt-pub-authors">Yutong Wang, Xuanzhi Ren, Tianyi Xu, <strong>Ruitong Liu</strong>, jd xu, Peihao Wu, Bryan Dai, Bin Dong</p>
+            <div class="rt-pub-tags">
+              <span class="rt-pub-badge rt-pub-badge--venue">ICLR 2027</span>
+              <span class="rt-pub-badge rt-pub-badge--review">Under Review</span>
+            </div>
+          </li>
+
+          <li class="rt-pub-item">
+            <span class="rt-pub-title">From Prediction to Evidence: Authority-Aware Reasoning for Open-World Question Answering over Knowledge Graphs</span>
+            <p class="rt-pub-authors">Yuqian Gao, Zuowei Zhang, <strong>Ruitong Liu</strong>, Jingyi Kang, Te Sun, Junxi Wang, Youyuan Zhang, Enhao Gu, Zhihao Chen, Siyuan Li#</p>
+            <div class="rt-pub-tags">
+              <span class="rt-pub-badge rt-pub-badge--venue">AAAI 2027</span>
+              <span class="rt-pub-badge rt-pub-badge--review">Under Review</span>
+            </div>
+          </li>
+
+        </ol>
+      </section>
+
+      <section class="rt-pub-year">
         <div class="rt-pub-year-label"><span class="rt-pub-year-num">2026</span></div>
         <ol class="rt-pub-list">
 
@@ -2413,7 +2451,6 @@ body.rt-theme-dark .sidebar .author__urls li {
             <a class="rt-pub-title" href="https://arxiv.org/pdf/2510.08966">Semantic-Condition Tuning: Fusing Graph Context with Large Language Models for Knowledge Graph Completion</a>
             <p class="rt-pub-authors"><strong>Ruitong Liu</strong>, Yan Wen, Te Sun, Yunjia Wu, Pingyang Huang, Zihang Yu, Siyuan Li</p>
             <div class="rt-pub-tags">
-              <span class="rt-pub-badge rt-pub-badge--venue">EMNLP 2026</span>
               <span class="rt-pub-badge rt-pub-badge--review">Under Review</span>
             </div>
           </li>
